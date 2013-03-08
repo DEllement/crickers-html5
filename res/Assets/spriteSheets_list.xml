@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfSpriteSheet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpriteSheet>
+    <AnimCellHeight>0</AnimCellHeight>
+    <AnimCellWidth>0</AnimCellWidth>
+    <CellHeight>250</CellHeight>
+    <CellWidth>250</CellWidth>
+    <EndCellIndex>32</EndCellIndex>
+    <FrameDuration>33</FrameDuration>
+    <Name>Red Crickers</Name>
+    <SpriteSheetID>2</SpriteSheetID>
+    <StartCellIndex>0</StartCellIndex>
+    <TotalFrames>0</TotalFrames>
+  </SpriteSheet>
+</ArrayOfSpriteSheet>
