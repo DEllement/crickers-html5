@@ -5,7 +5,7 @@ var LevelScene = cc.Scene.extend({
 
         var selfPointer = this;
 
-        cc.SPRITE_DEBUG_DRAW = true;
+        //cc.SPRITE_DEBUG_DRAW = true;
 
         var winSize = cc.Director.getInstance().getWinSize();
 
@@ -50,15 +50,20 @@ var LevelScene = cc.Scene.extend({
                 var h = parseFloat(gameSpriteXml.getElementsByTagName("Height")[0].firstChild.nodeValue);
                 var assetType = gameSpriteXml.getElementsByTagName("AssetType")[0].firstChild.nodeValue;
                 var imageSourceSrc = gameSpriteXml.getElementsByTagName("ImageSourceStr")[0].firstChild.nodeValue;
+                var name = gameSpriteXml.getElementsByTagName("Name")[0].firstChild.nodeValue;
 
                 //Create sprite based on data
                 var sprite = null;
                 if (assetType == "ACTOR_SPRITE") {
                     sprite = new CrickerActor();
                     sprite.initWithFile("res" + imageSourceSrc);
+
                 }else{
                     sprite = cc.Sprite.create("res" + imageSourceSrc);
                 }
+                sprite.name = name;
+                sprite.assetType = assetType;
+
                 sprite.setAnchorPoint(cc.p(0,1));
                 sprite.setPosition(cc.p(x, winSize.height - (0 + y)));
                 sprite.setRotation(0);

@@ -1,6 +1,7 @@
 ﻿/// <reference path="../js/libs/lib/Cocos2d-html5-v2.1.1.min.js" />
 
 var CrickerActor = cc.Sprite.extend({
+    name:"",
     actions: [],
     selected: false,
     ctor: function () {
@@ -12,41 +13,54 @@ var CrickerActor = cc.Sprite.extend({
         this.stopAction();
         this.runAction(cc.Animate.create(this.actions[0]));
     },
-    walkLeft: function(){
+    walkLeft: function (walkFinishCallBack) {
 
+        var me = this;
         console.log('walkLeft');
 
         var actionMove = cc.MoveBy.create(.5, cc.p(-this.getBoundingBox().width, 0));
 
-        var actionMoveDone =  cc.CallFunc.create(this.onWalkedLeft, this );
+        var actionMoveDone = cc.CallFunc.create(walkFinishCallBack, this);
 
         this.stopAction();
         this.runAction(cc.Animate.create(this.actions[0]));
         this.runAction(cc.Sequence.create([actionMove, actionMoveDone]));
     },
-    walkRight: function(){
+    walkRight: function (walkFinishCallBack) {
 
         var me = this;
         console.log('walkRight');
 
         var actionMove = cc.MoveBy.create(.5, cc.p(this.getBoundingBox().width, 0));
-        var actionMoveDone =  cc.CallFunc.create( this.onWalkedRight, this );
+        var actionMoveDone = cc.CallFunc.create(walkFinishCallBack, this);
 
         this.stopAction();
         this.runAction(cc.Animate.create(this.actions[0]));
         this.runAction(cc.Sequence.create([actionMove, actionMoveDone]));
 
     },
-    onWalkedLeft :function(){
+    onWalkedLeft: function () {
+
+        if (callBack)
+            callBack(this);
 
         console.log('Moved Left' + this.getPosition().x);
-        //Move down if there is no crickers below
-        var actionDown = cc.MoveBy.create(.5, cc.p(0,-this.getBoundingBox().height*2));
-        this.runAction(actionDown);
+        
     },
-    onWalkedRight :function(){
+    onWalkedRight: function () {
 
-        var actionDown = cc.MoveBy.create(.5, cc.p(0,-this.getBoundingBox().height*2));
+        if (callBack)
+            callBack(this);
+    },
+    fallDown: function (toY) {
+
+        var distanceY = this.getPosition().y-Math.max(toY,0);
+
+        var speed = ((distanceY)/this.getBoundingBox().height)*.25;
+
+        console.log("fallDown by" + -distanceY + " during " + speed);
+
+        var actionDown = cc.MoveBy.create(speed, cc.p(0, -distanceY));
         this.runAction(actionDown);
     }
 });
