@@ -10,6 +10,7 @@ function lineIntersectsRect(p1, p2, r)
 
 
 var PlaygroundLayer = cc.Layer.extend({
+    selectedCricker: null,
     init: function () {
         var me = this;
         //////////////////////////////
@@ -17,6 +18,7 @@ var PlaygroundLayer = cc.Layer.extend({
         this._super();
 
         this.setTouchEnabled(true);
+        this.schedule(this.validateGravity, 1 / 30);
     },
     onTouchesBegan: function (touches, event) {
         this.touchtStartLocation = touches[0].getLocation();
@@ -38,7 +40,7 @@ var PlaygroundLayer = cc.Layer.extend({
         var startX = this.touchtStartLocation.x;
         var endX = touches[0].getLocation().x;
         var distanceX = Math.max( startX, endX ) - Math.min(startX, endX);
-        if( distanceX > 75){
+        if( distanceX > 25){
             isSwipping = true;
             swipeDirection = startX < endX ? 'right' : 'left';
         }
@@ -52,17 +54,20 @@ var PlaygroundLayer = cc.Layer.extend({
             if( isSwipping && cricker.selected && lineIntersectsRect( this.touchtStartLocation, touches[0].getLocation() , rBB)){
 
                 if( swipeDirection == 'left')
-                    cricker.walkLeft(function () { me.validateGravity(); });
+                    cricker.walkLeft();
                 if( swipeDirection == 'right')
-                    cricker.walkRight(function () { me.validateGravity(); });
+                    cricker.walkRight();
 
-            } else if (!cricker.selected && cc.rectContainsPoint(rBB, touches[0].getLocation())) {
+            } else if (!isSwipping && !cricker.selected && cc.rectContainsPoint(rBB, touches[0].getLocation())) {
+
+                if( this.selectedCricker){
+                    this.selectedCricker.selected = false;
+                    this.selectedCricker.stopAction();
+                }
+
 
                 cricker.select();
-
-            } else {
-                cricker.selected = false;
-                cricker.stopAction();
+                this.selectedCricker = cricker;
             }
         }
     },
@@ -80,20 +85,23 @@ var PlaygroundLayer = cc.Layer.extend({
             var cricker = childSprite;
 
             var bb = cricker.getBoundingBoxToWorld();
-            var rBB = cc.rect(bb.getX() + 9, bb.getY() + 11, bb.getWidth() - 18, bb.getHeight() - 17);
-            var sBB = cc.rect(bb.getX() + 2, bb.getY() -10 , bb.getWidth() - 4, 10);
+            var rBB = cc.rect(bb.getX() + 9, bb.getY() + 8, bb.getWidth() - 18, bb.getHeight() - 17);
 
             var supported = false;
             var supportedAt = null;
 
             for (var j = 0; j < this.getChildrenCount() ; j++) {
                 var sprite = this.getChildren()[j];
+
+                if(sprite.name == cricker.name)
+                    continue;
+
                 var bb2 = sprite.getBoundingBoxToWorld();
-                var rBB2 = bb2;
+                var rBB2 = cc.rect(bb2.getX(), bb2.getY(), bb2.getWidth(), bb2.getHeight());
                 if( sprite.assetType == "ACTOR_SPRITE") //Temp will be replaced by Body Data
-                    rBB2 = cc.rect(bb2.getX() + 9, bb2.getY() + 11, bb2.getWidth() - 18, bb2.getHeight() - 17);
+                    rBB2 = cc.rect(bb2.getX() + 9, bb2.getY() + 8, bb2.getWidth() - 18, bb2.getHeight() - 17);
                 
-                if (cc.rectIntersectsRect(rBB2, sBB)) {
+                if (rBB2.getY() < rBB.getY() && cc.rectIntersectsRect(rBB2, rBB)) {
                     supported = true;
                     supportedAt = parseFloat(rBB2.getY())+parseFloat(rBB2.getHeight());
                     break;
@@ -101,27 +109,31 @@ var PlaygroundLayer = cc.Layer.extend({
             }
             if(!supported){
 
-                var testY = sBB.getY();
+                var testY = rBB.getY();
                 while(!supported && testY > 0 ){
 
-                    sBB.setY(testY--);
+                    var sBB = cc.rect(rBB.getX(), testY--, rBB.getWidth(), rBB.getHeight());
 
                     for (var k = 0; k < this.getChildrenCount() ; k++) {
                         var sprite2 = this.getChildren()[k];
-                        var bb3 = sprite2.getBoundingBoxToWorld();
-                        var rBB3 = bb3;
-                        if( sprite2.assetType == "ACTOR_SPRITE") //Temp will be replaced by Body Data
-                            rBB3 = cc.rect(bb3.getX() + 9, bb3.getY() + 11, bb3.getWidth() - 18, bb3.getHeight() - 17);
 
-                        if (cc.rectIntersectsRect(rBB3, sBB)) {
+                        if(sprite2.name == cricker.name)
+                            continue;
+
+                        var bb3 = sprite2.getBoundingBoxToWorld();
+                        var rBB3 = cc.rect(bb3.getX(), bb3.getY(), bb3.getWidth(), bb3.getHeight());
+                        if( sprite2.assetType == "ACTOR_SPRITE") //Temp will be replaced by Body Data
+                            rBB3 = cc.rect(bb3.getX() + 9, bb3.getY() + 8, bb3.getWidth() - 18, bb3.getHeight() - 17);
+
+                        if (rBB3.getY() < sBB.getY() && cc.rectIntersectsRect(rBB3, sBB)) {
                             supported = true;
                             supportedAt = parseFloat(rBB3.getY()+rBB3.getHeight())+rBB.getHeight();
                             break;
                         }
                     }
                 }
-
-                cricker.fallDown(supported ? supportedAt : -100);
+                if(!cricker.isFalling)
+                    cricker.fallDown(supported ? supportedAt : -100);
 
             }
         }

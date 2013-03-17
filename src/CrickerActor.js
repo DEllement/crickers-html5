@@ -4,6 +4,8 @@ var CrickerActor = cc.Sprite.extend({
     name:"",
     actions: [],
     selected: false,
+    isFalling: false,
+    isWalking: false,
     ctor: function () {
         this._super();
 
@@ -13,54 +15,61 @@ var CrickerActor = cc.Sprite.extend({
         this.stopAction();
         this.runAction(cc.Animate.create(this.actions[0]));
     },
-    walkLeft: function (walkFinishCallBack) {
+    walkLeft: function () {
 
-        var me = this;
         console.log('walkLeft');
 
         var actionMove = cc.MoveBy.create(.5, cc.p(-this.getBoundingBox().width, 0));
 
-        var actionMoveDone = cc.CallFunc.create(walkFinishCallBack, this);
+        var actionMoveDone = cc.CallFunc.create(this.onWalkedLeft, this);
 
         this.stopAction();
         this.runAction(cc.Animate.create(this.actions[0]));
         this.runAction(cc.Sequence.create([actionMove, actionMoveDone]));
-    },
-    walkRight: function (walkFinishCallBack) {
 
-        var me = this;
+        this.isWalking = true;
+    },
+    walkRight: function () {
+
         console.log('walkRight');
 
         var actionMove = cc.MoveBy.create(.5, cc.p(this.getBoundingBox().width, 0));
-        var actionMoveDone = cc.CallFunc.create(walkFinishCallBack, this);
+        var actionMoveDone = cc.CallFunc.create(this.onWalkedRight, this);
 
         this.stopAction();
         this.runAction(cc.Animate.create(this.actions[0]));
         this.runAction(cc.Sequence.create([actionMove, actionMoveDone]));
 
+        this.isWalking = true;
+
     },
     onWalkedLeft: function () {
-
-        if (callBack)
-            callBack(this);
-
-        console.log('Moved Left' + this.getPosition().x);
-        
+        this.isWalking = false;
     },
     onWalkedRight: function () {
-
-        if (callBack)
-            callBack(this);
+        this.isWalking = false;
+    },
+    onFalledDown: function(){
+        this.isFalling = false;
     },
     fallDown: function (toY) {
 
         var distanceY = this.getPosition().y-Math.max(toY,0);
+
+        if(distanceY == 0){
+            this.isFalling = true;
+            return;
+        }
 
         var speed = ((distanceY)/this.getBoundingBox().height)*.25;
 
         console.log("fallDown by" + -distanceY + " during " + speed);
 
         var actionDown = cc.MoveBy.create(speed, cc.p(0, -distanceY));
-        this.runAction(actionDown);
+        var actionDownDone = cc.CallFunc.create(this.onFalledDown, this);
+
+        this.runAction(cc.Sequence.create([actionDown, actionDownDone]));
+
+        this.isFalling = true;
     }
 });
