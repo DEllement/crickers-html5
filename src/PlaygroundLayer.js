@@ -18,7 +18,7 @@ var PlaygroundLayer = cc.Layer.extend({
         this._super();
 
         this.setTouchEnabled(true);
-        this.schedule(this.validateGravity, 1 / 30);
+        //this.schedule(this.validateGravity, 1 / 30);
     },
     onTouchesBegan: function (touches, event) {
         this.touchtStartLocation = touches[0].getLocation();

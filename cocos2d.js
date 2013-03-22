@@ -29,7 +29,7 @@
     var c = {
         COCOS2D_DEBUG:2, //0 to turn debug off, 1 for basic debug, and 2 for full debug
         box2d:false,
-        chipmunk:false,
+        chipmunk:true,
         showFPS:true,
         frameRate:60,
         loadExtension:false,
@@ -40,8 +40,7 @@
             'src/resource.js',
             'src/CrickerActor.js',
             'src/PlaygroundLayer.js',
-            'src/LevelScene.js',
-            'src/myApp.js'
+            'src/LevelScene.js'
         ]
     };
     window.addEventListener('DOMContentLoaded', function () {
