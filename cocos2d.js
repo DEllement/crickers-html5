@@ -40,7 +40,8 @@
             'src/resource.js',
             'src/CrickerActor.js',
             'src/PlaygroundLayer.js',
-            'src/LevelScene.js'
+            'src/LevelScene.js',
+            'src/myApp.js'
         ]
     };
     window.addEventListener('DOMContentLoaded', function () {

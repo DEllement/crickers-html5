@@ -8,22 +8,16 @@ var LevelScene = cc.Scene.extend({
         var winSize = cc.Director.getInstance().getWinSize();
 
         //Chipmunk
-        var DENSITY = 1 / 10000;
+        var DENSITY = 1;
 
+        // physic:
         this.space = new cp.Space();
+        this.space.gravity = cp.v(0,-1500);
+        this.space.iterations = 150;
+        this.space.sleepTimeThreshold = .5;
+        this.space.collisionSlop = 0.5;
 
         var staticBody = this.space.staticBody;
-        var floorShape = new cp.SegmentShape( staticBody, cp.v(0,125), cp.v(winSize.width,125), 0 );
-        floorShape.setElasticity(0);
-        floorShape.setFriction(1);
-        floorShape.setCollisionType(0);
-
-        this.space.addStaticShape( floorShape );
-
-        // Gravity:
-        this.space.gravity = cp.v(0,-500);
-        this.space.iterations = 15;
-        //this.space.sleepTimeThreshold = 0.5;
 
         //load level data
         if (window.XMLHttpRequest)
@@ -31,7 +25,7 @@ var LevelScene = cc.Scene.extend({
         else
             xhttp = new ActiveXObject("Microsoft.XMLHTTP");
 
-        xhttp.open("GET", "res/LevelTest.xml", false);
+        xhttp.open("GET", "res/LevelTest_Phx.xml", false);
         xhttp.send();
 
         var sceneNodeXml = xhttp.responseXML.getElementsByTagName("Level")[0].getElementsByTagName("Scene")[0];
@@ -51,9 +45,28 @@ var LevelScene = cc.Scene.extend({
                 this._debugNode = cc.PhysicsDebugNode.create( this.space );
                 this._debugNode.setSpace(this.space);
                 this._debugNode.setVisible( true );
+                //layer.addChild( this._debugNode );  //Uncomment this to display physic Debug
 
-                //layer.addChild( this._debugNode );
+                var physicBodiesXml =  layersXml[i].getElementsByTagName("PhysicBody");
+                for(var j = 0; j < physicBodiesXml.length; j++){
 
+                    var physicBodyXml = physicBodiesXml[j];
+
+                    var physicBody_x = parseFloat(physicBodyXml.getElementsByTagName("X")[0].firstChild.nodeValue);
+                    var physicBody_y = parseFloat(physicBodyXml.getElementsByTagName("Y")[0].firstChild.nodeValue);
+                    var physicBody_w = parseFloat(physicBodyXml.getElementsByTagName("Width")[0].firstChild.nodeValue);
+                    var physicBody_h= parseFloat(physicBodyXml.getElementsByTagName("Height")[0].firstChild.nodeValue);
+
+
+                    staticBody.setPos(cc.p((physicBody_x+(physicBody_w/2)) , winSize.height-(physicBody_y+(physicBody_h/2))));
+
+                    var boxShape = new cp.BoxShape( staticBody, physicBody_w, physicBody_h);
+                    boxShape.setElasticity(0);
+                    boxShape.setFriction(2);
+                    //boxShape.setCollisionType(1);
+
+                    this.space.addStaticShape( boxShape );
+                }
             }else
                 layer = cc.Layer.create();
 
@@ -84,19 +97,21 @@ var LevelScene = cc.Scene.extend({
                     sprite.initWithFile("res" + imageSourceSrc);
 
                     //Chipmunk Cricker Body Setup
-                    var mass = w * h * DENSITY;
-                    var moment = cp.momentForBox(mass, w, h);
+                    var mass = 1;//w * h * DENSITY;
+                    var moment = cp.momentForBox(mass,  w-18, h-12);
                     var crickerBody = new cp.Body(mass, moment);
-                    crickerBody.setPos(cc.p(20, 20));
 
-                    var shape = new cp.BoxShape( crickerBody, w-20, h-12);
+                    var shape = new cp.BoxShape( crickerBody, w-18, h-12);
 
                     shape.setElasticity( 0 );
-                    shape.setFriction( 1 );
-                    shape.setCollisionType(1 );
+                    shape.setFriction(2);
+                    //shape.setCollisionType(1);
+                    shape.group = name;
 
                     this.space.addBody( crickerBody );
                     this.space.addShape( shape );
+
+                    crickerBody.resetForces();
 
                     //this.space.addConstraint( new cp.RotaryLimitJoint(crickerBody, crickerBody, -10, 10) );
 
@@ -203,7 +218,6 @@ var LevelScene = cc.Scene.extend({
         return true;
     },
     update: function(delta){
-        this.space.step( delta );
-
+        this.space.step(delta);
     }
 });

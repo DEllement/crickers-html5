@@ -16,100 +16,86 @@ var CrickerActor = cc.PhysicsSprite.extend({
     },
     select : function(){
         this.selected = true;
-        this.stopAction();
-        this.runAction(cc.Animate.create(this.actions[0]));
+        this.stopAllActions();
+        this.runAction(cc.RepeatForever.create(cc.Animate.create(this.actions[0])));
+        this.getBody().activate();
+    },
+    unSelect: function(){
+        this.selected = false;
+        this.stopAllActions();
+        //this.startIdleAnimation();
     },
     walkLeft: function () {
 
+        this.getBody().activate();
+
         this.walkDirection = WALK_LEFT;
 
-        var actionMove = cc.MoveBy.create(.5, cc.p(-this.getBoundingBox().width*2, 0));
+        var actionMove = cc.MoveBy.create(.5, cc.p(-this.getBoundingBox().width, 0));
 
         var actionMoveDone = cc.CallFunc.create(this.onWalkedLeft, this);
-
+        var x = Math.round(this.getPositionX());
         this.stopAction();
-        this.runAction(cc.Animate.create(this.actions[0]));
-        this.runAction(cc.Sequence.create([actionMove, actionMoveDone]));
-
+        /*this.runAction(cc.Animate.create(this.actions[0]));
+        this.runAction(cc.Sequence.create([actionMove, actionMoveDone]));  */
+        //this.getBody().setPos( new cc.p(x-1, this.getPositionY()) );
         this.isWalking = true;
+        this.walkStep = this.getBoundingBox().width;
     },
     walkRight: function () {
 
         this.walkDirection = WALK_RIGHT;
 
-        var actionMove = cc.MoveBy.create(.5, cc.p(this.getBoundingBox().width*2, 0));
+        var actionMove = cc.MoveBy.create(.5, cc.p(this.getBoundingBox().width, 0));
         var actionMoveDone = cc.CallFunc.create(this.onWalkedRight, this);
-
+        var x = Math.round(this.getPositionX());
         this.stopAction();
-        this.runAction(cc.Animate.create(this.actions[0]));
-        this.runAction(cc.Sequence.create([actionMove, actionMoveDone]));
-
+        /*this.runAction(cc.Animate.create(this.actions[0]));
+        this.runAction(cc.Sequence.create([actionMove, actionMoveDone]));*/
+       // this.getBody().setPos( new cc.p(x+1, this.getPositionY()) );
         this.isWalking = true;
+        this.walkStep = this.getBoundingBox().width;
 
-    },
-    onWalkedLeft: function () {
-        this.isWalking = false;
-        this.lastX -= this.getBoundingBox().width;  //this.getPosition().x;
-    },
-    onWalkedRight: function () {
-        this.isWalking = false;
-        this.lastX += this.getBoundingBox().width;//this.getPosition().x;
-    },
-    onFalledDown: function(){
-        this.isFalling = false;
-    },
-    fallDown: function (toY) {
-
-        var distanceY = this.getPosition().y-Math.max(toY,0);
-
-        if(distanceY == 0){
-            this.isFalling = true;
-            return;
-        }
-
-        var speed = ((distanceY)/this.getBoundingBox().height)*.25;
-
-        //console.log("fallDown by" + -distanceY + " during " + speed);
-
-        var actionDown = cc.MoveBy.create(speed, cc.p(0, -distanceY));
-        var actionDownDone = cc.CallFunc.create(this.onFalledDown, this);
-
-        this.runAction(cc.Sequence.create([actionDown, actionDownDone]));
-
-        this.isFalling = true;
     },
     update: function(delta){
 
-         var x = this.getPositionX();
+        var x = Math.round(this.getPositionX());
 
+        if(this.isWalking && this.walkStep > 0){
+            if(this.walkDirection == WALK_LEFT)
+                this.getBody().setPos( new cc.p(x-1, this.getPositionY()) );
+            if(this.walkDirection == WALK_RIGHT)
+                this.getBody().setPos( new cc.p(x+1, this.getPositionY()) );
 
+            this.walkStep--;
+
+            if(this.walkStep == 0){
+                this.lastX = this.getPositionX();
+                this.isWalking = false;
+            }
+        }
         if(!this.isWalking)
-            this.getBody().setPos( new cc.p(this.lastX, this.getPositionY()) );
-
+            this.getBody().setPos(cc.p(this.lastX, this.getPositionY()));
         else{
-
              var minX = this.lastX - this.getBoundingBox().width;
              var maxX = this.lastX + this.getBoundingBox().width;
 
              if(this.walkDirection == WALK_LEFT && this.getPositionX() < minX )
-                this.getBody().setPos( new cc.p(minX, this.getPositionY()) );
+                this.getBody().setPos( new cc.p(Math.round(minX), this.getPositionY()) );
              if(this.walkDirection == WALK_RIGHT && this.getPositionX() > maxX)
-                this.getBody().setPos( new cc.p(maxX, this.getPositionY()) );
+                this.getBody().setPos( new cc.p(Math.round(maxX), this.getPositionY()) );
         }
-
-
-        console.log(this.lastX, this.getPositionX());
-
 
         //Constraints
         var z = this.getRotation();
-        if(this.getRotation() < 0)
+        /*if(this.getRotation() < 0)
             this.setRotation( Math.max(z, -10) );
         else
-            this.setRotation( Math.min(z, 10) );
+            this.setRotation( Math.min(z, 10) );*/
 
-        //if(!this.isWalking)
-            //this.setPositionX(this.lastX);
+        this.setRotation(0);
+
+
 
 
     }

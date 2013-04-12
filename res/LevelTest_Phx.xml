@@ -18,14 +18,15 @@
     <Height>640</Height>
     <Layers>
       <Layer>
-        <IsItemLocked>false</IsItemLocked>
+        <IsItemLocked>true</IsItemLocked>
         <IsItemVisible>true</IsItemVisible>
         <Name>Foreground</Name>
         <GameSprites />
         <Icon>/Assets/UI/ico_layers.png</Icon>
+        <PhysicBodies />
       </Layer>
       <Layer>
-        <IsItemLocked>false</IsItemLocked>
+        <IsItemLocked>true</IsItemLocked>
         <IsItemVisible>true</IsItemVisible>
         <Name>Middle Foreground</Name>
         <GameSprites>
@@ -38,10 +39,10 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
-            <ZIndex>40</ZIndex>
+            <ZIndex>41</ZIndex>
             <ID>29</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstcolonn0.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
+            <IsItemLocked>true</IsItemLocked>
             <Name>l1_firstcolonn0.png_29</Name>
             <Fill>None</Fill>
           </GameSprite>
@@ -54,10 +55,10 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
-            <ZIndex>39</ZIndex>
+            <ZIndex>40</ZIndex>
             <ID>28</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstpalm0.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
+            <IsItemLocked>true</IsItemLocked>
             <Name>l1_firstpalm0.png_28</Name>
             <Fill>None</Fill>
           </GameSprite>
@@ -70,10 +71,10 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
-            <ZIndex>38</ZIndex>
+            <ZIndex>39</ZIndex>
             <ID>26</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstgrass1.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
+            <IsItemLocked>true</IsItemLocked>
             <Name>l1_firstgrass1.png_26</Name>
             <Fill>None</Fill>
           </GameSprite>
@@ -86,10 +87,10 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
-            <ZIndex>37</ZIndex>
+            <ZIndex>38</ZIndex>
             <ID>18</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstgrass1.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
+            <IsItemLocked>true</IsItemLocked>
             <Name>l1_firstgrass1.png_18</Name>
             <Fill>None</Fill>
           </GameSprite>
@@ -102,15 +103,16 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
-            <ZIndex>36</ZIndex>
+            <ZIndex>37</ZIndex>
             <ID>16</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstgrass0.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
+            <IsItemLocked>true</IsItemLocked>
             <Name>l1_firstgrass0.png_16</Name>
             <Fill>None</Fill>
           </GameSprite>
         </GameSprites>
         <Icon>/Assets/UI/ico_layers.png</Icon>
+        <PhysicBodies />
       </Layer>
       <Layer>
         <IsItemLocked>false</IsItemLocked>
@@ -118,15 +120,15 @@
         <Name>Playground</Name>
         <GameSprites>
           <GameSprite xsi:type="ActorSprite">
-            <X>444</X>
-            <Y>442</Y>
+            <X>660</X>
+            <Y>243</Y>
             <Width>69</Width>
             <Height>68</Height>
             <IsItemVisible>true</IsItemVisible>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
-            <ZIndex>22</ZIndex>
+            <ZIndex>36</ZIndex>
             <ID>46</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
             <IsItemLocked>false</IsItemLocked>
@@ -1294,8 +1296,8 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>445</X>
-            <Y>384</Y>
+            <X>657</X>
+            <Y>293</Y>
             <Width>69</Width>
             <Height>68</Height>
             <IsItemVisible>true</IsItemVisible>
@@ -1667,9 +1669,56 @@
           </GameSprite>
         </GameSprites>
         <Icon>/Assets/UI/ico_layers.png</Icon>
+        <PhysicBodies>
+          <PhysicBody>
+            <X>665</X>
+            <Y>354</Y>
+            <Width>80</Width>
+            <Height>51</Height>
+            <Elasticity>0</Elasticity>
+            <Friction>0</Friction>
+            <CollisionType>0</CollisionType>
+          </PhysicBody>
+          <PhysicBody>
+            <X>212</X>
+            <Y>513</Y>
+            <Width>119</Width>
+            <Height>52</Height>
+            <Elasticity>0</Elasticity>
+            <Friction>0</Friction>
+            <CollisionType>0</CollisionType>
+          </PhysicBody>
+          <PhysicBody>
+            <X>136</X>
+            <Y>459</Y>
+            <Width>58</Width>
+            <Height>124</Height>
+            <Elasticity>0</Elasticity>
+            <Friction>0</Friction>
+            <CollisionType>0</CollisionType>
+          </PhysicBody>
+          <PhysicBody>
+            <X>178</X>
+            <Y>475</Y>
+            <Width>33</Width>
+            <Height>51</Height>
+            <Elasticity>0</Elasticity>
+            <Friction>0</Friction>
+            <CollisionType>0</CollisionType>
+          </PhysicBody>
+          <PhysicBody>
+            <X>188</X>
+            <Y>495</Y>
+            <Width>41</Width>
+            <Height>40</Height>
+            <Elasticity>0</Elasticity>
+            <Friction>0</Friction>
+            <CollisionType>0</CollisionType>
+          </PhysicBody>
+        </PhysicBodies>
       </Layer>
       <Layer>
-        <IsItemLocked>false</IsItemLocked>
+        <IsItemLocked>true</IsItemLocked>
         <IsItemVisible>true</IsItemVisible>
         <Name>Middle Background</Name>
         <GameSprites>
@@ -1685,7 +1734,7 @@
             <ZIndex>3</ZIndex>
             <ID>19</ID>
             <ImageSourceStr>/Assets/Sprites/l1_middlerock1.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
+            <IsItemLocked>true</IsItemLocked>
             <Name>l1_middlerock1.png_19</Name>
             <Fill>None</Fill>
           </GameSprite>
@@ -1701,7 +1750,7 @@
             <ZIndex>2</ZIndex>
             <ID>14</ID>
             <ImageSourceStr>/Assets/Sprites/l1_middlecolonn.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
+            <IsItemLocked>true</IsItemLocked>
             <Name>l1_middlecolonn.png_14</Name>
             <Fill>None</Fill>
           </GameSprite>
@@ -1717,12 +1766,13 @@
             <ZIndex>1</ZIndex>
             <ID>15</ID>
             <ImageSourceStr>/Assets/Sprites/l1_middlerock0.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
+            <IsItemLocked>true</IsItemLocked>
             <Name>l1_middlerock0.png_15</Name>
             <Fill>None</Fill>
           </GameSprite>
         </GameSprites>
         <Icon>/Assets/UI/ico_layers.png</Icon>
+        <PhysicBodies />
       </Layer>
       <Layer>
         <IsItemLocked>true</IsItemLocked>
@@ -1747,9 +1797,20 @@
           </GameSprite>
         </GameSprites>
         <Icon>/Assets/UI/ico_layers.png</Icon>
+        <PhysicBodies />
       </Layer>
     </Layers>
     <NewSpriteId>46</NewSpriteId>
     <Width>960</Width>
+    <PhysicConfig>
+      <Gravity>
+        <X>0</X>
+        <Y>0</Y>
+      </Gravity>
+      <Iteration>0</Iteration>
+      <SleepTimeThreshold>0</SleepTimeThreshold>
+      <CollisionSlop>0</CollisionSlop>
+      <DebugMode>false</DebugMode>
+    </PhysicConfig>
   </Scene>
 </Level>
