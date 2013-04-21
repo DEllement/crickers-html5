@@ -9,6 +9,9 @@ var CrickerActor = cc.PhysicsSprite.extend({
     selected: false,
     walkDirection: "",
     isWalking: false,
+    isFalling: false,
+    isTeleporting: false,
+    walkStep:0,
     ctor: function () {
         this._super();
 
@@ -40,7 +43,7 @@ var CrickerActor = cc.PhysicsSprite.extend({
         this.runAction(cc.Sequence.create([actionMove, actionMoveDone]));  */
         //this.getBody().setPos( new cc.p(x-1, this.getPositionY()) );
         this.isWalking = true;
-        this.walkStep = this.getBoundingBox().width;
+        this.walkStep += this.getBoundingBox().width;
     },
     walkRight: function () {
 
@@ -54,46 +57,56 @@ var CrickerActor = cc.PhysicsSprite.extend({
         this.runAction(cc.Sequence.create([actionMove, actionMoveDone]));*/
        // this.getBody().setPos( new cc.p(x+1, this.getPositionY()) );
         this.isWalking = true;
-        this.walkStep = this.getBoundingBox().width;
+        this.walkStep += this.getBoundingBox().width;
 
     },
     update: function(delta){
 
-        var x = Math.round(this.getPositionX());
+        if(this.isTeleporting)
+            return;
 
-        if(this.isWalking && this.walkStep > 0){
+        var x = Math.round(this.getPositionX());
+        var y = Math.round(this.getPositionY());
+
+        this.isFalling = this.lastY != y && Math.max(this.lastY, y)-Math.min(this.lastY, y) > 2;
+
+        if( this.isWalking ){
             if(this.walkDirection == WALK_LEFT)
                 this.getBody().setPos( new cc.p(x-1, this.getPositionY()) );
             if(this.walkDirection == WALK_RIGHT)
                 this.getBody().setPos( new cc.p(x+1, this.getPositionY()) );
 
-            this.walkStep--;
+            if(!this.isFalling){
 
-            if(this.walkStep == 0){
+                //Detect if he is obstructed
+                if(x == this.lastX)
+                    this.xStuck++;
+                else
+                    this.xStuck = 0;
+
+                if(this.xStuck >= 3){
+                    this.isWalking = false;
+                    //TODO: Move back to grid X align position
+                }
+
                 this.lastX = this.getPositionX();
-                this.isWalking = false;
             }
+            this.lastY = y;
         }
-        if(!this.isWalking)
-            this.getBody().setPos(cc.p(this.lastX, this.getPositionY()));
-        else{
-             var minX = this.lastX - this.getBoundingBox().width;
-             var maxX = this.lastX + this.getBoundingBox().width;
 
-             if(this.walkDirection == WALK_LEFT && this.getPositionX() < minX )
-                this.getBody().setPos( new cc.p(Math.round(minX), this.getPositionY()) );
-             if(this.walkDirection == WALK_RIGHT && this.getPositionX() > maxX)
-                this.getBody().setPos( new cc.p(Math.round(maxX), this.getPositionY()) );
+        //Stabilise X Pos
+        if(!this.isWalking || this.isFalling)
+            this.getBody().setPos(cc.p(this.lastX, this.getPositionY()));
+
+        if( this.isWalking && Math.round(this.getPositionX()) == this.walkDestination ){
+            this.isWalking = false;
+            //TODO: Move back to grid X align position
         }
 
         //Constraints
-        var z = this.getRotation();
-        /*if(this.getRotation() < 0)
-            this.setRotation( Math.max(z, -10) );
-        else
-            this.setRotation( Math.min(z, 10) );*/
-
         this.setRotation(0);
+
+        this.setNodeDirty();
 
 
 

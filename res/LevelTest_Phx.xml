@@ -26,24 +26,72 @@
         <PhysicBodies />
       </Layer>
       <Layer>
-        <IsItemLocked>true</IsItemLocked>
+        <IsItemLocked>false</IsItemLocked>
         <IsItemVisible>true</IsItemVisible>
         <Name>Middle Foreground</Name>
         <GameSprites>
+          <GameSprite>
+            <X>775</X>
+            <Y>334</Y>
+            <Width>53</Width>
+            <Height>31</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_firstgrass0.png_96</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Foreground World 1</Category>
+            <ZIndex>85</ZIndex>
+            <ID>96</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_firstgrass0.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>710</X>
+            <Y>514</Y>
+            <Width>55</Width>
+            <Height>20</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_firstgrass1.png_95</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Foreground World 1</Category>
+            <ZIndex>84</ZIndex>
+            <ID>95</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_firstgrass1.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>317</X>
+            <Y>191</Y>
+            <Width>53</Width>
+            <Height>31</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_firstgrass0.png_66</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Foreground World 1</Category>
+            <ZIndex>83</ZIndex>
+            <ID>66</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_firstgrass0.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
           <GameSprite>
             <X>0</X>
             <Y>482.4</Y>
             <Width>96</Width>
             <Height>157</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_firstcolonn0.png_29</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
-            <ZIndex>41</ZIndex>
+            <ZIndex>82</ZIndex>
             <ID>29</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstcolonn0.png</ImageSourceStr>
-            <IsItemLocked>true</IsItemLocked>
-            <Name>l1_firstcolonn0.png_29</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -52,14 +100,14 @@
             <Width>95</Width>
             <Height>228</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_firstpalm0.png_28</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
-            <ZIndex>40</ZIndex>
+            <ZIndex>81</ZIndex>
             <ID>28</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstpalm0.png</ImageSourceStr>
-            <IsItemLocked>true</IsItemLocked>
-            <Name>l1_firstpalm0.png_28</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -68,14 +116,14 @@
             <Width>55</Width>
             <Height>20</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_firstgrass1.png_26</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
-            <ZIndex>39</ZIndex>
+            <ZIndex>80</ZIndex>
             <ID>26</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstgrass1.png</ImageSourceStr>
-            <IsItemLocked>true</IsItemLocked>
-            <Name>l1_firstgrass1.png_26</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -84,14 +132,14 @@
             <Width>55</Width>
             <Height>20</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_firstgrass1.png_18</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
-            <ZIndex>38</ZIndex>
+            <ZIndex>79</ZIndex>
             <ID>18</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstgrass1.png</ImageSourceStr>
-            <IsItemLocked>true</IsItemLocked>
-            <Name>l1_firstgrass1.png_18</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -100,14 +148,14 @@
             <Width>53</Width>
             <Height>31</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_firstgrass0.png_16</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
-            <ZIndex>37</ZIndex>
+            <ZIndex>78</ZIndex>
             <ID>16</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstgrass0.png</ImageSourceStr>
-            <IsItemLocked>true</IsItemLocked>
-            <Name>l1_firstgrass0.png_16</Name>
             <Fill>None</Fill>
           </GameSprite>
         </GameSprites>
@@ -119,20 +167,1372 @@
         <IsItemVisible>true</IsItemVisible>
         <Name>Playground</Name>
         <GameSprites>
+          <GameSprite>
+            <X>374</X>
+            <Y>470</Y>
+            <Width>47</Width>
+            <Height>44</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>boxB</Name>
+            <AssetType>INTERACTIVE_SPRITE</AssetType>
+            <AssetTypeInt>3</AssetTypeInt>
+            <Category>Interactive Items</Category>
+            <ZIndex>77</ZIndex>
+            <ID>98</ID>
+            <ImageSourceStr>/Assets/Sprites/box.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>636</X>
+            <Y>311</Y>
+            <Width>47</Width>
+            <Height>44</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>boxA</Name>
+            <AssetType>INTERACTIVE_SPRITE</AssetType>
+            <AssetTypeInt>3</AssetTypeInt>
+            <Category>Interactive Items</Category>
+            <ZIndex>77</ZIndex>
+            <ID>97</ID>
+            <ImageSourceStr>/Assets/Sprites/box.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>402</X>
+            <Y>207</Y>
+            <Width>20</Width>
+            <Height>25</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r0.png_94</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>76</ZIndex>
+            <ID>94</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r0.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>706</X>
+            <Y>422</Y>
+            <Width>20</Width>
+            <Height>25</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r0.png_93</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>75</ZIndex>
+            <ID>93</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r0.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>737</X>
+            <Y>526</Y>
+            <Width>20</Width>
+            <Height>25</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r0.png_92</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>74</ZIndex>
+            <ID>92</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r0.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>739</X>
+            <Y>508</Y>
+            <Width>40</Width>
+            <Height>20</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_91</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>73</ZIndex>
+            <ID>91</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>712</X>
+            <Y>502</Y>
+            <Width>11</Width>
+            <Height>11</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r2.png_90</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>72</ZIndex>
+            <ID>90</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r2.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>744</X>
+            <Y>423</Y>
+            <Width>11</Width>
+            <Height>11</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r2.png_89</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>71</ZIndex>
+            <ID>89</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r2.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>725</X>
+            <Y>422</Y>
+            <Width>20</Width>
+            <Height>21</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_88</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>70</ZIndex>
+            <ID>88</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>719</X>
+            <Y>507</Y>
+            <Width>20</Width>
+            <Height>21</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_87</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>69</ZIndex>
+            <ID>87</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>719</X>
+            <Y>488</Y>
+            <Width>20</Width>
+            <Height>21</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_86</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>68</ZIndex>
+            <ID>86</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>623</X>
+            <Y>512</Y>
+            <Width>38</Width>
+            <Height>35</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r8.png_85</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>67</ZIndex>
+            <ID>85</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r8.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>801</X>
+            <Y>370</Y>
+            <Width>20</Width>
+            <Height>21</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_74</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>66</ZIndex>
+            <ID>74</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>782</X>
+            <Y>370</Y>
+            <Width>20</Width>
+            <Height>21</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_73</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>65</ZIndex>
+            <ID>73</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>764</X>
+            <Y>370</Y>
+            <Width>20</Width>
+            <Height>21</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_72</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>64</ZIndex>
+            <ID>72</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>745</X>
+            <Y>370</Y>
+            <Width>20</Width>
+            <Height>21</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_71</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>63</ZIndex>
+            <ID>71</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>745</X>
+            <Y>353</Y>
+            <Width>40</Width>
+            <Height>20</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_67_68</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>62</ZIndex>
+            <ID>68</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>781</X>
+            <Y>353</Y>
+            <Width>40</Width>
+            <Height>20</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_67</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>61</ZIndex>
+            <ID>67</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>302</X>
+            <Y>210</Y>
+            <Width>38</Width>
+            <Height>35</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r8.png_64</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>60</ZIndex>
+            <ID>64</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r8.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>374</X>
+            <Y>228</Y>
+            <Width>28</Width>
+            <Height>12</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r7.png_63</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>59</ZIndex>
+            <ID>63</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r7.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>510</X>
+            <Y>530</Y>
+            <Width>20</Width>
+            <Height>25</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r0.png_62</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>58</ZIndex>
+            <ID>62</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r0.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>637</X>
+            <Y>355</Y>
+            <Width>38</Width>
+            <Height>35</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r8.png_61</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>57</ZIndex>
+            <ID>61</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r8.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>364</X>
+            <Y>210</Y>
+            <Width>40</Width>
+            <Height>20</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_7_60</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>56</ZIndex>
+            <ID>60</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>325</X>
+            <Y>210</Y>
+            <Width>40</Width>
+            <Height>20</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_7_59</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>55</ZIndex>
+            <ID>59</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>757</X>
+            <Y>259</Y>
+            <Width>66</Width>
+            <Height>97</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>portalC</Name>
+            <AssetType>INTERACTIVE_SPRITE</AssetType>
+            <AssetTypeInt>3</AssetTypeInt>
+            <Category>Interactive Items</Category>
+            <ZIndex>54</ZIndex>
+            <ID>58</ID>
+            <ImageSourceStr>/Assets/Sprites/trporter.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>463</X>
+            <Y>417</Y>
+            <Width>66</Width>
+            <Height>97</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>portalA</Name>
+            <AssetType>INTERACTIVE_SPRITE</AssetType>
+            <AssetTypeInt>3</AssetTypeInt>
+            <Category>Interactive Items</Category>
+            <ZIndex>53</ZIndex>
+            <ID>57</ID>
+            <ImageSourceStr>/Assets/Sprites/trporter.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>451</X>
+            <Y>513</Y>
+            <Width>40</Width>
+            <Height>20</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_7_54</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>52</ZIndex>
+            <ID>54</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>412</X>
+            <Y>513</Y>
+            <Width>40</Width>
+            <Height>20</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_7_53</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>51</ZIndex>
+            <ID>53</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>372</X>
+            <Y>513</Y>
+            <Width>40</Width>
+            <Height>20</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_7_52</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>50</ZIndex>
+            <ID>52</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>332</X>
+            <Y>514</Y>
+            <Width>40</Width>
+            <Height>20</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_7_51</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>49</ZIndex>
+            <ID>51</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>270.59999999999985</X>
+            <Y>512.20000000000027</Y>
+            <Width>40</Width>
+            <Height>20</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_7_50</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Rock World 1</Category>
+            <ZIndex>48</ZIndex>
+            <ID>50</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>339</X>
+            <Y>115</Y>
+            <Width>66</Width>
+            <Height>97</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>portalB</Name>
+            <AssetType>INTERACTIVE_SPRITE</AssetType>
+            <AssetTypeInt>3</AssetTypeInt>
+            <Category>Interactive Items</Category>
+            <ZIndex>47</ZIndex>
+            <ID>49</ID>
+            <ImageSourceStr>/Assets/Sprites/trporter.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>660</X>
-            <Y>243</Y>
+            <X>705</X>
+            <Y>309</Y>
+            <Width>50</Width>
+            <Height>50</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_48</Name>
+            <AssetType>ACTOR_SPRITE</AssetType>
+            <AssetTypeInt>2</AssetTypeInt>
+            <Category>Crickers</Category>
+            <ZIndex>46</ZIndex>
+            <ID>48</ID>
+            <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <Fill>None</Fill>
+            <Animations>
+              <Animation>
+                <AnimationType>WALKING_LEFT</AnimationType>
+                <Name>Walking Toward Left</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>10</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>WALKING_RIGHT</AnimationType>
+                <Name>Walking Toward Right</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>11</StartIndex>
+                <EndIndex>33</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>FALLING</AnimationType>
+                <Name>Falling Down</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>TALKING</AnimationType>
+                <Name>Talking</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>JUMPING</AnimationType>
+                <Name>Jumping</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>SLEEPING</AnimationType>
+                <Name>Sleeping</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>IDLE</AnimationType>
+                <Name>Waiting</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>33</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+            </Animations>
+            <IsMovable>true</IsMovable>
+            <IsSelectable>true</IsSelectable>
+            <Speachs />
+          </GameSprite>
+          <GameSprite xsi:type="ActorSprite">
+            <X>278</X>
+            <Y>469</Y>
+            <Width>50</Width>
+            <Height>50</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_47</Name>
+            <AssetType>ACTOR_SPRITE</AssetType>
+            <AssetTypeInt>2</AssetTypeInt>
+            <Category>Crickers</Category>
+            <ZIndex>45</ZIndex>
+            <ID>47</ID>
+            <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <Fill>None</Fill>
+            <Animations>
+              <Animation>
+                <AnimationType>WALKING_LEFT</AnimationType>
+                <Name>Walking Toward Left</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>10</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>WALKING_RIGHT</AnimationType>
+                <Name>Walking Toward Right</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>11</StartIndex>
+                <EndIndex>33</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>FALLING</AnimationType>
+                <Name>Falling Down</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>TALKING</AnimationType>
+                <Name>Talking</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>JUMPING</AnimationType>
+                <Name>Jumping</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>SLEEPING</AnimationType>
+                <Name>Sleeping</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>IDLE</AnimationType>
+                <Name>Waiting</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>33</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+            </Animations>
+            <IsMovable>true</IsMovable>
+            <IsSelectable>true</IsSelectable>
+            <Speachs />
+          </GameSprite>
+          <GameSprite xsi:type="ActorSprite">
+            <X>131</X>
+            <Y>396</Y>
             <Width>69</Width>
             <Height>68</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>groundT3_46</Name>
+            <AssetType>ACTOR_SPRITE</AssetType>
+            <AssetTypeInt>2</AssetTypeInt>
+            <Category>Crickers</Category>
+            <ZIndex>44</ZIndex>
+            <ID>46</ID>
+            <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <Fill>None</Fill>
+            <Animations>
+              <Animation>
+                <AnimationType>WALKING_LEFT</AnimationType>
+                <Name>Walking Toward Left</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>10</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>WALKING_RIGHT</AnimationType>
+                <Name>Walking Toward Right</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>11</StartIndex>
+                <EndIndex>33</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>FALLING</AnimationType>
+                <Name>Falling Down</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>TALKING</AnimationType>
+                <Name>Talking</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>JUMPING</AnimationType>
+                <Name>Jumping</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>SLEEPING</AnimationType>
+                <Name>Sleeping</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>IDLE</AnimationType>
+                <Name>Waiting</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>33</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+            </Animations>
+            <IsMovable>true</IsMovable>
+            <IsSelectable>true</IsSelectable>
+            <Speachs />
+          </GameSprite>
+          <GameSprite xsi:type="ActorSprite">
+            <X>298</X>
+            <Y>128</Y>
+            <Width>50</Width>
+            <Height>50</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_45</Name>
+            <AssetType>ACTOR_SPRITE</AssetType>
+            <AssetTypeInt>2</AssetTypeInt>
+            <Category>Crickers</Category>
+            <ZIndex>43</ZIndex>
+            <ID>45</ID>
+            <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <Fill>None</Fill>
+            <Animations>
+              <Animation>
+                <AnimationType>WALKING_LEFT</AnimationType>
+                <Name>Walking Toward Left</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>10</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>WALKING_RIGHT</AnimationType>
+                <Name>Walking Toward Right</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>11</StartIndex>
+                <EndIndex>33</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>FALLING</AnimationType>
+                <Name>Falling Down</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>TALKING</AnimationType>
+                <Name>Talking</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>JUMPING</AnimationType>
+                <Name>Jumping</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>SLEEPING</AnimationType>
+                <Name>Sleeping</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>IDLE</AnimationType>
+                <Name>Waiting</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>33</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+            </Animations>
+            <IsMovable>true</IsMovable>
+            <IsSelectable>true</IsSelectable>
+            <Speachs />
+          </GameSprite>
+          <GameSprite xsi:type="ActorSprite">
+            <X>228</X>
+            <Y>334.60000000000014</Y>
+            <Width>50</Width>
+            <Height>50</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_44</Name>
+            <AssetType>ACTOR_SPRITE</AssetType>
+            <AssetTypeInt>2</AssetTypeInt>
+            <Category>Crickers</Category>
+            <ZIndex>42</ZIndex>
+            <ID>44</ID>
+            <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <Fill>None</Fill>
+            <Animations>
+              <Animation>
+                <AnimationType>WALKING_LEFT</AnimationType>
+                <Name>Walking Toward Left</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>10</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>WALKING_RIGHT</AnimationType>
+                <Name>Walking Toward Right</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>11</StartIndex>
+                <EndIndex>33</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>FALLING</AnimationType>
+                <Name>Falling Down</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>TALKING</AnimationType>
+                <Name>Talking</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>JUMPING</AnimationType>
+                <Name>Jumping</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>SLEEPING</AnimationType>
+                <Name>Sleeping</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>IDLE</AnimationType>
+                <Name>Waiting</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>33</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+            </Animations>
+            <IsMovable>true</IsMovable>
+            <IsSelectable>true</IsSelectable>
+            <Speachs />
+          </GameSprite>
+          <GameSprite xsi:type="ActorSprite">
+            <X>229.00000000000011</X>
+            <Y>368.40000000000009</Y>
+            <Width>50</Width>
+            <Height>50</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_43</Name>
+            <AssetType>ACTOR_SPRITE</AssetType>
+            <AssetTypeInt>2</AssetTypeInt>
+            <Category>Crickers</Category>
+            <ZIndex>41</ZIndex>
+            <ID>43</ID>
+            <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <Fill>None</Fill>
+            <Animations>
+              <Animation>
+                <AnimationType>WALKING_LEFT</AnimationType>
+                <Name>Walking Toward Left</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>10</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>WALKING_RIGHT</AnimationType>
+                <Name>Walking Toward Right</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>11</StartIndex>
+                <EndIndex>33</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>FALLING</AnimationType>
+                <Name>Falling Down</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>TALKING</AnimationType>
+                <Name>Talking</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>JUMPING</AnimationType>
+                <Name>Jumping</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>SLEEPING</AnimationType>
+                <Name>Sleeping</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>IDLE</AnimationType>
+                <Name>Waiting</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>33</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+            </Animations>
+            <IsMovable>true</IsMovable>
+            <IsSelectable>true</IsSelectable>
+            <Speachs />
+          </GameSprite>
+          <GameSprite xsi:type="ActorSprite">
+            <X>228.79999999999984</X>
+            <Y>401.39999999999986</Y>
+            <Width>50</Width>
+            <Height>50</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_42</Name>
+            <AssetType>ACTOR_SPRITE</AssetType>
+            <AssetTypeInt>2</AssetTypeInt>
+            <Category>Crickers</Category>
+            <ZIndex>40</ZIndex>
+            <ID>42</ID>
+            <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <Fill>None</Fill>
+            <Animations>
+              <Animation>
+                <AnimationType>WALKING_LEFT</AnimationType>
+                <Name>Walking Toward Left</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>10</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>WALKING_RIGHT</AnimationType>
+                <Name>Walking Toward Right</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>11</StartIndex>
+                <EndIndex>33</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>FALLING</AnimationType>
+                <Name>Falling Down</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>TALKING</AnimationType>
+                <Name>Talking</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>JUMPING</AnimationType>
+                <Name>Jumping</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>SLEEPING</AnimationType>
+                <Name>Sleeping</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>IDLE</AnimationType>
+                <Name>Waiting</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>33</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+            </Animations>
+            <IsMovable>true</IsMovable>
+            <IsSelectable>true</IsSelectable>
+            <Speachs />
+          </GameSprite>
+          <GameSprite xsi:type="ActorSprite">
+            <X>230</X>
+            <Y>433.19999999999982</Y>
+            <Width>50</Width>
+            <Height>50</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_41</Name>
+            <AssetType>ACTOR_SPRITE</AssetType>
+            <AssetTypeInt>2</AssetTypeInt>
+            <Category>Crickers</Category>
+            <ZIndex>39</ZIndex>
+            <ID>41</ID>
+            <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <Fill>None</Fill>
+            <Animations>
+              <Animation>
+                <AnimationType>WALKING_LEFT</AnimationType>
+                <Name>Walking Toward Left</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>10</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>WALKING_RIGHT</AnimationType>
+                <Name>Walking Toward Right</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>11</StartIndex>
+                <EndIndex>33</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>FALLING</AnimationType>
+                <Name>Falling Down</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>TALKING</AnimationType>
+                <Name>Talking</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>JUMPING</AnimationType>
+                <Name>Jumping</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>SLEEPING</AnimationType>
+                <Name>Sleeping</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>IDLE</AnimationType>
+                <Name>Waiting</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>33</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+            </Animations>
+            <IsMovable>true</IsMovable>
+            <IsSelectable>true</IsSelectable>
+            <Speachs />
+          </GameSprite>
+          <GameSprite xsi:type="ActorSprite">
+            <X>229.00000000000011</X>
+            <Y>465.80000000000007</Y>
+            <Width>50</Width>
+            <Height>50</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>groundT2</Name>
+            <AssetType>ACTOR_SPRITE</AssetType>
+            <AssetTypeInt>2</AssetTypeInt>
+            <Category>Crickers</Category>
+            <ZIndex>38</ZIndex>
+            <ID>40</ID>
+            <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <Fill>None</Fill>
+            <Animations>
+              <Animation>
+                <AnimationType>WALKING_LEFT</AnimationType>
+                <Name>Walking Toward Left</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>10</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>WALKING_RIGHT</AnimationType>
+                <Name>Walking Toward Right</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>11</StartIndex>
+                <EndIndex>33</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>FALLING</AnimationType>
+                <Name>Falling Down</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>TALKING</AnimationType>
+                <Name>Talking</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>JUMPING</AnimationType>
+                <Name>Jumping</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>SLEEPING</AnimationType>
+                <Name>Sleeping</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>IDLE</AnimationType>
+                <Name>Waiting</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>33</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+            </Animations>
+            <IsMovable>true</IsMovable>
+            <IsSelectable>true</IsSelectable>
+            <Speachs />
+          </GameSprite>
+          <GameSprite xsi:type="ActorSprite">
+            <X>229</X>
+            <Y>300</Y>
+            <Width>50</Width>
+            <Height>50</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_39</Name>
+            <AssetType>ACTOR_SPRITE</AssetType>
+            <AssetTypeInt>2</AssetTypeInt>
+            <Category>Crickers</Category>
+            <ZIndex>37</ZIndex>
+            <ID>39</ID>
+            <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <Fill>None</Fill>
+            <Animations>
+              <Animation>
+                <AnimationType>WALKING_LEFT</AnimationType>
+                <Name>Walking Toward Left</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>10</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>WALKING_RIGHT</AnimationType>
+                <Name>Walking Toward Right</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>11</StartIndex>
+                <EndIndex>33</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>FALLING</AnimationType>
+                <Name>Falling Down</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>TALKING</AnimationType>
+                <Name>Talking</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>JUMPING</AnimationType>
+                <Name>Jumping</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>SLEEPING</AnimationType>
+                <Name>Sleeping</Name>
+                <SpriteSheetID>0</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>0</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>false</LoopAnimation>
+              </Animation>
+              <Animation>
+                <AnimationType>IDLE</AnimationType>
+                <Name>Waiting</Name>
+                <SpriteSheetID>2</SpriteSheetID>
+                <StartIndex>0</StartIndex>
+                <EndIndex>33</EndIndex>
+                <FrameRate>30</FrameRate>
+                <LoopAnimation>true</LoopAnimation>
+              </Animation>
+            </Animations>
+            <IsMovable>true</IsMovable>
+            <IsSelectable>true</IsSelectable>
+            <Speachs />
+          </GameSprite>
+          <GameSprite xsi:type="ActorSprite">
+            <X>280.5999999999998</X>
+            <Y>296</Y>
+            <Width>50</Width>
+            <Height>50</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_38</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>36</ZIndex>
-            <ID>46</ID>
+            <ID>38</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>groundT3_46</Name>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -204,19 +1604,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>250.19999999999982</X>
-            <Y>303.99999999999989</Y>
+            <X>279.5999999999998</X>
+            <Y>329.4</Y>
             <Width>50</Width>
             <Height>50</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_37</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>35</ZIndex>
-            <ID>45</ID>
+            <ID>37</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_45</Name>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -288,19 +1688,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>249</X>
-            <Y>335.60000000000014</Y>
+            <X>279.5999999999998</X>
+            <Y>363.19999999999993</Y>
             <Width>50</Width>
             <Height>50</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_36</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>34</ZIndex>
-            <ID>44</ID>
+            <ID>36</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_44</Name>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -372,19 +1772,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>250.00000000000011</X>
-            <Y>369.40000000000009</Y>
+            <X>279.79999999999961</X>
+            <Y>396.4</Y>
             <Width>50</Width>
             <Height>50</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_35</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>33</ZIndex>
-            <ID>43</ID>
+            <ID>35</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_43</Name>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -456,19 +1856,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>249.79999999999984</X>
-            <Y>402.39999999999986</Y>
+            <X>279</X>
+            <Y>431.59999999999991</Y>
             <Width>50</Width>
             <Height>50</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>groundT1</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>32</ZIndex>
-            <ID>42</ID>
+            <ID>34</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_42</Name>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -540,19 +1940,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>251</X>
-            <Y>434.19999999999982</Y>
+            <X>297</X>
+            <Y>165</Y>
             <Width>50</Width>
             <Height>50</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>31</ZIndex>
-            <ID>41</ID>
+            <ID>32</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_41</Name>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -624,691 +2024,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>250.00000000000011</X>
-            <Y>466.80000000000007</Y>
-            <Width>50</Width>
-            <Height>50</Height>
+            <X>134</X>
+            <Y>342</Y>
+            <Width>69</Width>
+            <Height>68</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>groundT3</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>30</ZIndex>
-            <ID>40</ID>
-            <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>groundT2</Name>
-            <Fill>None</Fill>
-            <Animations>
-              <Animation>
-                <AnimationType>WALKING_LEFT</AnimationType>
-                <Name>Walking Toward Left</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>10</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>WALKING_RIGHT</AnimationType>
-                <Name>Walking Toward Right</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>11</StartIndex>
-                <EndIndex>33</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>FALLING</AnimationType>
-                <Name>Falling Down</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>TALKING</AnimationType>
-                <Name>Talking</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>JUMPING</AnimationType>
-                <Name>Jumping</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>SLEEPING</AnimationType>
-                <Name>Sleeping</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>IDLE</AnimationType>
-                <Name>Waiting</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>33</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-            </Animations>
-            <IsMovable>true</IsMovable>
-            <IsSelectable>true</IsSelectable>
-            <Speachs />
-          </GameSprite>
-          <GameSprite xsi:type="ActorSprite">
-            <X>130.39999999999964</X>
-            <Y>244</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <AssetType>ACTOR_SPRITE</AssetType>
-            <AssetTypeInt>2</AssetTypeInt>
-            <Category>Crickers</Category>
-            <ZIndex>29</ZIndex>
-            <ID>39</ID>
-            <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_39</Name>
-            <Fill>None</Fill>
-            <Animations>
-              <Animation>
-                <AnimationType>WALKING_LEFT</AnimationType>
-                <Name>Walking Toward Left</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>10</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>WALKING_RIGHT</AnimationType>
-                <Name>Walking Toward Right</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>11</StartIndex>
-                <EndIndex>33</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>FALLING</AnimationType>
-                <Name>Falling Down</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>TALKING</AnimationType>
-                <Name>Talking</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>JUMPING</AnimationType>
-                <Name>Jumping</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>SLEEPING</AnimationType>
-                <Name>Sleeping</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>IDLE</AnimationType>
-                <Name>Waiting</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>33</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-            </Animations>
-            <IsMovable>true</IsMovable>
-            <IsSelectable>true</IsSelectable>
-            <Speachs />
-          </GameSprite>
-          <GameSprite xsi:type="ActorSprite">
-            <X>130.5999999999998</X>
-            <Y>276.79999999999984</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <AssetType>ACTOR_SPRITE</AssetType>
-            <AssetTypeInt>2</AssetTypeInt>
-            <Category>Crickers</Category>
-            <ZIndex>28</ZIndex>
-            <ID>38</ID>
-            <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_38</Name>
-            <Fill>None</Fill>
-            <Animations>
-              <Animation>
-                <AnimationType>WALKING_LEFT</AnimationType>
-                <Name>Walking Toward Left</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>10</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>WALKING_RIGHT</AnimationType>
-                <Name>Walking Toward Right</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>11</StartIndex>
-                <EndIndex>33</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>FALLING</AnimationType>
-                <Name>Falling Down</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>TALKING</AnimationType>
-                <Name>Talking</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>JUMPING</AnimationType>
-                <Name>Jumping</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>SLEEPING</AnimationType>
-                <Name>Sleeping</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>IDLE</AnimationType>
-                <Name>Waiting</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>33</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-            </Animations>
-            <IsMovable>true</IsMovable>
-            <IsSelectable>true</IsSelectable>
-            <Speachs />
-          </GameSprite>
-          <GameSprite xsi:type="ActorSprite">
-            <X>129.5999999999998</X>
-            <Y>310.19999999999982</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <AssetType>ACTOR_SPRITE</AssetType>
-            <AssetTypeInt>2</AssetTypeInt>
-            <Category>Crickers</Category>
-            <ZIndex>27</ZIndex>
-            <ID>37</ID>
-            <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_37</Name>
-            <Fill>None</Fill>
-            <Animations>
-              <Animation>
-                <AnimationType>WALKING_LEFT</AnimationType>
-                <Name>Walking Toward Left</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>10</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>WALKING_RIGHT</AnimationType>
-                <Name>Walking Toward Right</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>11</StartIndex>
-                <EndIndex>33</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>FALLING</AnimationType>
-                <Name>Falling Down</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>TALKING</AnimationType>
-                <Name>Talking</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>JUMPING</AnimationType>
-                <Name>Jumping</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>SLEEPING</AnimationType>
-                <Name>Sleeping</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>IDLE</AnimationType>
-                <Name>Waiting</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>33</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-            </Animations>
-            <IsMovable>true</IsMovable>
-            <IsSelectable>true</IsSelectable>
-            <Speachs />
-          </GameSprite>
-          <GameSprite xsi:type="ActorSprite">
-            <X>129.5999999999998</X>
-            <Y>343.99999999999977</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <AssetType>ACTOR_SPRITE</AssetType>
-            <AssetTypeInt>2</AssetTypeInt>
-            <Category>Crickers</Category>
-            <ZIndex>26</ZIndex>
-            <ID>36</ID>
-            <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_36</Name>
-            <Fill>None</Fill>
-            <Animations>
-              <Animation>
-                <AnimationType>WALKING_LEFT</AnimationType>
-                <Name>Walking Toward Left</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>10</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>WALKING_RIGHT</AnimationType>
-                <Name>Walking Toward Right</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>11</StartIndex>
-                <EndIndex>33</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>FALLING</AnimationType>
-                <Name>Falling Down</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>TALKING</AnimationType>
-                <Name>Talking</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>JUMPING</AnimationType>
-                <Name>Jumping</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>SLEEPING</AnimationType>
-                <Name>Sleeping</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>IDLE</AnimationType>
-                <Name>Waiting</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>33</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-            </Animations>
-            <IsMovable>true</IsMovable>
-            <IsSelectable>true</IsSelectable>
-            <Speachs />
-          </GameSprite>
-          <GameSprite xsi:type="ActorSprite">
-            <X>129.79999999999961</X>
-            <Y>377.19999999999982</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <AssetType>ACTOR_SPRITE</AssetType>
-            <AssetTypeInt>2</AssetTypeInt>
-            <Category>Crickers</Category>
-            <ZIndex>25</ZIndex>
-            <ID>35</ID>
-            <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_35</Name>
-            <Fill>None</Fill>
-            <Animations>
-              <Animation>
-                <AnimationType>WALKING_LEFT</AnimationType>
-                <Name>Walking Toward Left</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>10</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>WALKING_RIGHT</AnimationType>
-                <Name>Walking Toward Right</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>11</StartIndex>
-                <EndIndex>33</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>FALLING</AnimationType>
-                <Name>Falling Down</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>TALKING</AnimationType>
-                <Name>Talking</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>JUMPING</AnimationType>
-                <Name>Jumping</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>SLEEPING</AnimationType>
-                <Name>Sleeping</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>IDLE</AnimationType>
-                <Name>Waiting</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>33</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-            </Animations>
-            <IsMovable>true</IsMovable>
-            <IsSelectable>true</IsSelectable>
-            <Speachs />
-          </GameSprite>
-          <GameSprite xsi:type="ActorSprite">
-            <X>129</X>
-            <Y>412.39999999999975</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <AssetType>ACTOR_SPRITE</AssetType>
-            <AssetTypeInt>2</AssetTypeInt>
-            <Category>Crickers</Category>
-            <ZIndex>24</ZIndex>
-            <ID>34</ID>
-            <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>groundT1</Name>
-            <Fill>None</Fill>
-            <Animations>
-              <Animation>
-                <AnimationType>WALKING_LEFT</AnimationType>
-                <Name>Walking Toward Left</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>10</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>WALKING_RIGHT</AnimationType>
-                <Name>Walking Toward Right</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>11</StartIndex>
-                <EndIndex>33</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>FALLING</AnimationType>
-                <Name>Falling Down</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>TALKING</AnimationType>
-                <Name>Talking</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>JUMPING</AnimationType>
-                <Name>Jumping</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>SLEEPING</AnimationType>
-                <Name>Sleeping</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>IDLE</AnimationType>
-                <Name>Waiting</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>33</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-            </Animations>
-            <IsMovable>true</IsMovable>
-            <IsSelectable>true</IsSelectable>
-            <Speachs />
-          </GameSprite>
-          <GameSprite xsi:type="ActorSprite">
-            <X>251</X>
-            <Y>270</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <AssetType>ACTOR_SPRITE</AssetType>
-            <AssetTypeInt>2</AssetTypeInt>
-            <Category>Crickers</Category>
-            <ZIndex>23</ZIndex>
-            <ID>32</ID>
-            <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32</Name>
-            <Fill>None</Fill>
-            <Animations>
-              <Animation>
-                <AnimationType>WALKING_LEFT</AnimationType>
-                <Name>Walking Toward Left</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>10</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>WALKING_RIGHT</AnimationType>
-                <Name>Walking Toward Right</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>11</StartIndex>
-                <EndIndex>33</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>FALLING</AnimationType>
-                <Name>Falling Down</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>TALKING</AnimationType>
-                <Name>Talking</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>JUMPING</AnimationType>
-                <Name>Jumping</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>SLEEPING</AnimationType>
-                <Name>Sleeping</Name>
-                <SpriteSheetID>0</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>0</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>false</LoopAnimation>
-              </Animation>
-              <Animation>
-                <AnimationType>IDLE</AnimationType>
-                <Name>Waiting</Name>
-                <SpriteSheetID>2</SpriteSheetID>
-                <StartIndex>0</StartIndex>
-                <EndIndex>33</EndIndex>
-                <FrameRate>30</FrameRate>
-                <LoopAnimation>true</LoopAnimation>
-              </Animation>
-            </Animations>
-            <IsMovable>true</IsMovable>
-            <IsSelectable>true</IsSelectable>
-            <Speachs />
-          </GameSprite>
-          <GameSprite xsi:type="ActorSprite">
-            <X>657</X>
-            <Y>293</Y>
-            <Width>69</Width>
-            <Height>68</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <AssetType>ACTOR_SPRITE</AssetType>
-            <AssetTypeInt>2</AssetTypeInt>
-            <Category>Crickers</Category>
-            <ZIndex>22</ZIndex>
             <ID>31</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>groundT3</Name>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -1385,14 +2113,14 @@
             <Width>20</Width>
             <Height>25</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r0.png_25</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>21</ZIndex>
+            <ZIndex>29</ZIndex>
             <ID>25</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r0.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r0.png_25</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -1401,14 +2129,14 @@
             <Width>24.000000000000114</Width>
             <Height>24.799999999999955</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_24</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>20</ZIndex>
+            <ZIndex>28</ZIndex>
             <ID>24</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r1.png_24</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -1417,14 +2145,14 @@
             <Width>38</Width>
             <Height>35</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r8.png_23</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>19</ZIndex>
+            <ZIndex>27</ZIndex>
             <ID>23</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r8.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r8.png_23</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -1433,14 +2161,14 @@
             <Width>16</Width>
             <Height>17</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r10.png_22</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>18</ZIndex>
+            <ZIndex>26</ZIndex>
             <ID>22</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r10.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r10.png_22</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -1449,14 +2177,14 @@
             <Width>40</Width>
             <Height>20</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_20_21</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>17</ZIndex>
+            <ZIndex>25</ZIndex>
             <ID>21</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r3.png_20_21</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -1465,14 +2193,14 @@
             <Width>40</Width>
             <Height>20</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_20</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>16</ZIndex>
+            <ZIndex>24</ZIndex>
             <ID>20</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r3.png_20</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -1481,14 +2209,14 @@
             <Width>16</Width>
             <Height>16</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r12.png_13</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>15</ZIndex>
+            <ZIndex>23</ZIndex>
             <ID>13</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r12.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r12.png_13</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -1497,14 +2225,14 @@
             <Width>20</Width>
             <Height>17</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r5.png_12</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>14</ZIndex>
+            <ZIndex>22</ZIndex>
             <ID>12</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r5.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r5.png_12</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -1513,14 +2241,14 @@
             <Width>20</Width>
             <Height>25</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r0.png_11</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>13</ZIndex>
+            <ZIndex>21</ZIndex>
             <ID>11</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r0.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r0.png_11</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -1529,14 +2257,14 @@
             <Width>28</Width>
             <Height>12</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r7.png_10</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>12</ZIndex>
+            <ZIndex>20</ZIndex>
             <ID>10</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r7.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r7.png_10</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -1545,14 +2273,14 @@
             <Width>38</Width>
             <Height>35</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r8.png_9</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>11</ZIndex>
+            <ZIndex>19</ZIndex>
             <ID>9</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r8.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r8.png_9</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -1561,30 +2289,30 @@
             <Width>40</Width>
             <Height>20</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_7_8</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>10</ZIndex>
+            <ZIndex>18</ZIndex>
             <ID>8</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r3.png_7_8</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>270.59999999999985</X>
-            <Y>512.20000000000027</Y>
+            <X>491</X>
+            <Y>513</Y>
             <Width>40</Width>
             <Height>20</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_7</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>9</ZIndex>
+            <ZIndex>17</ZIndex>
             <ID>7</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r3.png_7</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -1593,14 +2321,14 @@
             <Width>20</Width>
             <Height>21</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_3_6</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>8</ZIndex>
+            <ZIndex>16</ZIndex>
             <ID>6</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r1.png_3_6</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -1609,14 +2337,14 @@
             <Width>20</Width>
             <Height>21</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_3_5</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>7</ZIndex>
+            <ZIndex>15</ZIndex>
             <ID>5</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r1.png_3_5</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -1625,14 +2353,14 @@
             <Width>20</Width>
             <Height>21</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_3_4</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>6</ZIndex>
+            <ZIndex>14</ZIndex>
             <ID>4</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r1.png_3_4</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -1641,14 +2369,14 @@
             <Width>20</Width>
             <Height>21</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_3</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>5</ZIndex>
+            <ZIndex>13</ZIndex>
             <ID>3</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r1.png_3</Name>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -1657,23 +2385,23 @@
             <Width>20</Width>
             <Height>21</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_2</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>4</ZIndex>
+            <ZIndex>12</ZIndex>
             <ID>2</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r1.png_2</Name>
             <Fill>None</Fill>
           </GameSprite>
         </GameSprites>
         <Icon>/Assets/UI/ico_layers.png</Icon>
         <PhysicBodies>
           <PhysicBody>
-            <X>665</X>
+            <X>636</X>
             <Y>354</Y>
-            <Width>80</Width>
+            <Width>187</Width>
             <Height>51</Height>
             <Elasticity>0</Elasticity>
             <Friction>0</Friction>
@@ -1682,7 +2410,7 @@
           <PhysicBody>
             <X>212</X>
             <Y>513</Y>
-            <Width>119</Width>
+            <Width>320</Width>
             <Height>52</Height>
             <Elasticity>0</Elasticity>
             <Friction>0</Friction>
@@ -1698,7 +2426,7 @@
             <CollisionType>0</CollisionType>
           </PhysicBody>
           <PhysicBody>
-            <X>178</X>
+            <X>179</X>
             <Y>475</Y>
             <Width>33</Width>
             <Height>51</Height>
@@ -1715,6 +2443,24 @@
             <Friction>0</Friction>
             <CollisionType>0</CollisionType>
           </PhysicBody>
+          <PhysicBody>
+            <X>302</X>
+            <Y>209</Y>
+            <Width>120</Width>
+            <Height>54</Height>
+            <Elasticity>0</Elasticity>
+            <Friction>0</Friction>
+            <CollisionType>0</CollisionType>
+          </PhysicBody>
+          <PhysicBody>
+            <X>622</X>
+            <Y>512</Y>
+            <Width>39</Width>
+            <Height>39</Height>
+            <Elasticity>0</Elasticity>
+            <Friction>0</Friction>
+            <CollisionType>0</CollisionType>
+          </PhysicBody>
         </PhysicBodies>
       </Layer>
       <Layer>
@@ -1723,19 +2469,131 @@
         <Name>Middle Background</Name>
         <GameSprites>
           <GameSprite>
-            <X>666.40000000000009</X>
-            <Y>370.20000000000027</Y>
-            <Width>72</Width>
-            <Height>35</Height>
+            <X>639</X>
+            <Y>371</Y>
+            <Width>81</Width>
+            <Height>202</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middlecolonn.png_70</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Middleground World 1</Category>
-            <ZIndex>3</ZIndex>
-            <ID>19</ID>
+            <ZIndex>11</ZIndex>
+            <ID>70</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_middlecolonn.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>233</X>
+            <Y>569</Y>
+            <Width>86</Width>
+            <Height>52</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middlerock0.png_83</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Middleground World 1</Category>
+            <ZIndex>10</ZIndex>
+            <ID>83</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_middlerock0.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>675</X>
+            <Y>427</Y>
+            <Width>86</Width>
+            <Height>52</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middlerock0.png_82</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Middleground World 1</Category>
+            <ZIndex>9</ZIndex>
+            <ID>82</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_middlerock0.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>702</X>
+            <Y>382</Y>
+            <Width>86</Width>
+            <Height>52</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middlerock0.png_81</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Middleground World 1</Category>
+            <ZIndex>8</ZIndex>
+            <ID>81</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_middlerock0.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>243</X>
+            <Y>518</Y>
+            <Width>86</Width>
+            <Height>52</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middlerock0.png_15_55</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Middleground World 1</Category>
+            <ZIndex>7</ZIndex>
+            <ID>55</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_middlerock0.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>673</X>
+            <Y>380</Y>
+            <Width>72</Width>
+            <Height>35</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middlerock1.png_19_56_65</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Middleground World 1</Category>
+            <ZIndex>6</ZIndex>
+            <ID>65</ID>
             <ImageSourceStr>/Assets/Sprites/l1_middlerock1.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>330</X>
+            <Y>224</Y>
+            <Width>72</Width>
+            <Height>35</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middlerock1.png_19_56</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Middleground World 1</Category>
+            <ZIndex>5</ZIndex>
+            <ID>56</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_middlerock1.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>384</X>
+            <Y>525</Y>
+            <Width>72</Width>
+            <Height>35</Height>
+            <IsItemVisible>true</IsItemVisible>
             <IsItemLocked>true</IsItemLocked>
             <Name>l1_middlerock1.png_19</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Middleground World 1</Category>
+            <ZIndex>4</ZIndex>
+            <ID>19</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_middlerock1.png</ImageSourceStr>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
@@ -1744,30 +2602,46 @@
             <Width>81</Width>
             <Height>202</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middlecolonn.png_14</Name>
+            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetTypeInt>0</AssetTypeInt>
+            <Category>Middleground World 1</Category>
+            <ZIndex>3</ZIndex>
+            <ID>14</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_middlecolonn.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>437</X>
+            <Y>515</Y>
+            <Width>86</Width>
+            <Height>52</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middlerock0.png_15</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Middleground World 1</Category>
             <ZIndex>2</ZIndex>
-            <ID>14</ID>
-            <ImageSourceStr>/Assets/Sprites/l1_middlecolonn.png</ImageSourceStr>
-            <IsItemLocked>true</IsItemLocked>
-            <Name>l1_middlecolonn.png_14</Name>
+            <ID>15</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_middlerock0.png</ImageSourceStr>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>246.00000000000006</X>
-            <Y>512.80000000000018</Y>
-            <Width>86</Width>
-            <Height>52</Height>
+            <X>270</X>
+            <Y>395</Y>
+            <Width>480</Width>
+            <Height>208</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middleback.png_69</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Middleground World 1</Category>
             <ZIndex>1</ZIndex>
-            <ID>15</ID>
-            <ImageSourceStr>/Assets/Sprites/l1_middlerock0.png</ImageSourceStr>
-            <IsItemLocked>true</IsItemLocked>
-            <Name>l1_middlerock0.png_15</Name>
+            <ID>69</ID>
+            <ImageSourceStr>/Assets/Sprites/l1_middleback.png</ImageSourceStr>
             <Fill>None</Fill>
           </GameSprite>
         </GameSprites>
@@ -1785,14 +2659,14 @@
             <Width>960</Width>
             <Height>640</Height>
             <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_back.png_1</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Background World 1</Category>
             <ZIndex>0</ZIndex>
             <ID>1</ID>
             <ImageSourceStr>/Assets/Sprites/l1_back.png</ImageSourceStr>
-            <IsItemLocked>true</IsItemLocked>
-            <Name>l1_back.png_1</Name>
             <Fill>None</Fill>
           </GameSprite>
         </GameSprites>
@@ -1800,7 +2674,7 @@
         <PhysicBodies />
       </Layer>
     </Layers>
-    <NewSpriteId>46</NewSpriteId>
+    <NewSpriteId>98</NewSpriteId>
     <Width>960</Width>
     <PhysicConfig>
       <Gravity>

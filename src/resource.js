@@ -1,7 +1,6 @@
-var s_HelloWorld = "res/HelloWorld.png";
+/*var s_HelloWorld = "res/HelloWorld.png";
 var s_CloseNormal = "res/CloseNormal.png";
-var s_CloseSelected = "res/CloseSelected.png";
-var s_CloseSelected = "res/CloseSelected.png";
+var s_CloseSelected = "res/CloseSelected.png";*/
 var l1_back = "res/Assets/Sprites/l1_back.png";
 var l1_firstcolonn0 = "res/Assets/Sprites/l1_firstcolonn0.png";
 var l1_firstgrass0 = "res/Assets/Sprites/l1_firstgrass0.png";
@@ -26,12 +25,14 @@ var l1_r11 = "res/Assets/Sprites/l1_r11.png";
 var l1_r12 = "res/Assets/Sprites/l1_r12.png";
 var red0001 = "res/Assets/Sprites/red0001.png";
 var ss2 = "res/Assets/SpritesSheet/2.png";
+var trporter = "res/Assets/Sprites/trporter.png";
+var box = "res/Assets/Sprites/box.png";
 
 var g_ressources = [
     //image
-    {type:"image", src:s_HelloWorld},
+    /*{type:"image", src:s_HelloWorld},
     {type:"image", src:s_CloseNormal},
-    { type: "image", src: s_CloseSelected },
+    { type: "image", src: s_CloseSelected }, */
     { type: "image", src: l1_back },
     { type: "image", src: l1_firstcolonn0 },
     { type: "image", src: l1_firstgrass0 },
@@ -56,6 +57,8 @@ var g_ressources = [
     { type: "image", src: l1_r12 },
     { type: "image", src: red0001 },
     { type: "image", src: ss2 },
+    { type: "image", src: trporter },
+    { type: "image", src: box }
 
     //plist
 

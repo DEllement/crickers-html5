@@ -18,7 +18,6 @@ var PlaygroundLayer = cc.Layer.extend({
         this._super();
 
         this.setTouchEnabled(true);
-        //this.schedule(this.validateGravity, 1 / 30);
     },
     onTouchesBegan: function (touches, event) {
         this.touchtStartLocation = touches[0].getLocation();
@@ -33,10 +32,9 @@ var PlaygroundLayer = cc.Layer.extend({
     onTouchesEnded: function (touches, event) {
         var me = this;
         //SwipeTest
-        var isSwippingOver = false;
         var isSwipping = false;
+        var isSelection = false;
         var swipeDirection = null;
-
         var startX = this.touchtStartLocation.x;
         var endX = touches[0].getLocation().x;
         var distanceX = Math.max( startX, endX ) - Math.min(startX, endX);
@@ -45,8 +43,12 @@ var PlaygroundLayer = cc.Layer.extend({
             swipeDirection = startX < endX ? 'right' : 'left';
         }
 
+        //Check for Selection && Walking if swipping
         for (var i = 0; i < this.getChildrenCount() ; i++) {
             var cricker = this.getChildren()[i];
+
+            if( cricker.assetType != "ACTOR_SPRITE")
+                continue;
 
             var bb = cricker.getBoundingBoxToWorld();
             var rBB = cc.rect(bb.getX()+9, bb.getY()+11, bb.getWidth()-18, bb.getHeight()-17); //FIXME: get from the body instead...
@@ -66,7 +68,21 @@ var PlaygroundLayer = cc.Layer.extend({
 
                 cricker.select();
                 this.selectedCricker = cricker;
+                isSelection = true;
             }
+        }
+
+        //Check for point and click move
+        if(!isSwipping && !isSelection && this.selectedCricker){
+
+            var walkDirection = endX > this.selectedCricker.getPositionX() ? "right" : "left";
+
+            if(walkDirection == "left")
+                this.selectedCricker.walkLeft();
+            else
+                this.selectedCricker.walkRight();
+
+            this.selectedCricker.walkDestination = Math.round(endX);  //TODO: Reconize the grid cell
         }
     },
     onTouchesCancelled: function (touches, event) {

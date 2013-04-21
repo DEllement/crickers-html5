@@ -1,5 +1,8 @@
 //
 var LevelScene = cc.Scene.extend({
+    actors:[],
+    interactiveObjects:[],
+    levelXmlPath: "LevelTest_Phx.xml",
     onEnter:function(){
         this._super();
 
@@ -12,10 +15,10 @@ var LevelScene = cc.Scene.extend({
 
         // physic:
         this.space = new cp.Space();
-        this.space.gravity = cp.v(0,-1500);
-        this.space.iterations = 150;
+        this.space.gravity = cp.v(0,-1000);
+        this.space.iterations = 15;
         this.space.sleepTimeThreshold = .5;
-        this.space.collisionSlop = 0.5;
+        //this.space.collisionSlop = 0.5;
 
         var staticBody = this.space.staticBody;
 
@@ -25,7 +28,7 @@ var LevelScene = cc.Scene.extend({
         else
             xhttp = new ActiveXObject("Microsoft.XMLHTTP");
 
-        xhttp.open("GET", "res/LevelTest_Phx.xml", false);
+        xhttp.open("GET", "res/" + this.levelXmlPath, false);
         xhttp.send();
 
         var sceneNodeXml = xhttp.responseXML.getElementsByTagName("Level")[0].getElementsByTagName("Scene")[0];
@@ -45,7 +48,8 @@ var LevelScene = cc.Scene.extend({
                 this._debugNode = cc.PhysicsDebugNode.create( this.space );
                 this._debugNode.setSpace(this.space);
                 this._debugNode.setVisible( true );
-                //layer.addChild( this._debugNode );  //Uncomment this to display physic Debug
+                if(window.location.toString().indexOf('PHYSIC_DEBUG=1') >= 0)
+                    layer.addChild( this._debugNode );
 
                 var physicBodiesXml =  layersXml[i].getElementsByTagName("PhysicBody");
                 for(var j = 0; j < physicBodiesXml.length; j++){
@@ -63,7 +67,7 @@ var LevelScene = cc.Scene.extend({
                     var boxShape = new cp.BoxShape( staticBody, physicBody_w, physicBody_h);
                     boxShape.setElasticity(0);
                     boxShape.setFriction(2);
-                    //boxShape.setCollisionType(1);
+                    boxShape.setCollisionType(0);
 
                     this.space.addStaticShape( boxShape );
                 }
@@ -97,7 +101,7 @@ var LevelScene = cc.Scene.extend({
                     sprite.initWithFile("res" + imageSourceSrc);
 
                     //Chipmunk Cricker Body Setup
-                    var mass = 1;//w * h * DENSITY;
+                    var mass = w * h * DENSITY;
                     var moment = cp.momentForBox(mass,  w-18, h-12);
                     var crickerBody = new cp.Body(mass, moment);
 
@@ -105,7 +109,7 @@ var LevelScene = cc.Scene.extend({
 
                     shape.setElasticity( 0 );
                     shape.setFriction(2);
-                    //shape.setCollisionType(1);
+                    shape.setCollisionType(0);
                     shape.group = name;
 
                     this.space.addBody( crickerBody );
@@ -113,10 +117,43 @@ var LevelScene = cc.Scene.extend({
 
                     crickerBody.resetForces();
 
-                    //this.space.addConstraint( new cp.RotaryLimitJoint(crickerBody, crickerBody, -10, 10) );
-
                     sprite.setBody(crickerBody);
-                }else{
+
+                    this.actors.push(sprite);
+                }
+                else if( assetType == "INTERACTIVE_SPRITE" ){
+
+                    if( name.indexOf("portal") >= 0){
+                        sprite = new PortalObject();
+                        sprite.initWithFile("res" + imageSourceSrc);
+                    }
+                    if (name.indexOf("box") >= 0){
+                        sprite = new BoxObject();
+                        sprite.initWithFile("res" + imageSourceSrc);
+
+                        //Chipmunk Cricker Body Setup
+                        var mass = w * h * DENSITY;
+                        var moment = cp.momentForBox(mass,  w, h);
+                        var boxBody = new cp.Body(mass, moment);
+
+                        var shape = new cp.BoxShape( boxBody, w, h);
+
+                        shape.setElasticity( 0 );
+                        shape.setFriction(.5);
+                        shape.setCollisionType(1);
+                        shape.group = name;
+
+                        this.space.addBody( boxBody );
+                        this.space.addShape( shape );
+
+                        boxBody.resetForces();
+
+                        sprite.setBody(boxBody);
+                    }
+
+                    this.interactiveObjects.push(sprite);
+                }
+                else{
                     sprite = cc.Sprite.create("res" + imageSourceSrc);
                 }
                 sprite.name = name;
@@ -178,7 +215,7 @@ var LevelScene = cc.Scene.extend({
                         }
                     }
 
-                    var animation = new cc.Animation()
+                    var animation = new cc.Animation();
                     animation.initWithSpriteFrames(animFrames, 0.0333);
                     animation.setRestoreOriginalFrame(true);
 
@@ -211,13 +248,14 @@ var LevelScene = cc.Scene.extend({
                 sprite.setZOrder(spriteZOrder++);
             }
         }
-
+        this.init();
         this.scheduleUpdate();
-
 
         return true;
     },
     update: function(delta){
         this.space.step(delta);
+
+
     }
 });
