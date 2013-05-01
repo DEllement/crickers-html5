@@ -2,7 +2,7 @@
 (function () {
     var d = document;
     var c = {
-        COCOS2D_DEBUG:2, //0 to turn debug off, 1 for basic debug, and 2 for full debug
+        COCOS2D_DEBUG:0, //0 to turn debug off, 1 for basic debug, and 2 for full debug
         box2d:false,
         chipmunk:true,
         showFPS:true,
@@ -16,6 +16,7 @@
             'src/CrickerActor.js',
             'src/PortalObject.js',
             'src/BoxObject.js',
+            'src/ElevatorObject.js',
             'src/PlaygroundLayer.js',
             'src/LevelScene.js',
             'src/levels/Level001.js'

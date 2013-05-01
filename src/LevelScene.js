@@ -1,7 +1,15 @@
 //
+
+FLOOR_COLLISION_TYPE = 0;
+CRICKER_COLLISION_TYPE = 1;
+BOXOBJECT_COLLISION_TYPE = 10;
+PORTALOBJECT_COLLISION_TYPE = 11;
+ELEVATOROBJECT_COLLISION_TYPE = 12;
+
 var LevelScene = cc.Scene.extend({
     actors:[],
     interactiveObjects:[],
+    gridSquareSize: 50,
     levelXmlPath: "LevelTest_Phx.xml",
     onEnter:function(){
         this._super();
@@ -17,8 +25,8 @@ var LevelScene = cc.Scene.extend({
         this.space = new cp.Space();
         this.space.gravity = cp.v(0,-1000);
         this.space.iterations = 15;
+        this.space.collisionBias = Math.pow(1 - 0.3, 60);
         this.space.sleepTimeThreshold = .5;
-        //this.space.collisionSlop = 0.5;
 
         var staticBody = this.space.staticBody;
 
@@ -32,6 +40,9 @@ var LevelScene = cc.Scene.extend({
         xhttp.send();
 
         var sceneNodeXml = xhttp.responseXML.getElementsByTagName("Level")[0].getElementsByTagName("Scene")[0];
+
+        this.gridSquareSize = sceneNodeXml.getElementsByTagName("GridSquareSize")[0].firstChild.nodeValue;
+
         var layersXml = sceneNodeXml.getElementsByTagName("Layer");
 
         for (var i = 0; i < layersXml.length; i++) {
@@ -67,7 +78,7 @@ var LevelScene = cc.Scene.extend({
                     var boxShape = new cp.BoxShape( staticBody, physicBody_w, physicBody_h);
                     boxShape.setElasticity(0);
                     boxShape.setFriction(2);
-                    boxShape.setCollisionType(0);
+                    boxShape.setCollisionType(FLOOR_COLLISION_TYPE);
 
                     this.space.addStaticShape( boxShape );
                 }
@@ -109,7 +120,7 @@ var LevelScene = cc.Scene.extend({
 
                     shape.setElasticity( 0 );
                     shape.setFriction(2);
-                    shape.setCollisionType(0);
+                    shape.setCollisionType(CRICKER_COLLISION_TYPE);
                     shape.group = name;
 
                     this.space.addBody( crickerBody );
@@ -131,7 +142,6 @@ var LevelScene = cc.Scene.extend({
                         sprite = new BoxObject();
                         sprite.initWithFile("res" + imageSourceSrc);
 
-                        //Chipmunk Cricker Body Setup
                         var mass = w * h * DENSITY;
                         var moment = cp.momentForBox(mass,  w, h);
                         var boxBody = new cp.Body(mass, moment);
@@ -140,7 +150,7 @@ var LevelScene = cc.Scene.extend({
 
                         shape.setElasticity( 0 );
                         shape.setFriction(.5);
-                        shape.setCollisionType(1);
+                        shape.setCollisionType(BOXOBJECT_COLLISION_TYPE);
                         shape.group = name;
 
                         this.space.addBody( boxBody );
@@ -150,16 +160,41 @@ var LevelScene = cc.Scene.extend({
 
                         sprite.setBody(boxBody);
                     }
+                    if (name.indexOf("elevator") >= 0){
+
+                        sprite = new ElevatorObject();
+                        sprite.initWithFile("res" + imageSourceSrc);
+
+                        var elevatorBody = new cp.Body(Infinity, Infinity);
+
+                        var shape = new cp.BoxShape( elevatorBody, w, 20);
+
+                        shape.setElasticity(0);
+                        shape.setFriction(2);
+                        shape.setCollisionType(ELEVATOROBJECT_COLLISION_TYPE);
+                        shape.group = name;
+
+                        //this.space.addBody( elevatorBody );
+                        this.space.addShape( shape );
+
+                        sprite.setAnchorPoint(cc.p(0.5,0.4));
+                        sprite.setBody(elevatorBody);
+
+                        //sprite.origX = cc.p((x+(w/2)) , winSize.height-(y+(h/2))).y;
+                        //sprite.origY = cc.p((x+(w/2)) , winSize.height-(y+(h/2))).x;
+                        sprite.currentY = sprite.origY;
+                    }
 
                     this.interactiveObjects.push(sprite);
                 }
                 else{
                     sprite = cc.Sprite.create("res" + imageSourceSrc);
+                    //sprite.setAnchorPoint(cc.p(0.5,0.5));
                 }
                 sprite.name = name;
                 sprite.assetType = assetType;
 
-                sprite.setAnchorPoint(cc.p(0.5,0.5));
+
                 sprite.setPosition(cc.p((x+(w/2)) , winSize.height-(y+(h/2))));
                 sprite.lastX = sprite.getPosition().x;
                 sprite.setRotation(0);
@@ -254,8 +289,7 @@ var LevelScene = cc.Scene.extend({
         return true;
     },
     update: function(delta){
-        this.space.step(delta);
 
-
+        this.space.step(1/60); // 1/60 Fixed time step
     }
 });

@@ -27,6 +27,7 @@ var red0001 = "res/Assets/Sprites/red0001.png";
 var ss2 = "res/Assets/SpritesSheet/2.png";
 var trporter = "res/Assets/Sprites/trporter.png";
 var box = "res/Assets/Sprites/box.png";
+var elevator = "res/Assets/Sprites/lift.png";
 
 var g_ressources = [
     //image
@@ -58,7 +59,8 @@ var g_ressources = [
     { type: "image", src: red0001 },
     { type: "image", src: ss2 },
     { type: "image", src: trporter },
-    { type: "image", src: box }
+    { type: "image", src: box },
+    { type: "image", src: elevator }
 
     //plist
 

@@ -26,136 +26,152 @@
         <PhysicBodies />
       </Layer>
       <Layer>
-        <IsItemLocked>false</IsItemLocked>
+        <IsItemLocked>true</IsItemLocked>
         <IsItemVisible>true</IsItemVisible>
         <Name>Middle Foreground</Name>
         <GameSprites>
           <GameSprite>
-            <X>775</X>
-            <Y>334</Y>
-            <Width>53</Width>
-            <Height>31</Height>
+            <AssetType>INTERACTIVE_SPRITE</AssetType>
+            <AssetTypeInt>3</AssetTypeInt>
+            <Category>Interactive Items</Category>
+            <ZIndex>86</ZIndex>
+            <ID>98</ID>
+            <ImageSourceStr>/Assets/Sprites/box.png</ImageSourceStr>
             <IsItemVisible>true</IsItemVisible>
             <IsItemLocked>false</IsItemLocked>
-            <Name>l1_firstgrass0.png_96</Name>
+            <Name>boxB</Name>
+            <X>374</X>
+            <Y>470</Y>
+            <Width>47</Width>
+            <Height>44</Height>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
             <ZIndex>85</ZIndex>
             <ID>96</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstgrass0.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_firstgrass0.png_96</Name>
+            <X>775</X>
+            <Y>334</Y>
+            <Width>53</Width>
+            <Height>31</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>710</X>
-            <Y>514</Y>
-            <Width>55</Width>
-            <Height>20</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_firstgrass1.png_95</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
             <ZIndex>84</ZIndex>
             <ID>95</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstgrass1.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_firstgrass1.png_95</Name>
+            <X>710</X>
+            <Y>514</Y>
+            <Width>55</Width>
+            <Height>20</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>317</X>
-            <Y>191</Y>
-            <Width>53</Width>
-            <Height>31</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_firstgrass0.png_66</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
             <ZIndex>83</ZIndex>
             <ID>66</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstgrass0.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_firstgrass0.png_66</Name>
+            <X>317</X>
+            <Y>191</Y>
+            <Width>53</Width>
+            <Height>31</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>0</X>
-            <Y>482.4</Y>
-            <Width>96</Width>
-            <Height>157</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_firstcolonn0.png_29</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
             <ZIndex>82</ZIndex>
             <ID>29</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstcolonn0.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_firstcolonn0.png_29</Name>
+            <X>0</X>
+            <Y>482.4</Y>
+            <Width>96</Width>
+            <Height>157</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>867.2</X>
-            <Y>283.20000000000005</Y>
-            <Width>95</Width>
-            <Height>228</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_firstpalm0.png_28</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
             <ZIndex>81</ZIndex>
             <ID>28</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstpalm0.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_firstpalm0.png_28</Name>
+            <X>867.2</X>
+            <Y>283.20000000000005</Y>
+            <Width>95</Width>
+            <Height>228</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>674</X>
-            <Y>357.8000000000003</Y>
-            <Width>55</Width>
-            <Height>20</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_firstgrass1.png_26</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
             <ZIndex>80</ZIndex>
             <ID>26</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstgrass1.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_firstgrass1.png_26</Name>
+            <X>674</X>
+            <Y>357.8000000000003</Y>
+            <Width>55</Width>
+            <Height>20</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>141.2</X>
-            <Y>464.00000000000028</Y>
-            <Width>55</Width>
-            <Height>20</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_firstgrass1.png_18</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
             <ZIndex>79</ZIndex>
             <ID>18</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstgrass1.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_firstgrass1.png_18</Name>
+            <X>141.2</X>
+            <Y>464.00000000000028</Y>
+            <Width>55</Width>
+            <Height>20</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>221.99999999999994</X>
-            <Y>493.60000000000036</Y>
-            <Width>53</Width>
-            <Height>31</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_firstgrass0.png_16</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
             <ZIndex>78</ZIndex>
             <ID>16</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstgrass0.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_firstgrass0.png_16</Name>
+            <X>221.99999999999994</X>
+            <Y>493.60000000000036</Y>
+            <Width>53</Width>
+            <Height>31</Height>
             <Fill>None</Fill>
           </GameSprite>
         </GameSprites>
@@ -168,531 +184,531 @@
         <Name>Playground</Name>
         <GameSprites>
           <GameSprite>
-            <X>374</X>
-            <Y>470</Y>
-            <Width>47</Width>
-            <Height>44</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>boxB</Name>
             <AssetType>INTERACTIVE_SPRITE</AssetType>
             <AssetTypeInt>3</AssetTypeInt>
             <Category>Interactive Items</Category>
-            <ZIndex>77</ZIndex>
-            <ID>98</ID>
-            <ImageSourceStr>/Assets/Sprites/box.png</ImageSourceStr>
+            <ZIndex>0</ZIndex>
+            <ID>100</ID>
+            <ImageSourceStr>/Assets/Sprites/lift.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>elevatorA</Name>
+            <X>534</X>
+            <Y>427</Y>
+            <Width>86</Width>
+            <Height>152</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>636</X>
-            <Y>311</Y>
-            <Width>47</Width>
-            <Height>44</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>boxA</Name>
             <AssetType>INTERACTIVE_SPRITE</AssetType>
             <AssetTypeInt>3</AssetTypeInt>
             <Category>Interactive Items</Category>
             <ZIndex>77</ZIndex>
             <ID>97</ID>
             <ImageSourceStr>/Assets/Sprites/box.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>boxA</Name>
+            <X>636</X>
+            <Y>311</Y>
+            <Width>47</Width>
+            <Height>44</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>402</X>
-            <Y>207</Y>
-            <Width>20</Width>
-            <Height>25</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r0.png_94</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>76</ZIndex>
             <ID>94</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r0.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r0.png_94</Name>
+            <X>402</X>
+            <Y>207</Y>
+            <Width>20</Width>
+            <Height>25</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>706</X>
-            <Y>422</Y>
-            <Width>20</Width>
-            <Height>25</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r0.png_93</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>75</ZIndex>
             <ID>93</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r0.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r0.png_93</Name>
+            <X>706</X>
+            <Y>422</Y>
+            <Width>20</Width>
+            <Height>25</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>737</X>
-            <Y>526</Y>
-            <Width>20</Width>
-            <Height>25</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r0.png_92</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>74</ZIndex>
             <ID>92</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r0.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r0.png_92</Name>
+            <X>737</X>
+            <Y>526</Y>
+            <Width>20</Width>
+            <Height>25</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>739</X>
-            <Y>508</Y>
-            <Width>40</Width>
-            <Height>20</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r3.png_91</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>73</ZIndex>
             <ID>91</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_91</Name>
+            <X>739</X>
+            <Y>508</Y>
+            <Width>40</Width>
+            <Height>20</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>712</X>
-            <Y>502</Y>
-            <Width>11</Width>
-            <Height>11</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r2.png_90</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>72</ZIndex>
             <ID>90</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r2.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r2.png_90</Name>
+            <X>712</X>
+            <Y>502</Y>
+            <Width>11</Width>
+            <Height>11</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>744</X>
-            <Y>423</Y>
-            <Width>11</Width>
-            <Height>11</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r2.png_89</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>71</ZIndex>
             <ID>89</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r2.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r2.png_89</Name>
+            <X>744</X>
+            <Y>423</Y>
+            <Width>11</Width>
+            <Height>11</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>725</X>
-            <Y>422</Y>
-            <Width>20</Width>
-            <Height>21</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r1.png_88</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>70</ZIndex>
             <ID>88</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_88</Name>
+            <X>725</X>
+            <Y>422</Y>
+            <Width>20</Width>
+            <Height>21</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>719</X>
-            <Y>507</Y>
-            <Width>20</Width>
-            <Height>21</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r1.png_87</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>69</ZIndex>
             <ID>87</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_87</Name>
+            <X>719</X>
+            <Y>507</Y>
+            <Width>20</Width>
+            <Height>21</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>719</X>
-            <Y>488</Y>
-            <Width>20</Width>
-            <Height>21</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r1.png_86</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>68</ZIndex>
             <ID>86</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_86</Name>
+            <X>719</X>
+            <Y>488</Y>
+            <Width>20</Width>
+            <Height>21</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>623</X>
-            <Y>512</Y>
-            <Width>38</Width>
-            <Height>35</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r8.png_85</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>67</ZIndex>
             <ID>85</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r8.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r8.png_85</Name>
+            <X>623</X>
+            <Y>512</Y>
+            <Width>38</Width>
+            <Height>35</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>801</X>
-            <Y>370</Y>
-            <Width>20</Width>
-            <Height>21</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r1.png_74</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>66</ZIndex>
             <ID>74</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
-            <Fill>None</Fill>
-          </GameSprite>
-          <GameSprite>
-            <X>782</X>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_74</Name>
+            <X>801</X>
             <Y>370</Y>
             <Width>20</Width>
             <Height>21</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r1.png_73</Name>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>65</ZIndex>
             <ID>73</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
-            <Fill>None</Fill>
-          </GameSprite>
-          <GameSprite>
-            <X>764</X>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_73</Name>
+            <X>782</X>
             <Y>370</Y>
             <Width>20</Width>
             <Height>21</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r1.png_72</Name>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>64</ZIndex>
             <ID>72</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
-            <Fill>None</Fill>
-          </GameSprite>
-          <GameSprite>
-            <X>745</X>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_72</Name>
+            <X>764</X>
             <Y>370</Y>
             <Width>20</Width>
             <Height>21</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r1.png_71</Name>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>63</ZIndex>
             <ID>71</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_71</Name>
+            <X>745</X>
+            <Y>370</Y>
+            <Width>20</Width>
+            <Height>21</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>745</X>
-            <Y>353</Y>
-            <Width>40</Width>
-            <Height>20</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r3.png_67_68</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>62</ZIndex>
             <ID>68</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
-            <Fill>None</Fill>
-          </GameSprite>
-          <GameSprite>
-            <X>781</X>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_67_68</Name>
+            <X>745</X>
             <Y>353</Y>
             <Width>40</Width>
             <Height>20</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r3.png_67</Name>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>61</ZIndex>
             <ID>67</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_67</Name>
+            <X>781</X>
+            <Y>353</Y>
+            <Width>40</Width>
+            <Height>20</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>302</X>
-            <Y>210</Y>
-            <Width>38</Width>
-            <Height>35</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r8.png_64</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>60</ZIndex>
             <ID>64</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r8.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r8.png_64</Name>
+            <X>302</X>
+            <Y>210</Y>
+            <Width>38</Width>
+            <Height>35</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>374</X>
-            <Y>228</Y>
-            <Width>28</Width>
-            <Height>12</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r7.png_63</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>59</ZIndex>
             <ID>63</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r7.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r7.png_63</Name>
+            <X>374</X>
+            <Y>228</Y>
+            <Width>28</Width>
+            <Height>12</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>510</X>
-            <Y>530</Y>
-            <Width>20</Width>
-            <Height>25</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r0.png_62</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>58</ZIndex>
             <ID>62</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r0.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r0.png_62</Name>
+            <X>510</X>
+            <Y>530</Y>
+            <Width>20</Width>
+            <Height>25</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>637</X>
-            <Y>355</Y>
-            <Width>38</Width>
-            <Height>35</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r8.png_61</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>57</ZIndex>
             <ID>61</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r8.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r8.png_61</Name>
+            <X>637</X>
+            <Y>355</Y>
+            <Width>38</Width>
+            <Height>35</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>364</X>
-            <Y>210</Y>
-            <Width>40</Width>
-            <Height>20</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r3.png_7_60</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>56</ZIndex>
             <ID>60</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
-            <Fill>None</Fill>
-          </GameSprite>
-          <GameSprite>
-            <X>325</X>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_7_60</Name>
+            <X>364</X>
             <Y>210</Y>
             <Width>40</Width>
             <Height>20</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r3.png_7_59</Name>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>55</ZIndex>
             <ID>59</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_7_59</Name>
+            <X>325</X>
+            <Y>210</Y>
+            <Width>40</Width>
+            <Height>20</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>757</X>
-            <Y>259</Y>
-            <Width>66</Width>
-            <Height>97</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>portalC</Name>
             <AssetType>INTERACTIVE_SPRITE</AssetType>
             <AssetTypeInt>3</AssetTypeInt>
             <Category>Interactive Items</Category>
             <ZIndex>54</ZIndex>
             <ID>58</ID>
             <ImageSourceStr>/Assets/Sprites/trporter.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>portalC</Name>
+            <X>757</X>
+            <Y>259</Y>
+            <Width>66</Width>
+            <Height>97</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>463</X>
-            <Y>417</Y>
-            <Width>66</Width>
-            <Height>97</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>portalA</Name>
             <AssetType>INTERACTIVE_SPRITE</AssetType>
             <AssetTypeInt>3</AssetTypeInt>
             <Category>Interactive Items</Category>
             <ZIndex>53</ZIndex>
             <ID>57</ID>
             <ImageSourceStr>/Assets/Sprites/trporter.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>portalA</Name>
+            <X>463</X>
+            <Y>417</Y>
+            <Width>66</Width>
+            <Height>97</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>451</X>
-            <Y>513</Y>
-            <Width>40</Width>
-            <Height>20</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r3.png_7_54</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>52</ZIndex>
             <ID>54</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
-            <Fill>None</Fill>
-          </GameSprite>
-          <GameSprite>
-            <X>412</X>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_7_54</Name>
+            <X>451</X>
             <Y>513</Y>
             <Width>40</Width>
             <Height>20</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r3.png_7_53</Name>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>51</ZIndex>
             <ID>53</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
-            <Fill>None</Fill>
-          </GameSprite>
-          <GameSprite>
-            <X>372</X>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_7_53</Name>
+            <X>412</X>
             <Y>513</Y>
             <Width>40</Width>
             <Height>20</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r3.png_7_52</Name>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>50</ZIndex>
             <ID>52</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_7_52</Name>
+            <X>372</X>
+            <Y>513</Y>
+            <Width>40</Width>
+            <Height>20</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>332</X>
-            <Y>514</Y>
-            <Width>40</Width>
-            <Height>20</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r3.png_7_51</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>49</ZIndex>
             <ID>51</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_7_51</Name>
+            <X>332</X>
+            <Y>514</Y>
+            <Width>40</Width>
+            <Height>20</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>270.59999999999985</X>
-            <Y>512.20000000000027</Y>
-            <Width>40</Width>
-            <Height>20</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r3.png_7_50</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>48</ZIndex>
             <ID>50</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_7_50</Name>
+            <X>270.59999999999985</X>
+            <Y>512.20000000000027</Y>
+            <Width>40</Width>
+            <Height>20</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>339</X>
-            <Y>115</Y>
-            <Width>66</Width>
-            <Height>97</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>portalB</Name>
             <AssetType>INTERACTIVE_SPRITE</AssetType>
             <AssetTypeInt>3</AssetTypeInt>
             <Category>Interactive Items</Category>
             <ZIndex>47</ZIndex>
             <ID>49</ID>
             <ImageSourceStr>/Assets/Sprites/trporter.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>portalB</Name>
+            <X>339</X>
+            <Y>115</Y>
+            <Width>66</Width>
+            <Height>97</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>705</X>
-            <Y>309</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_48</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>46</ZIndex>
             <ID>48</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_48</Name>
+            <X>705</X>
+            <Y>309</Y>
+            <Width>50</Width>
+            <Height>50</Height>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -764,19 +780,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>278</X>
-            <Y>469</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_47</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>45</ZIndex>
             <ID>47</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_47</Name>
+            <X>278</X>
+            <Y>469</Y>
+            <Width>50</Width>
+            <Height>50</Height>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -848,19 +864,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>131</X>
-            <Y>396</Y>
-            <Width>69</Width>
-            <Height>68</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>groundT3_46</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>44</ZIndex>
             <ID>46</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>groundT3_46</Name>
+            <X>131</X>
+            <Y>396</Y>
+            <Width>69</Width>
+            <Height>68</Height>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -932,19 +948,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>298</X>
-            <Y>128</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_45</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>43</ZIndex>
             <ID>45</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_45</Name>
+            <X>298</X>
+            <Y>128</Y>
+            <Width>50</Width>
+            <Height>50</Height>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -1016,19 +1032,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>228</X>
-            <Y>334.60000000000014</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_44</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>42</ZIndex>
             <ID>44</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_44</Name>
+            <X>228</X>
+            <Y>334.60000000000014</Y>
+            <Width>50</Width>
+            <Height>50</Height>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -1100,19 +1116,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>229.00000000000011</X>
-            <Y>368.40000000000009</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_43</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>41</ZIndex>
             <ID>43</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_43</Name>
+            <X>229.00000000000011</X>
+            <Y>368.40000000000009</Y>
+            <Width>50</Width>
+            <Height>50</Height>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -1184,19 +1200,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>228.79999999999984</X>
-            <Y>401.39999999999986</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_42</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>40</ZIndex>
             <ID>42</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_42</Name>
+            <X>228.79999999999984</X>
+            <Y>401.39999999999986</Y>
+            <Width>50</Width>
+            <Height>50</Height>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -1268,19 +1284,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>230</X>
-            <Y>433.19999999999982</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_41</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>39</ZIndex>
             <ID>41</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_41</Name>
+            <X>230</X>
+            <Y>433.19999999999982</Y>
+            <Width>50</Width>
+            <Height>50</Height>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -1352,19 +1368,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>229.00000000000011</X>
-            <Y>465.80000000000007</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>groundT2</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>38</ZIndex>
             <ID>40</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>groundT2</Name>
+            <X>229.00000000000011</X>
+            <Y>465.80000000000007</Y>
+            <Width>50</Width>
+            <Height>50</Height>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -1436,19 +1452,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>229</X>
-            <Y>300</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_39</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>37</ZIndex>
             <ID>39</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_39</Name>
+            <X>229</X>
+            <Y>300</Y>
+            <Width>50</Width>
+            <Height>50</Height>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -1520,19 +1536,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>280.5999999999998</X>
-            <Y>296</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_38</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>36</ZIndex>
             <ID>38</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_38</Name>
+            <X>280.5999999999998</X>
+            <Y>296</Y>
+            <Width>50</Width>
+            <Height>50</Height>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -1604,19 +1620,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>279.5999999999998</X>
-            <Y>329.4</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_37</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>35</ZIndex>
             <ID>37</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_37</Name>
+            <X>279.5999999999998</X>
+            <Y>329.4</Y>
+            <Width>50</Width>
+            <Height>50</Height>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -1688,19 +1704,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>279.5999999999998</X>
-            <Y>363.19999999999993</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_36</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>34</ZIndex>
             <ID>36</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_36</Name>
+            <X>279.5999999999998</X>
+            <Y>363.19999999999993</Y>
+            <Width>50</Width>
+            <Height>50</Height>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -1772,19 +1788,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>279.79999999999961</X>
-            <Y>396.4</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32_35</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>33</ZIndex>
             <ID>35</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32_35</Name>
+            <X>279.79999999999961</X>
+            <Y>396.4</Y>
+            <Width>50</Width>
+            <Height>50</Height>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -1856,19 +1872,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>279</X>
-            <Y>431.59999999999991</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>groundT1</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>32</ZIndex>
             <ID>34</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>groundT1</Name>
+            <X>279</X>
+            <Y>431.59999999999991</Y>
+            <Width>50</Width>
+            <Height>50</Height>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -1940,19 +1956,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>297</X>
-            <Y>165</Y>
-            <Width>50</Width>
-            <Height>50</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>red0001.png_31_32</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>31</ZIndex>
             <ID>32</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>red0001.png_31_32</Name>
+            <X>297</X>
+            <Y>165</Y>
+            <Width>50</Width>
+            <Height>50</Height>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -2024,19 +2040,19 @@
             <Speachs />
           </GameSprite>
           <GameSprite xsi:type="ActorSprite">
-            <X>134</X>
-            <Y>342</Y>
-            <Width>69</Width>
-            <Height>68</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>groundT3</Name>
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
             <ZIndex>30</ZIndex>
             <ID>31</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>groundT3</Name>
+            <X>134</X>
+            <Y>342</Y>
+            <Width>69</Width>
+            <Height>68</Height>
             <Fill>None</Fill>
             <Animations>
               <Animation>
@@ -2108,358 +2124,358 @@
             <Speachs />
           </GameSprite>
           <GameSprite>
-            <X>665</X>
-            <Y>370.8000000000003</Y>
-            <Width>20</Width>
-            <Height>25</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r0.png_25</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>29</ZIndex>
             <ID>25</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r0.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r0.png_25</Name>
+            <X>665</X>
+            <Y>370.8000000000003</Y>
+            <Width>20</Width>
+            <Height>25</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>309.20000000000005</X>
-            <Y>512.60000000000036</Y>
-            <Width>24.000000000000114</Width>
-            <Height>24.799999999999955</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r1.png_24</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>28</ZIndex>
             <ID>24</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_24</Name>
+            <X>309.20000000000005</X>
+            <Y>512.60000000000036</Y>
+            <Width>24.000000000000114</Width>
+            <Height>24.799999999999955</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>691.60000000000014</X>
-            <Y>371.40000000000032</Y>
-            <Width>38</Width>
-            <Height>35</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r8.png_23</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>27</ZIndex>
             <ID>23</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r8.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r8.png_23</Name>
+            <X>691.60000000000014</X>
+            <Y>371.40000000000032</Y>
+            <Width>38</Width>
+            <Height>35</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>730.20000000000027</X>
-            <Y>370.40000000000015</Y>
-            <Width>16</Width>
-            <Height>17</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r10.png_22</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>26</ZIndex>
             <ID>22</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r10.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r10.png_22</Name>
+            <X>730.20000000000027</X>
+            <Y>370.40000000000015</Y>
+            <Width>16</Width>
+            <Height>17</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>665.2</X>
-            <Y>353.8000000000003</Y>
-            <Width>40</Width>
-            <Height>20</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r3.png_20_21</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>25</ZIndex>
             <ID>21</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_20_21</Name>
+            <X>665.2</X>
+            <Y>353.8000000000003</Y>
+            <Width>40</Width>
+            <Height>20</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>704.80000000000018</X>
-            <Y>353.60000000000025</Y>
-            <Width>40</Width>
-            <Height>20</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r3.png_20</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>24</ZIndex>
             <ID>20</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_20</Name>
+            <X>704.80000000000018</X>
+            <Y>353.60000000000025</Y>
+            <Width>40</Width>
+            <Height>20</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>197.40000000000015</X>
-            <Y>493.20000000000027</Y>
-            <Width>16</Width>
-            <Height>16</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r12.png_13</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>23</ZIndex>
             <ID>13</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r12.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r12.png_13</Name>
+            <X>197.40000000000015</X>
+            <Y>493.20000000000027</Y>
+            <Width>16</Width>
+            <Height>16</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>210.60000000000008</X>
-            <Y>512.80000000000018</Y>
-            <Width>20</Width>
-            <Height>17</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r5.png_12</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>22</ZIndex>
             <ID>12</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r5.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r5.png_12</Name>
+            <X>210.60000000000008</X>
+            <Y>512.80000000000018</Y>
+            <Width>20</Width>
+            <Height>17</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>135.00000000000006</X>
-            <Y>475.20000000000022</Y>
-            <Width>20</Width>
-            <Height>25</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r0.png_11</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>21</ZIndex>
             <ID>11</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r0.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r0.png_11</Name>
+            <X>135.00000000000006</X>
+            <Y>475.20000000000022</Y>
+            <Width>20</Width>
+            <Height>25</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>231.39999999999992</X>
-            <Y>529.60000000000036</Y>
-            <Width>28</Width>
-            <Height>12</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r7.png_10</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>20</ZIndex>
             <ID>10</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r7.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r7.png_10</Name>
+            <X>231.39999999999992</X>
+            <Y>529.60000000000036</Y>
+            <Width>28</Width>
+            <Height>12</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>155.39999999999992</X>
-            <Y>476.60000000000031</Y>
-            <Width>38</Width>
-            <Height>35</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r8.png_9</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>19</ZIndex>
             <ID>9</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r8.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r8.png_9</Name>
+            <X>155.39999999999992</X>
+            <Y>476.60000000000031</Y>
+            <Width>38</Width>
+            <Height>35</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>230.8</X>
-            <Y>511.60000000000036</Y>
-            <Width>40</Width>
-            <Height>20</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r3.png_7_8</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>18</ZIndex>
             <ID>8</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_7_8</Name>
+            <X>230.8</X>
+            <Y>511.60000000000036</Y>
+            <Width>40</Width>
+            <Height>20</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>491</X>
-            <Y>513</Y>
-            <Width>40</Width>
-            <Height>20</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r3.png_7</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>17</ZIndex>
             <ID>7</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r3.png_7</Name>
+            <X>491</X>
+            <Y>513</Y>
+            <Width>40</Width>
+            <Height>20</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>192.99999999999994</X>
-            <Y>475.20000000000022</Y>
-            <Width>20</Width>
-            <Height>21</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r1.png_3_6</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>16</ZIndex>
             <ID>6</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_3_6</Name>
+            <X>192.99999999999994</X>
+            <Y>475.20000000000022</Y>
+            <Width>20</Width>
+            <Height>21</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>173.7999999999999</X>
-            <Y>457.60000000000019</Y>
-            <Width>20</Width>
-            <Height>21</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r1.png_3_5</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>15</ZIndex>
             <ID>5</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_3_5</Name>
+            <X>173.7999999999999</X>
+            <Y>457.60000000000019</Y>
+            <Width>20</Width>
+            <Height>21</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>154.8</X>
-            <Y>458.00000000000017</Y>
-            <Width>20</Width>
-            <Height>21</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r1.png_3_4</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>14</ZIndex>
             <ID>4</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_3_4</Name>
+            <X>154.8</X>
+            <Y>458.00000000000017</Y>
+            <Width>20</Width>
+            <Height>21</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>211.40000000000015</X>
-            <Y>494.00000000000023</Y>
-            <Width>20</Width>
-            <Height>21</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r1.png_3</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>13</ZIndex>
             <ID>3</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_3</Name>
+            <X>211.40000000000015</X>
+            <Y>494.00000000000023</Y>
+            <Width>20</Width>
+            <Height>21</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>134.8</X>
-            <Y>457.60000000000025</Y>
-            <Width>20</Width>
-            <Height>21</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>false</IsItemLocked>
-            <Name>l1_r1.png_2</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
             <ZIndex>12</ZIndex>
             <ID>2</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r1.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>l1_r1.png_2</Name>
+            <X>134.8</X>
+            <Y>457.60000000000025</Y>
+            <Width>20</Width>
+            <Height>21</Height>
             <Fill>None</Fill>
           </GameSprite>
         </GameSprites>
         <Icon>/Assets/UI/ico_layers.png</Icon>
         <PhysicBodies>
           <PhysicBody>
+            <Elasticity>0</Elasticity>
+            <Friction>0</Friction>
+            <CollisionType>0</CollisionType>
             <X>636</X>
             <Y>354</Y>
             <Width>187</Width>
             <Height>51</Height>
+          </PhysicBody>
+          <PhysicBody>
             <Elasticity>0</Elasticity>
             <Friction>0</Friction>
             <CollisionType>0</CollisionType>
-          </PhysicBody>
-          <PhysicBody>
             <X>212</X>
             <Y>513</Y>
             <Width>320</Width>
             <Height>52</Height>
+          </PhysicBody>
+          <PhysicBody>
             <Elasticity>0</Elasticity>
             <Friction>0</Friction>
             <CollisionType>0</CollisionType>
-          </PhysicBody>
-          <PhysicBody>
             <X>136</X>
             <Y>459</Y>
             <Width>58</Width>
             <Height>124</Height>
+          </PhysicBody>
+          <PhysicBody>
             <Elasticity>0</Elasticity>
             <Friction>0</Friction>
             <CollisionType>0</CollisionType>
-          </PhysicBody>
-          <PhysicBody>
             <X>179</X>
             <Y>475</Y>
             <Width>33</Width>
             <Height>51</Height>
+          </PhysicBody>
+          <PhysicBody>
             <Elasticity>0</Elasticity>
             <Friction>0</Friction>
             <CollisionType>0</CollisionType>
-          </PhysicBody>
-          <PhysicBody>
             <X>188</X>
             <Y>495</Y>
             <Width>41</Width>
             <Height>40</Height>
+          </PhysicBody>
+          <PhysicBody>
             <Elasticity>0</Elasticity>
             <Friction>0</Friction>
             <CollisionType>0</CollisionType>
-          </PhysicBody>
-          <PhysicBody>
             <X>302</X>
             <Y>209</Y>
             <Width>120</Width>
             <Height>54</Height>
+          </PhysicBody>
+          <PhysicBody>
             <Elasticity>0</Elasticity>
             <Friction>0</Friction>
             <CollisionType>0</CollisionType>
-          </PhysicBody>
-          <PhysicBody>
             <X>622</X>
             <Y>512</Y>
             <Width>39</Width>
             <Height>39</Height>
-            <Elasticity>0</Elasticity>
-            <Friction>0</Friction>
-            <CollisionType>0</CollisionType>
           </PhysicBody>
         </PhysicBodies>
       </Layer>
@@ -2469,179 +2485,179 @@
         <Name>Middle Background</Name>
         <GameSprites>
           <GameSprite>
-            <X>639</X>
-            <Y>371</Y>
-            <Width>81</Width>
-            <Height>202</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>true</IsItemLocked>
-            <Name>l1_middlecolonn.png_70</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Middleground World 1</Category>
             <ZIndex>11</ZIndex>
             <ID>70</ID>
             <ImageSourceStr>/Assets/Sprites/l1_middlecolonn.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middlecolonn.png_70</Name>
+            <X>639</X>
+            <Y>371</Y>
+            <Width>81</Width>
+            <Height>202</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>233</X>
-            <Y>569</Y>
-            <Width>86</Width>
-            <Height>52</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>true</IsItemLocked>
-            <Name>l1_middlerock0.png_83</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Middleground World 1</Category>
             <ZIndex>10</ZIndex>
             <ID>83</ID>
             <ImageSourceStr>/Assets/Sprites/l1_middlerock0.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middlerock0.png_83</Name>
+            <X>233</X>
+            <Y>569</Y>
+            <Width>86</Width>
+            <Height>52</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>675</X>
-            <Y>427</Y>
-            <Width>86</Width>
-            <Height>52</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>true</IsItemLocked>
-            <Name>l1_middlerock0.png_82</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Middleground World 1</Category>
             <ZIndex>9</ZIndex>
             <ID>82</ID>
             <ImageSourceStr>/Assets/Sprites/l1_middlerock0.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middlerock0.png_82</Name>
+            <X>675</X>
+            <Y>427</Y>
+            <Width>86</Width>
+            <Height>52</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>702</X>
-            <Y>382</Y>
-            <Width>86</Width>
-            <Height>52</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>true</IsItemLocked>
-            <Name>l1_middlerock0.png_81</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Middleground World 1</Category>
             <ZIndex>8</ZIndex>
             <ID>81</ID>
             <ImageSourceStr>/Assets/Sprites/l1_middlerock0.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middlerock0.png_81</Name>
+            <X>702</X>
+            <Y>382</Y>
+            <Width>86</Width>
+            <Height>52</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>243</X>
-            <Y>518</Y>
-            <Width>86</Width>
-            <Height>52</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>true</IsItemLocked>
-            <Name>l1_middlerock0.png_15_55</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Middleground World 1</Category>
             <ZIndex>7</ZIndex>
             <ID>55</ID>
             <ImageSourceStr>/Assets/Sprites/l1_middlerock0.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middlerock0.png_15_55</Name>
+            <X>243</X>
+            <Y>518</Y>
+            <Width>86</Width>
+            <Height>52</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>673</X>
-            <Y>380</Y>
-            <Width>72</Width>
-            <Height>35</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>true</IsItemLocked>
-            <Name>l1_middlerock1.png_19_56_65</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Middleground World 1</Category>
             <ZIndex>6</ZIndex>
             <ID>65</ID>
             <ImageSourceStr>/Assets/Sprites/l1_middlerock1.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middlerock1.png_19_56_65</Name>
+            <X>673</X>
+            <Y>380</Y>
+            <Width>72</Width>
+            <Height>35</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>330</X>
-            <Y>224</Y>
-            <Width>72</Width>
-            <Height>35</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>true</IsItemLocked>
-            <Name>l1_middlerock1.png_19_56</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Middleground World 1</Category>
             <ZIndex>5</ZIndex>
             <ID>56</ID>
             <ImageSourceStr>/Assets/Sprites/l1_middlerock1.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middlerock1.png_19_56</Name>
+            <X>330</X>
+            <Y>224</Y>
+            <Width>72</Width>
+            <Height>35</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>384</X>
-            <Y>525</Y>
-            <Width>72</Width>
-            <Height>35</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>true</IsItemLocked>
-            <Name>l1_middlerock1.png_19</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Middleground World 1</Category>
             <ZIndex>4</ZIndex>
             <ID>19</ID>
             <ImageSourceStr>/Assets/Sprites/l1_middlerock1.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middlerock1.png_19</Name>
+            <X>384</X>
+            <Y>525</Y>
+            <Width>72</Width>
+            <Height>35</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>161.99999999999994</X>
-            <Y>406.4000000000002</Y>
-            <Width>81</Width>
-            <Height>202</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>true</IsItemLocked>
-            <Name>l1_middlecolonn.png_14</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Middleground World 1</Category>
             <ZIndex>3</ZIndex>
             <ID>14</ID>
             <ImageSourceStr>/Assets/Sprites/l1_middlecolonn.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middlecolonn.png_14</Name>
+            <X>161.99999999999994</X>
+            <Y>406.4000000000002</Y>
+            <Width>81</Width>
+            <Height>202</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>437</X>
-            <Y>515</Y>
-            <Width>86</Width>
-            <Height>52</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>true</IsItemLocked>
-            <Name>l1_middlerock0.png_15</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Middleground World 1</Category>
             <ZIndex>2</ZIndex>
             <ID>15</ID>
             <ImageSourceStr>/Assets/Sprites/l1_middlerock0.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middlerock0.png_15</Name>
+            <X>437</X>
+            <Y>515</Y>
+            <Width>86</Width>
+            <Height>52</Height>
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>270</X>
-            <Y>395</Y>
-            <Width>480</Width>
-            <Height>208</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>true</IsItemLocked>
-            <Name>l1_middleback.png_69</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Middleground World 1</Category>
             <ZIndex>1</ZIndex>
             <ID>69</ID>
             <ImageSourceStr>/Assets/Sprites/l1_middleback.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_middleback.png_69</Name>
+            <X>270</X>
+            <Y>395</Y>
+            <Width>480</Width>
+            <Height>208</Height>
             <Fill>None</Fill>
           </GameSprite>
         </GameSprites>
@@ -2654,19 +2670,19 @@
         <Name>Background</Name>
         <GameSprites>
           <GameSprite>
-            <X>0</X>
-            <Y>0</Y>
-            <Width>960</Width>
-            <Height>640</Height>
-            <IsItemVisible>true</IsItemVisible>
-            <IsItemLocked>true</IsItemLocked>
-            <Name>l1_back.png_1</Name>
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Background World 1</Category>
             <ZIndex>0</ZIndex>
             <ID>1</ID>
             <ImageSourceStr>/Assets/Sprites/l1_back.png</ImageSourceStr>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>true</IsItemLocked>
+            <Name>l1_back.png_1</Name>
+            <X>0</X>
+            <Y>0</Y>
+            <Width>960</Width>
+            <Height>640</Height>
             <Fill>None</Fill>
           </GameSprite>
         </GameSprites>
@@ -2674,7 +2690,7 @@
         <PhysicBodies />
       </Layer>
     </Layers>
-    <NewSpriteId>98</NewSpriteId>
+    <NewSpriteId>100</NewSpriteId>
     <Width>960</Width>
     <PhysicConfig>
       <Gravity>
