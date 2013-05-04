@@ -30,7 +30,7 @@ var Level001 = LevelScene.extend({
         this.portalC.destinationPortal = this.portalA;
 
 
-        this.space.addCollisionHandler(ELEVATOROBJECT_COLLISION_TYPE , BOXOBJECT_COLLISION_TYPE,
+        /*this.space.addCollisionHandler(ELEVATOROBJECT_COLLISION_TYPE , BOXOBJECT_COLLISION_TYPE,
             null,
             null,
             this.elevatorCollisionFixes.bind(this),
@@ -47,7 +47,7 @@ var Level001 = LevelScene.extend({
             null,
             this.elevatorCollisionFixes.bind(this),
             this.elevatorCollisionFixes.bind(this)
-        );
+        );  */
 
         this.scheduleUpdate();
 
