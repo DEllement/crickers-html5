@@ -5,6 +5,7 @@ CRICKER_COLLISION_TYPE = 1;
 BOXOBJECT_COLLISION_TYPE = 10;
 PORTALOBJECT_COLLISION_TYPE = 11;
 ELEVATOROBJECT_COLLISION_TYPE = 12;
+CRUMBLINGBLOCK_OBJECT_COLLISION_TYPE = 13;
 
 var LevelScene = cc.Scene.extend({
     actors:[],
@@ -108,6 +109,9 @@ var LevelScene = cc.Scene.extend({
                 //Create sprite based on data
                 var sprite = null;
                 if (assetType == "ACTOR_SPRITE") {
+
+                    var team = gameSpriteXml.getElementsByTagName("Team")[0].firstChild.nodeValue;
+
                     sprite = new CrickerActor();
                     sprite.initWithFile("res" + imageSourceSrc);
 
@@ -121,7 +125,9 @@ var LevelScene = cc.Scene.extend({
                     shape.setElasticity( 0 );
                     shape.setFriction(2);
                     shape.setCollisionType(CRICKER_COLLISION_TYPE);
-                    shape.group = name;
+                    //shape.group = name;
+
+                    sprite.team = team;
 
                     this.space.addBody( crickerBody );
                     this.space.addShape( shape );
@@ -180,9 +186,26 @@ var LevelScene = cc.Scene.extend({
                         sprite.setAnchorPoint(cc.p(0.5,0.4));
                         sprite.setBody(elevatorBody);
 
-                        //sprite.origX = cc.p((x+(w/2)) , winSize.height-(y+(h/2))).y;
-                        //sprite.origY = cc.p((x+(w/2)) , winSize.height-(y+(h/2))).x;
                         sprite.currentY = sprite.origY;
+                    }
+                    if(name.indexOf("crumblingRock") >= 0){
+
+                        sprite = CrumblingBlock.create("res/Assets/Sprites/crumblingRockl1.png",5,.5);
+
+                        var crumblingRockBody = new cp.Body(Infinity, Infinity);
+
+                        var shape = new cp.BoxShape( crumblingRockBody, w, h);
+
+                        shape.setElasticity(0);
+                        shape.setFriction(2);
+                        shape.setCollisionType(CRUMBLINGBLOCK_OBJECT_COLLISION_TYPE);
+                        shape.group = name;
+
+                        //this.space.addBody( crumblingRockBody );
+                        this.space.addShape( shape );
+
+                        sprite.physicShape = shape; //Be carefull for memory leak here
+                        sprite.setBody(crumblingRockBody);
                     }
 
                     this.interactiveObjects.push(sprite);
@@ -219,7 +242,7 @@ var LevelScene = cc.Scene.extend({
                     var frameRate = animationXml.getElementsByTagName("FrameRate")[0].firstChild.nodeValue;
                     var loopAnimation = animationXml.getElementsByTagName("LoopAnimation")[0].firstChild.nodeValue;
 
-                    if (animationType != "IDLE")
+                    if (animationType != "IDLE" || spriteSheetID == "0")
                         continue;
 
                     var spriteSheetPath = "res/Assets/SpritesSheet/" + spriteSheetID + ".png";
@@ -244,7 +267,7 @@ var LevelScene = cc.Scene.extend({
                         animFrames.push(spriteFrame);
 
                         frameX++;
-                        if(frameX == framesCol){
+                        if( frameX == framesCol ){
                             frameX = 0;
                             frameY++;
                         }

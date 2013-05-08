@@ -1,16 +1,10 @@
 
-function lineIntersectsRect(p1, p2, r)
-{
-    return cc.pSegmentIntersect(p1, p2, new cc.p(r.getX(), r.getY()), new cc.p(r.getX() + r.getWidth(), r.getY())) ||
-        cc.pSegmentIntersect(p1, p2, new cc.p(r.getX() + r.getWidth(), r.getY()), new cc.p(r.getX() + r.getWidth(), r.getY() + r.getHeight())) ||
-        cc.pSegmentIntersect(p1, p2, new cc.p(r.getX() + r.getWidth(), r.getY() + r.getHeight()),new cc.p(r.getX(), r.getY() + r.getHeight())) ||
-        cc.pSegmentIntersect(p1, p2, new cc.p(r.getX(), r.getY() + r.getHeight()), new cc.p(r.getX(), r.getY())) ||
-        (cc.rectContainsPoint(r, p1 ) && cc.rectContainsPoint(r, p2 ));
-}
+
 
 
 var PlaygroundLayer = cc.Layer.extend({
     selectedCricker: null,
+    drawDestination: false,
     init: function () {
         var me = this;
         //////////////////////////////
@@ -37,18 +31,20 @@ var PlaygroundLayer = cc.Layer.extend({
         var swipeDirection = null;
         var startX = this.touchtStartLocation.x;
         var endX = touches[0].getLocation().x;
+        var endY = touches[0].getLocation().y;
         var distanceX = Math.max( startX, endX ) - Math.min(startX, endX);
         if( distanceX > 25){
             isSwipping = true;
             swipeDirection = startX < endX ? 'right' : 'left';
         }
 
-        //Check for Selection && Walking if swipping
-        for (var i = 0; i < this.getChildrenCount() ; i++) {
-            var cricker = this.getChildren()[i];
+        var curScene = cc.Director.getInstance().getRunningScene();
 
-            if( cricker.assetType != "ACTOR_SPRITE")
-                continue;
+        //Check for Selection && Walking if swipping
+        for (var i = 0; i < curScene.actors.length; i++) {
+            var cricker = curScene.actors[i];
+
+            //console.log(cricker.team);
 
             var bb = cricker.getBoundingBoxToWorld();
             var rBB = cc.rect(bb.getX()+9, bb.getY()+11, bb.getWidth()-18, bb.getHeight()-17); //FIXME: get from the body instead...
@@ -66,6 +62,8 @@ var PlaygroundLayer = cc.Layer.extend({
                     this.selectedCricker.unSelect();
                 }
 
+                //console.log("cricker selected");
+
                 cricker.select();
                 this.selectedCricker = cricker;
                 isSelection = true;
@@ -82,10 +80,61 @@ var PlaygroundLayer = cc.Layer.extend({
             else
                 this.selectedCricker.walkRight();
 
-            this.selectedCricker.walkDestination = Math.round(endX);  //TODO: Reconize the grid cell
+            //TODO: Encapsulate
+            var xOffset = -(960/2);
+            var yOffset = -(640/2);
+
+            var destX = Math.floor((endX)/curScene.gridSquareSize);
+            var destY = Math.floor(((640-endY)/curScene.gridSquareSize));
+
+            //this.selectedCricker.walkDestination = Math.round(endX);
+            this.selectedCricker.gotoCell(destX, destY);
+            this.drawDestinationCell(destX, destY, 120);
         }
     },
     onTouchesCancelled: function (touches, event) {
         console.log("onTouchesCancelled");
+    },
+    draw: function(ctx){
+        this._super(ctx);
+
+        var xOffset = -(960/2);
+        var yOffset = -(640/2);
+
+        //Script for displaying the Level Grid
+        var gridSquareSize = cc.Director.getInstance().getRunningScene().gridSquareSize;
+
+        /*for(var y = 0 ; y <= 640/gridSquareSize; y++){
+
+
+            cc.drawingUtil.drawLine( cc.p(0+xOffset, 640 - (y*gridSquareSize)+yOffset), cc.p(960+xOffset, 640 - (y*gridSquareSize)+yOffset) );
+
+            for(var x = 0 ; x <= 960/gridSquareSize; x++){
+
+                cc.drawingUtil.drawLine( cc.p((x*gridSquareSize)+xOffset, 0+yOffset), cc.p((x*gridSquareSize)+xOffset, 640+yOffset) );
+
+            }
+        } */
+
+        if(this.drawDestination){
+           this.drawDestinationDelai--;
+
+            var scene = cc.Director.getInstance().getRunningScene();
+
+            var destX = (this.currDestination.x * scene.gridSquareSize)+(scene.gridSquareSize/2);
+            var destY = (this.currDestination.y * scene.gridSquareSize)+(scene.gridSquareSize/2);
+            cc.drawingUtil.drawCircle(cc.p(destX+xOffset, 640- destY+yOffset), scene.gridSquareSize/2, 0, 1, false  )
+
+
+           if(this.drawDestinationDelai <= 0)
+               this.drawDestination = false;
+        }
+
+
+    },
+    drawDestinationCell: function(cellX, cellY, delai){
+        this.drawDestination = true;
+        this.currDestination = cc.p(cellX, cellY);
+        this.drawDestinationDelai = delai;
     }
 });

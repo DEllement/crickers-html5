@@ -24,10 +24,19 @@ var l1_r10 = "res/Assets/Sprites/l1_r10.png";
 var l1_r11 = "res/Assets/Sprites/l1_r11.png";
 var l1_r12 = "res/Assets/Sprites/l1_r12.png";
 var red0001 = "res/Assets/Sprites/red0001.png";
+var blue0001 = "res/Assets/Sprites/pers_blue.png";
+var green0001 = "res/Assets/Sprites/pers_green.png";
+var or0001 = "res/Assets/Sprites/pers_or.png";
 var ss2 = "res/Assets/SpritesSheet/2.png";
 var trporter = "res/Assets/Sprites/trporter.png";
 var box = "res/Assets/Sprites/box.png";
 var elevator = "res/Assets/Sprites/lift.png";
+var crumblingRl1 = "res/Assets/Sprites/crumblingRockl1.png";
+var crumblingRl1_0 = "res/Assets/SpritesComponents/crumblingRockl1_0.png";
+var crumblingRl1_1 = "res/Assets/SpritesComponents/crumblingRockl1_1.png";
+var crumblingRl1_2 = "res/Assets/SpritesComponents/crumblingRockl1_2.png";
+var crumblingRl1_3 = "res/Assets/SpritesComponents/crumblingRockl1_3.png";
+var crumblingRl1_4 = "res/Assets/SpritesComponents/crumblingRockl1_4.png";
 
 var g_ressources = [
     //image
@@ -57,10 +66,19 @@ var g_ressources = [
     { type: "image", src: l1_r11 },
     { type: "image", src: l1_r12 },
     { type: "image", src: red0001 },
+    { type: "image", src: blue0001 },
+    { type: "image", src: green0001 },
+    { type: "image", src: or0001 },
     { type: "image", src: ss2 },
     { type: "image", src: trporter },
     { type: "image", src: box },
-    { type: "image", src: elevator }
+    { type: "image", src: elevator },
+    { type: "image", src: crumblingRl1 },
+    { type: "image", src: crumblingRl1_0 },
+    { type: "image", src: crumblingRl1_1 },
+    { type: "image", src: crumblingRl1_2 },
+    { type: "image", src: crumblingRl1_3 },
+    { type: "image", src: crumblingRl1_4 }
 
     //plist
 

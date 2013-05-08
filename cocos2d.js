@@ -13,7 +13,9 @@
         //SingleEngineFile:'',
         appFiles:[
             'src/resource.js',
+            'src/GameUtils.js',
             'src/CrickerActor.js',
+            'src/CrumblingBlock.js',
             'src/PortalObject.js',
             'src/BoxObject.js',
             'src/ElevatorObject.js',
