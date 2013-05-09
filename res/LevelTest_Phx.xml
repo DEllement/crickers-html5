@@ -184,8 +184,8 @@
         <Name>Playground</Name>
         <GameSprites>
           <GameSprite>
-            <X>497</X>
-            <Y>190</Y>
+            <X>190</X>
+            <Y>304</Y>
             <Width>38</Width>
             <Height>38</Height>
             <IsItemVisible>true</IsItemVisible>
@@ -200,7 +200,7 @@
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>421</X>
+            <X>418</X>
             <Y>190</Y>
             <Width>38</Width>
             <Height>38</Height>
@@ -1406,7 +1406,7 @@
             <Team>Green</Team>
           </GameSprite>
           <GameSprite>
-            <X>459</X>
+            <X>456</X>
             <Y>190</Y>
             <Width>38</Width>
             <Height>38</Height>
@@ -1454,8 +1454,8 @@
             <Fill>None</Fill>
           </GameSprite>
           <GameSprite>
-            <X>402</X>
-            <Y>188</Y>
+            <X>398</X>
+            <Y>189</Y>
             <Width>20</Width>
             <Height>25</Height>
             <IsItemVisible>true</IsItemVisible>

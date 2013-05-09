@@ -25,8 +25,8 @@ var LevelScene = cc.Scene.extend({
         // physic:
         this.space = new cp.Space();
         this.space.gravity = cp.v(0,-1000);
-        this.space.iterations = 15;
-        this.space.collisionBias = Math.pow(1 - 0.3, 60);
+        this.space.iterations = 10;
+        //this.space.collisionBias = Math.pow(1 - 0.3, 60);
         this.space.sleepTimeThreshold = .5;
 
         var staticBody = this.space.staticBody;
@@ -192,7 +192,7 @@ var LevelScene = cc.Scene.extend({
 
                         sprite = CrumblingBlock.create("res/Assets/Sprites/crumblingRockl1.png",5,.5);
 
-                        var crumblingRockBody = new cp.Body(Infinity, Infinity);
+                        var crumblingRockBody = new cp.Body(9999999, 9999999);
 
                         var shape = new cp.BoxShape( crumblingRockBody, w, h);
 

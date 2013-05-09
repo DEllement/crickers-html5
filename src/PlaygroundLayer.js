@@ -95,10 +95,10 @@ var PlaygroundLayer = cc.Layer.extend({
     onTouchesCancelled: function (touches, event) {
         console.log("onTouchesCancelled");
     },
-    draw: function(ctx){
+    /*draw: function(ctx){
         this._super(ctx);
 
-        var xOffset = -(960/2);
+       /* var xOffset = -(960/2);
         var yOffset = -(640/2);
 
         //Script for displaying the Level Grid
@@ -114,7 +114,7 @@ var PlaygroundLayer = cc.Layer.extend({
                 cc.drawingUtil.drawLine( cc.p((x*gridSquareSize)+xOffset, 0+yOffset), cc.p((x*gridSquareSize)+xOffset, 640+yOffset) );
 
             }
-        } */
+        }
 
         if(this.drawDestination){
            this.drawDestinationDelai--;
@@ -131,7 +131,7 @@ var PlaygroundLayer = cc.Layer.extend({
         }
 
 
-    },
+    }, */
     drawDestinationCell: function(cellX, cellY, delai){
         this.drawDestination = true;
         this.currDestination = cc.p(cellX, cellY);

@@ -37,40 +37,6 @@ var Level001 = LevelScene.extend({
         this.portalB.destinationPortal = this.portalC;
         this.portalC.destinationPortal = this.portalA;
 
-
-        /*this.space.addCollisionHandler(ELEVATOROBJECT_COLLISION_TYPE , BOXOBJECT_COLLISION_TYPE,
-            null,
-            null,
-            this.elevatorCollisionFixes.bind(this),
-            this.elevatorCollisionFixes.bind(this)
-        );
-        this.space.addCollisionHandler(ELEVATOROBJECT_COLLISION_TYPE , CRICKER_COLLISION_TYPE,
-            null,
-            null,
-            this.elevatorCollisionFixes.bind(this),
-            this.elevatorCollisionFixes.bind(this)
-        );
-        this.space.addCollisionHandler(BOXOBJECT_COLLISION_TYPE , CRICKER_COLLISION_TYPE,
-            null,
-            null,
-            this.elevatorCollisionFixes.bind(this),
-            this.elevatorCollisionFixes.bind(this)
-        );  */
-
-        //TODO: Move in LevelScene has a edge case fixe
-        this.space.addCollisionHandler(FLOOR_COLLISION_TYPE , CRUMBLINGBLOCK_OBJECT_COLLISION_TYPE,
-            this.resolveCrumblingBlockCollision.bind(this),
-            this.resolveCrumblingBlockCollision.bind(this),
-            this.resolveCrumblingBlockCollision.bind(this),
-            this.resolveCrumblingBlockCollision.bind(this)
-        );
-        this.space.addCollisionHandler(CRUMBLINGBLOCK_OBJECT_COLLISION_TYPE , CRUMBLINGBLOCK_OBJECT_COLLISION_TYPE,
-            this.resolveCrumblingBlockCollision.bind(this),
-            this.resolveCrumblingBlockCollision.bind(this),
-            this.resolveCrumblingBlockCollision.bind(this),
-            this.resolveCrumblingBlockCollision.bind(this)
-        );
-
         this.scheduleUpdate();
     },
     update:function(delta){
@@ -98,22 +64,25 @@ var Level001 = LevelScene.extend({
         if(this.lastCrumblingRockLogicDeltaTime >= .25){ //Logic is executed each 1/4 second
             for(var i=0; i < this.actors.length; i++){
 
-                if( this.crumblingRockA.isCrumbled && this.space.containsShape(this.crumblingRockA.physicShape) ){
+                if( this.crumblingRockA.isCrumbled && !this.crumblingRockA.isPhysicShapeRemoved ){
                     this.space.removeShape(this.crumblingRockA.physicShape);
+                    this.crumblingRockA.isPhysicShapeRemoved = true;
                     //TODO: dispose the block....
                 }else{
                     this.crumblingRockA.testCricker(this.actors[i]);
                 }
 
-                if( this.crumblingRockB.isCrumbled && this.space.containsShape(this.crumblingRockB.physicShape) ){
+                if( this.crumblingRockB.isCrumbled && !this.crumblingRockB.isPhysicShapeRemoved ){
                     this.space.removeShape(this.crumblingRockB.physicShape);
+                    this.crumblingRockB.isPhysicShapeRemoved = true;
                     //TODO: dispose the block....
                 }else{
                     this.crumblingRockB.testCricker(this.actors[i]);
                 }
 
-                if( this.crumblingRockC.isCrumbled && this.space.containsShape(this.crumblingRockC.physicShape) ){
+                if( this.crumblingRockC.isCrumbled  && !this.crumblingRockC.isPhysicShapeRemoved ){
                     this.space.removeShape(this.crumblingRockC.physicShape);
+                    this.crumblingRockC.isPhysicShapeRemoved = true;
                     //TODO: dispose the block....
                 }else{
                     this.crumblingRockC.testCricker(this.actors[i]);
@@ -122,11 +91,7 @@ var Level001 = LevelScene.extend({
             this.lastCrumblingRockLogicDeltaTime = 0;
         }
         this.lastCrumblingRockLogicDeltaTime += delta;
-    },
-    resolveCrumblingBlockCollision: function(arbiter,space){
-        return 0;
     }
-
     /*elevatorCollisionFixes: function(arbiter, space){
 
         var shapes = arbiter.getShapes();
