@@ -37,6 +37,7 @@ var crumblingRl1_1 = "res/Assets/SpritesComponents/crumblingRockl1_1.png";
 var crumblingRl1_2 = "res/Assets/SpritesComponents/crumblingRockl1_2.png";
 var crumblingRl1_3 = "res/Assets/SpritesComponents/crumblingRockl1_3.png";
 var crumblingRl1_4 = "res/Assets/SpritesComponents/crumblingRockl1_4.png";
+var bomb_test = "res/Assets/Sprites/bomb_test.png";
 
 var g_ressources = [
     //image
@@ -78,7 +79,8 @@ var g_ressources = [
     { type: "image", src: crumblingRl1_1 },
     { type: "image", src: crumblingRl1_2 },
     { type: "image", src: crumblingRl1_3 },
-    { type: "image", src: crumblingRl1_4 }
+    { type: "image", src: crumblingRl1_4 },
+    { type: "image", src: bomb_test }
 
     //plist
 

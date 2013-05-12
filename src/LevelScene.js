@@ -6,6 +6,7 @@ BOXOBJECT_COLLISION_TYPE = 10;
 PORTALOBJECT_COLLISION_TYPE = 11;
 ELEVATOROBJECT_COLLISION_TYPE = 12;
 CRUMBLINGBLOCK_OBJECT_COLLISION_TYPE = 13;
+BOMB_OBJECT_COLLISION_TYPE = 14;
 
 var LevelScene = cc.Scene.extend({
     actors:[],
@@ -26,7 +27,7 @@ var LevelScene = cc.Scene.extend({
         this.space = new cp.Space();
         this.space.gravity = cp.v(0,-1000);
         this.space.iterations = 10;
-        //this.space.collisionBias = Math.pow(1 - 0.3, 60);
+        this.space.collisionBias = Math.pow(1 - 0.2, 60);
         this.space.sleepTimeThreshold = .5;
 
         var staticBody = this.space.staticBody;
@@ -123,7 +124,7 @@ var LevelScene = cc.Scene.extend({
                     var shape = new cp.BoxShape( crickerBody, w-18, h-12);
 
                     shape.setElasticity( 0 );
-                    shape.setFriction(2);
+                    shape.setFriction(0);
                     shape.setCollisionType(CRICKER_COLLISION_TYPE);
                     //shape.group = name;
 
@@ -206,6 +207,48 @@ var LevelScene = cc.Scene.extend({
 
                         sprite.physicShape = shape; //Be carefull for memory leak here
                         sprite.setBody(crumblingRockBody);
+                    }
+                    if (name.indexOf("bomb") >= 0){
+                        sprite = new BombObject();
+                        sprite.initWithFile("res" + imageSourceSrc);
+
+                        var radius = 19;
+                        var mass = radius * radius * DENSITY;
+                        var moment = cp.momentForCircle(mass, 0, radius, cp.v(0,0) );
+                        var bombBody = new cp.Body(mass, moment);
+
+                        var shape = new cp.CircleShape( bombBody, radius ,cp.v(0,0));
+
+                        shape.setElasticity( 0 );
+                        shape.setFriction( 1 );
+                        shape.setCollisionType(BOMB_OBJECT_COLLISION_TYPE);
+                        shape.group = name;
+
+                        this.space.addBody( bombBody );
+                        this.space.addShape( shape );
+
+                        //bombBody.resetForces();
+
+                        sprite.setBody(bombBody);
+                    }
+                    if(name.indexOf("destructibleBlock") >= 0){
+
+                        sprite = cc.PhysicsSprite.create("res" + imageSourceSrc);
+
+                        var destructibleBlockBody = new cp.Body(9999999, 9999999);
+
+                        var shape = new cp.BoxShape( destructibleBlockBody, w, h);
+
+                        shape.setElasticity(0);
+                        shape.setFriction(2);
+                        shape.setCollisionType(CRUMBLINGBLOCK_OBJECT_COLLISION_TYPE);
+                        shape.group = name;
+
+                        //this.space.addBody( crumblingRockBody );
+                        this.space.addShape( shape );
+
+                        sprite.physicShape = shape; //Be carefull for memory leak here
+                        sprite.setBody(destructibleBlockBody);
                     }
 
                     this.interactiveObjects.push(sprite);

@@ -70,29 +70,42 @@ var CrickerActor = cc.PhysicsSprite.extend({
         this.isWalking = true;
         console.log("cX:" + cellX + " cY:" + cellY + " " + this.walkDestination);
     },
+    test: 0,
     update: function(delta){
+
+        this._super();
 
         if(this.isTeleporting)
             return;
 
-        var x = Math.round(this.getPositionX());
-        var y = Math.round(this.getPositionY());
+        var x =this.getPositionX();
+        var y = /*Math.round(*/this.getPositionY();/*);*/
 
         this.isFalling = this.lastY != y && Math.max(this.lastY, y)-Math.min(this.lastY, y) > 2;
 
+        var newPos = null;//this.getBody().getPos();
+
         if( this.isWalking ){
             if(this.walkDirection == WALK_LEFT){
-                var newPos = cc.v2f(x-1, this.getPositionY());
-                this.getBody().setPos( newPos );
+                newPos = cc.v2f(x-1,y);
+
+                var newVelocity = cc.v2fmult(cc.v2fsub(newPos,this.getBody().getPos()), 1.0/delta);
+
+                this.getBody().setVel(cc.v2f(newVelocity.x, this.getBody().getVel().y));
+                //this.getBody().setPos( newPos );
             }
             if(this.walkDirection == WALK_RIGHT){
-                var newPos = cc.v2f(x+1, this.getPositionY());
-                this.getBody().setPos( newPos );
+                newPos = cc.v2f(x+1, y);
+
+                var newVelocity = cc.v2fmult(cc.v2fsub(newPos,this.getBody().getPos()), 1.0/delta);
+
+                this.getBody().setVel(cc.v2f(newVelocity.x, this.getBody().getVel().y));
+                //this.getBody().setPos( newPos );
             }
             if(!this.isFalling){
 
                 //Detect if he is obstructed
-                if(x == this.lastX)
+                if(Math.round(x) == Math.round( this.lastX ))
                     this.xStuck++;
                 else
                     this.xStuck = 0;
@@ -107,42 +120,44 @@ var CrickerActor = cc.PhysicsSprite.extend({
                     var xOffset = -(960/2);
                     var yOffset = -(640/2);
 
-                    var destX = Math.floor((this.getPositionX())/curScene.gridSquareSize);
-                    var destY = Math.floor(((640-this.getPositionY())/curScene.gridSquareSize));
+                    var destX = Math.floor((x)/curScene.gridSquareSize);
+                    var destY = Math.floor(((640-y)/curScene.gridSquareSize));
 
                     //this.selectedCricker.walkDestination = Math.round(endX);
                     this.gotoCell(destX, destY);
                 }
 
                 //Detect if he miss the target destination and bring it back to right direction
-                if(!this.isFalling && this.walkDirection == WALK_LEFT && this.getPositionX() < this.walkDestination ){
+                if(!this.isFalling && this.walkDirection == WALK_LEFT && x < this.walkDestination ){
                     this.walkDirection = WALK_RIGHT;
 
-                } else if(!this.isFalling && this.walkDirection == WALK_RIGHT && this.getPositionX() > this.walkDestination ){
+                } else if(!this.isFalling && this.walkDirection == WALK_RIGHT && x > this.walkDestination ){
                     this.walkDirection = WALK_LEFT;
                 }
 
-                this.lastX = Math.round(this.getPositionX());
+                this.lastX = x;
             }
             this.lastY = y;
         }
 
         //Stabilise X Pos while Falling
         if(!this.isWalking || this.isFalling){
-            this.getBody().setPos(cc.v2f(this.lastX, this.getPositionY()));
+            if(this.lastX != x)
+                this.getBody().setPos(cc.v2f(this.lastX, y));
+            this.lastY = y;
+
+            //this.lastX = x;
         }
 
-        if( this.isWalking && Math.round(this.getPositionX()) == this.walkDestination ){
+        if( this.isWalking && Math.round(x) == Math.round(this.walkDestination) ){
             this.isWalking = false;
         }
 
         //Constraints
         this.setRotation(0);
 
-        this.setNodeDirty();
 
 
-
-
+        //this.setNodeDirty();
     }
 });

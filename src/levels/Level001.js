@@ -6,6 +6,8 @@ var Level001 = LevelScene.extend({
     crumblingRockA: null,
     crumblingRockB: null,
     crumblingRockC: null,
+    bombA: null,
+    bombB: null,
     lastPortalLogicDeltaTime: 0,
     lastCrumblingRockLogicDeltaTime: 0,
     ctor: function () {
@@ -31,11 +33,23 @@ var Level001 = LevelScene.extend({
                 this.crumblingRockB = this.interactiveObjects[i];
             else if(this.interactiveObjects[i].name == "crumblingRockC")
                 this.crumblingRockC = this.interactiveObjects[i];
+            else if(this.interactiveObjects[i].name == "bombA")
+                this.bombA = this.interactiveObjects[i];
+            else if(this.interactiveObjects[i].name == "bombB")
+                this.bombB = this.interactiveObjects[i];
         }
 
         this.portalA.destinationPortal = this.portalB;
         this.portalB.destinationPortal = this.portalC;
         this.portalC.destinationPortal = this.portalA;
+
+
+        /*this.space.addCollisionHandler( CRICKER_COLLISION_TYPE, BOMB_OBJECT_COLLISION_TYPE,
+            this.collisionBeginWithCricker.bind(this),
+            null,
+            null,
+            null
+        );*/
 
         this.scheduleUpdate();
     },
@@ -91,6 +105,19 @@ var Level001 = LevelScene.extend({
             this.lastCrumblingRockLogicDeltaTime = 0;
         }
         this.lastCrumblingRockLogicDeltaTime += delta;
+    },
+    collisionBeginWithCricker: function(arbiter, space){
+
+        //Play gonna explose animation
+
+        //this.explose();
+
+
+        //this.bombA.getBody().setVel(cc.v2f(5,0));
+        this.bombA.updateVelocity();
+
+        return true;
+       // this.bombA.getBody().applyImpulse(cp.v(10,0),cp.v(0,0));
     }
     /*elevatorCollisionFixes: function(arbiter, space){
 
