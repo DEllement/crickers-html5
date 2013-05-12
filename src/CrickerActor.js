@@ -22,7 +22,8 @@ var CrickerActor = cc.PhysicsSprite.extend({
         this.selected = true;
         this.stopAllActions();
         //TODO: Fix this part
-        //this.runAction(cc.RepeatForever.create(cc.Animate.create(this.actions[0])));
+        if(this.name.indexOf("red") >= 0)
+            this.runAction(cc.RepeatForever.create(cc.Animate.create(this.actions[0])));
         this.getBody().activate();
     },
     unSelect: function(){
@@ -36,30 +37,18 @@ var CrickerActor = cc.PhysicsSprite.extend({
 
         this.walkDirection = WALK_LEFT;
 
-        var actionMove = cc.MoveBy.create(.5, cc.p(-this.getBoundingBox().width, 0));
-
-        var actionMoveDone = cc.CallFunc.create(this.onWalkedLeft, this);
-        var x = Math.round(this.getPositionX());
-        this.stopAction();
-        /*this.runAction(cc.Animate.create(this.actions[0]));
-        this.runAction(cc.Sequence.create([actionMove, actionMoveDone]));  */
-        //this.getBody().setPos( new cc.p(x-1, this.getPositionY()) );
+        this.walkDestination = 0;
         this.isWalking = true;
-        this.walkStep += this.getBoundingBox().width;
+
     },
     walkRight: function () {
 
+        this.getBody().activate();
+
         this.walkDirection = WALK_RIGHT;
 
-        var actionMove = cc.MoveBy.create(.5, cc.p(this.getBoundingBox().width, 0));
-        var actionMoveDone = cc.CallFunc.create(this.onWalkedRight, this);
-        var x = Math.round(this.getPositionX());
-        this.stopAction();
-        /*this.runAction(cc.Animate.create(this.actions[0]));
-        this.runAction(cc.Sequence.create([actionMove, actionMoveDone]));*/
-       // this.getBody().setPos( new cc.p(x+1, this.getPositionY()) );
+        this.walkDestination = 2000;
         this.isWalking = true;
-        this.walkStep += this.getBoundingBox().width;
 
     },
     gotoCell: function(cellX, cellY){
