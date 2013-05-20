@@ -38,6 +38,14 @@ var crumblingRl1_2 = "res/Assets/SpritesComponents/crumblingRockl1_2.png";
 var crumblingRl1_3 = "res/Assets/SpritesComponents/crumblingRockl1_3.png";
 var crumblingRl1_4 = "res/Assets/SpritesComponents/crumblingRockl1_4.png";
 var bomb_test = "res/Assets/Sprites/bomb_test.png";
+var bomb_smoke = "res/Assets/Sprites/bomb_smoke.png";
+var explosion_1024_167 = "res/Assets/SpritesSheet/explosion_1024_167.png";
+var red_idle = "res/Assets/SpritesSheet/red_idle.png";
+var green_idle = "res/Assets/SpritesSheet/green_idle.png";
+var blue_idle = "res/Assets/SpritesSheet/blue_idle.png";
+var orange_idle = "res/Assets/SpritesSheet/orange_idle.png";
+var red_selected_idle_655_80 = "res/Assets/SpritesSheet/red_selected_idle_655_80.png";
+
 
 var g_ressources = [
     //image
@@ -80,7 +88,14 @@ var g_ressources = [
     { type: "image", src: crumblingRl1_2 },
     { type: "image", src: crumblingRl1_3 },
     { type: "image", src: crumblingRl1_4 },
-    { type: "image", src: bomb_test }
+    { type: "image", src: bomb_test },
+    { type: "image", src: bomb_smoke },
+    { type: "image", src: explosion_1024_167 },
+    { type: "image", src: red_idle },
+    { type: "image", src: red_selected_idle_655_80 },
+    { type: "image", src: blue_idle },
+    { type: "image", src: green_idle },
+    { type: "image", src: orange_idle }
 
     //plist
 

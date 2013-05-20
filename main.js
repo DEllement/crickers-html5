@@ -62,4 +62,8 @@ var cocos2dApp = cc.Application.extend({
     }
 });
 
-var myApp = new cocos2dApp(Level001);
+if(window.location.toString().indexOf('level=test') >= 0)
+    myApp = new cocos2dApp(Level001);
+else
+    myApp = new cocos2dApp(Level01);
+

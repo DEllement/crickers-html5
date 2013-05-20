@@ -13,16 +13,19 @@
         //SingleEngineFile:'',
         appFiles:[
             'src/resource.js',
-            'src/GameUtils.js',
-            'src/CrickerActor.js',
+            'src/core/GameUtils.js',
+            'src/core/SpriteSheetsLoader.js',
+            'src/core/CrickerActor.js',
             'src/interactiveObjects/CrumblingBlock.js',
+            'src/interactiveObjects/DestructibleBlock.js',
             'src/interactiveObjects/PortalObject.js',
             'src/interactiveObjects/BoxObject.js',
             'src/interactiveObjects/ElevatorObject.js',
             'src/interactiveObjects/BombObject.js',
-            'src/PlaygroundLayer.js',
-            'src/LevelScene.js',
-            'src/levels/Level001.js'
+            'src/core/PlaygroundLayer.js',
+            'src/core/LevelScene.js',
+            'src/levels/Level001.js',
+            'src/levels/Level01.js'
         ]
     };
     window.addEventListener('DOMContentLoaded', function () {

@@ -63,7 +63,6 @@ var CrumblingBlock = cc.PhysicsSprite.extend({
 
         var actionMove = cc.MoveBy.create(1, cc.p(0, -200));
         var actionFade = cc.FadeOut.create(1);
-        //this.scheduleOnce(this.startCrumbling, .2);
 
         sprite.runAction(actionMove);
         sprite.runAction(actionFade);
@@ -74,9 +73,6 @@ var CrumblingBlock = cc.PhysicsSprite.extend({
             this.unschedule(this.startCrumbling);
         }
     }
-    /*update:function(delta){
-        this._super(delta);
-    }*/
 });
 
 CrumblingBlock.create = function(spritesBaseFileName, totalSprite, delay){

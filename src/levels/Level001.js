@@ -13,6 +13,7 @@ var Level001 = LevelScene.extend({
     ctor: function () {
         this._super();
 
+        this.name = "test";
         this.levelXmlPath = "LevelTest_Phx.xml?v=" + new Date().getTime();
     },
     init : function(){
@@ -44,12 +45,12 @@ var Level001 = LevelScene.extend({
         this.portalC.destinationPortal = this.portalA;
 
 
-        /*this.space.addCollisionHandler( CRICKER_COLLISION_TYPE, BOMB_OBJECT_COLLISION_TYPE,
-            this.collisionBeginWithCricker.bind(this),
+        this.space.addCollisionHandler( BOMB_OBJECT_COLLISION_TYPE, CRICKER_COLLISION_TYPE,
+            this.bombCollisionBeginWithCricker.bind(this),
             null,
             null,
             null
-        );*/
+        );
 
         this.scheduleUpdate();
     },
@@ -59,7 +60,7 @@ var Level001 = LevelScene.extend({
         this.lastPortalLogicDeltaTime += delta;
         if(this.lastPortalLogicDeltaTime >= .5){ //Logic is executed each 1/2 second
 
-            for(var i=0; i < this.actors.length; i++){
+            /*for(var i=0; i < this.actors.length; i++){
                 //Check if one of the crickers is inside one of the portal
                 var cricker = this.actors[i];
 
@@ -70,13 +71,13 @@ var Level001 = LevelScene.extend({
 
                 if( teleporting)
                     cricker.isTeleporting = false;
-            }
+            } */
             this.lastPortalLogicDeltaTime = 0;
         }
         this.lastPortalLogicDeltaTime += delta;
 
         if(this.lastCrumblingRockLogicDeltaTime >= .25){ //Logic is executed each 1/4 second
-            for(var i=0; i < this.actors.length; i++){
+            /*for(var i=0; i < this.actors.length; i++){
 
                 if( this.crumblingRockA.isCrumbled && !this.crumblingRockA.isPhysicShapeRemoved ){
                     this.space.removeShape(this.crumblingRockA.physicShape);
@@ -94,27 +95,26 @@ var Level001 = LevelScene.extend({
                     this.crumblingRockB.testCricker(this.actors[i]);
                 }
 
-                if( this.crumblingRockC.isCrumbled  && !this.crumblingRockC.isPhysicShapeRemoved ){
+                /*if( this.crumblingRockC.isCrumbled  && !this.crumblingRockC.isPhysicShapeRemoved ){
                     this.space.removeShape(this.crumblingRockC.physicShape);
                     this.crumblingRockC.isPhysicShapeRemoved = true;
                     //TODO: dispose the block....
                 }else{
                     this.crumblingRockC.testCricker(this.actors[i]);
                 }
-            }
+            }  */
             this.lastCrumblingRockLogicDeltaTime = 0;
         }
         this.lastCrumblingRockLogicDeltaTime += delta;
     },
-    collisionBeginWithCricker: function(arbiter, space){
+    bombCollisionBeginWithCricker: function(arbiter, space){
 
         //Play gonna explose animation
-
-        //this.explose();
-
-
-        //this.bombA.getBody().setVel(cc.v2f(5,0));
-        this.bombA.updateVelocity();
+        var shapes = arbiter.getShapes();
+        if(shapes[0].group == "bombA")
+            this.bombA.explode(this.interactiveObjects);
+        if(shapes[0].group == "bombB")
+            this.bombB.explode(this.interactiveObjects);
 
         return true;
        // this.bombA.getBody().applyImpulse(cp.v(10,0),cp.v(0,0));
