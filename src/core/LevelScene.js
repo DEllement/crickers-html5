@@ -282,6 +282,17 @@ var LevelScene = cc.Scene.extend({
 
                     this.interactiveObjects.push(sprite);
                 }
+                else if( assetType == "ANIMATED_SPRITE"){
+
+                    if( name.indexOf("palmTree") >= 0 ){
+
+                        sprite = new PalmTree();
+                        sprite.initWithFile("res" + imageSourceSrc);
+
+
+                    }
+
+                }
                 else{
                     sprite = cc.Sprite.create("res" + imageSourceSrc);
                     //sprite.setAnchorPoint(cc.p(0.5,0.5));

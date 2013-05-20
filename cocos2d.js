@@ -16,6 +16,7 @@
             'src/core/GameUtils.js',
             'src/core/SpriteSheetsLoader.js',
             'src/core/CrickerActor.js',
+            'src/animatedObjects/PalmTree.js',
             'src/interactiveObjects/CrumblingBlock.js',
             'src/interactiveObjects/DestructibleBlock.js',
             'src/interactiveObjects/PortalObject.js',
