@@ -13,7 +13,7 @@ var DestructibleBlock = cc.PhysicsSprite.extend({
         if( this.isDestroyed)
             return;
 
-        this.scheduleOnce(this.doExplosion, 1);
+        this.scheduleOnce(this.doExplosion, 2);
         this.isDestroyed = true;
     },
     doExplosion: function(){
