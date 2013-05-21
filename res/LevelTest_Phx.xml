@@ -3242,10 +3242,10 @@
         <Name>Background</Name>
         <GameSprites>
           <GameSprite>
-            <X>0</X>
-            <Y>0</Y>
-            <Width>960</Width>
-            <Height>640</Height>
+              <X>0</X>
+              <Y>-602</Y>
+              <Width>960</Width>
+              <Height>1200</Height>
             <IsItemVisible>true</IsItemVisible>
             <IsItemLocked>true</IsItemLocked>
             <Name>l1_back.png_1</Name>

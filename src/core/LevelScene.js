@@ -139,24 +139,28 @@ var LevelScene = cc.Scene.extend({
 
                     sprite.setBody(crickerBody);
 
-
-
-                    if( team == "Blue")
+                    if( team == "Blue"){
                         sprite.idleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("blue_idle","blue_idle.png", 14 , 7, 93 ,cc.size(70,63));
-                    else if(team == "Green")
-                        sprite.idleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("green_idle","green_idle.png", 15 , 5, 75 ,cc.size(68,66));
-                    else if(team == "Orange")
-                        sprite.idleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("orange_idle","orange_idle.png", 14 , 4, 50 ,cc.size(70,66));
-                    else
-                        sprite.idleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("red_idle","red_idle.png", 14 , 5, 65 ,cc.size(70,61));
+                        sprite.selectedIdleAnim = sprite.idleAnim;
+                        sprite.walkingAnim = sprite.idleAnim;
 
-                    sprite.selectedIdleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("red_selected_idle","red_selected_idle_655_80.png", 6 , 4, 21 ,cc.size(81,81));
-                    sprite.walkingAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("red_walking","red_walking_512_80_or_75.png", 6 , 3, 18 ,cc.size(81,82));
+                    }else if(team == "Green"){
+                        sprite.idleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("green_idle","green_idle.png", 15 , 5, 75 ,cc.size(68,66));
+                        sprite.selectedIdleAnim = sprite.idleAnim;
+                        sprite.walkingAnim = sprite.idleAnim;
+                    }else if(team == "Orange"){
+                        sprite.idleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("orange_idle","orange_idle.png", 14 , 4, 50 ,cc.size(70,66));
+                        sprite.selectedIdleAnim = sprite.idleAnim;
+                        sprite.walkingAnim = sprite.idleAnim;
+                    }else{
+                        sprite.idleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("red_idle","red_idle.png", 14 , 5, 65 ,cc.size(70,61));
+                        sprite.selectedIdleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("red_selected_idle","red_selected_idle_655_80.png", 6 , 4, 21 ,cc.size(81,81));
+                        sprite.walkingAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("red_walking","red_walking_512_80_or_75.png", 6 , 3, 18 ,cc.size(81,82));
+
+                    }
                     sprite.explosionAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("explosion","explosion_1024_167.png", 6 , 5, 28 ,cc.size(167,167));
 
                     sprite.playIdleAnim();
-
-
 
                     this.actors.push(sprite);
                 }
@@ -289,6 +293,9 @@ var LevelScene = cc.Scene.extend({
                         sprite = new PalmTree();
                         sprite.initWithFile("res" + imageSourceSrc);
 
+                        sprite.setAnchorPoint(cc.p(0.5,0));
+
+                        y = y+(h/2);
 
                     }
 
@@ -296,12 +303,13 @@ var LevelScene = cc.Scene.extend({
                 else{
                     sprite = cc.Sprite.create("res" + imageSourceSrc);
                     //sprite.setAnchorPoint(cc.p(0.5,0.5));
+
                 }
                 sprite.name = name;
                 sprite.assetType = assetType;
-
-
                 sprite.setPosition(cc.p((x+(w/2)) , winSize.height-(y+(h/2))));
+
+
                 sprite.lastX = sprite.getPosition().x;
                 sprite.setRotation(0);
 
@@ -334,6 +342,8 @@ var LevelScene = cc.Scene.extend({
         this.init();
         this.scheduleUpdate();
         this.schedule(this.checkCrickers, 1);
+
+        this.playLevelIntro();
 
         return true;
     },
@@ -464,8 +474,36 @@ var LevelScene = cc.Scene.extend({
 
             console.log(foundMatch);
         }
+    },
+    playLevelIntro: function(){
 
+        var backgroundLayer = this.getChildren()[4];
+        var middleBackgroundLayer = this.getChildren()[3];
+        var playgroundLayer = this.getChildren()[2];
+        var middleForegroundLayer = this.getChildren()[1];
+        var foregroundLayer = this.getChildren()[0];
 
+        backgroundLayer.setPositionY(-600);
+        middleBackgroundLayer.setPositionY(-650);
+        playgroundLayer.setPositionY(-700);
+        middleForegroundLayer.setPositionY(-700);
+        foregroundLayer.setPositionY(-800);
+
+        this.scheduleOnce(this.setLayerPosition, 2);
+    },
+    setLayerPosition: function(){
+
+        var backgroundLayer = this.getChildren()[4];
+        var middleBackgroundLayer = this.getChildren()[3];
+        var playgroundLayer = this.getChildren()[2];
+        var middleForegroundLayer = this.getChildren()[1];
+        var foregroundLayer = this.getChildren()[0];
+
+        backgroundLayer.runAction(cc.MoveTo.create(2,cc.p(0,0)));
+        middleBackgroundLayer.runAction(cc.MoveTo.create(2,cc.p(0,0)));
+        playgroundLayer.runAction(cc.MoveTo.create(2,cc.p(0,0)));
+        middleForegroundLayer.runAction(cc.MoveTo.create(2,cc.p(0,0)));
+        foregroundLayer.runAction(cc.MoveTo.create(2,cc.p(0,0)));
 
     }
 });
