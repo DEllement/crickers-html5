@@ -34,7 +34,11 @@ var BombObject = cc.PhysicsSprite.extend({
             }
         }
 
-        this.runAction( cc.Sequence.create([cc.ScaleTo.create(.5,.5,.5),
+
+        this.setNodeDirty();
+
+        this.runAction( cc.Sequence.create([
+                                            cc.ScaleTo.create(.5,.5,.5),
                                             cc.ScaleTo.create(.25,1.5,1.5),
                                             cc.ScaleTo.create(.5,.5,.5),
                                             cc.ScaleTo.create(.25,3,3),
@@ -44,8 +48,10 @@ var BombObject = cc.PhysicsSprite.extend({
     },
     doExplosion: function(){
         this.setScale(1,1);
-        this.runAction( cc.Sequence.create([cc.Animate.create(this.explosionAnim), cc.CallFunc.create(this.onBombExploded,this, null ) ]));
-        //this.setRotation(0);
+        this.setRotation(0);
+        this.setNodeDirty();
+        this.runAction( cc.Sequence.create([ cc.Animate.create(this.explosionAnim), cc.CallFunc.create(this.onBombExploded,this, null ) ]));
+
     },
     onBombExploded: function(){
         this.exploded = true;

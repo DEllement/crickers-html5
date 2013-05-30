@@ -140,25 +140,24 @@ var LevelScene = cc.Scene.extend({
                     sprite.setBody(crickerBody);
 
                     if( team == "Blue"){
-                        sprite.idleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("blue_idle","blue_idle.png", 14 , 7, 93 ,cc.size(70,63));
-                        sprite.selectedIdleAnim = sprite.idleAnim;
-                        sprite.walkingAnim = sprite.idleAnim;
-
+                        sprite.idleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("blue_02","blue_02_80x80.png", 12 , 8, 93 ,cc.size(81,80));
+                        sprite.holdingAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("blue_04","blue_04_80x80.png", 10 , 8, 71 ,cc.size(95,80));
+                        sprite.selectedIdleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("blue_13","blue_13_80x80.png", 6 , 4, 21 ,cc.size(80,80));
+                        sprite.walkingAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("blue_07-08","blue_07-08_80x80.png", 6 , 4, 19 ,cc.size(80,81));
                     }else if(team == "Green"){
-                        sprite.idleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("green_idle","green_idle.png", 15 , 5, 75 ,cc.size(68,66));
-                        sprite.selectedIdleAnim = sprite.idleAnim;
-                        sprite.walkingAnim = sprite.idleAnim;
+                        sprite.idleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("vert_02","vert_02_80x80.png", 12 , 5, 75 ,cc.size(81,81));
+                        sprite.selectedIdleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("vert_13","vert_13_80x80.png", 6 , 4, 21 ,cc.size(81,80));
+                        sprite.walkingAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("vert_07-08","vert_07-08_80x80.png", 6 , 4, 19 ,cc.size(81,81));
                     }else if(team == "Orange"){
-                        sprite.idleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("orange_idle","orange_idle.png", 14 , 4, 50 ,cc.size(70,66));
-                        sprite.selectedIdleAnim = sprite.idleAnim;
-                        sprite.walkingAnim = sprite.idleAnim;
+                        sprite.idleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("orange_02","orange_02_80x80.png", 12 , 4, 50 ,cc.size(80,80));
+                        sprite.selectedIdleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("orange_13","orange_13_80x80.png", 6 , 3, 17 ,cc.size(80,81));
+                        sprite.walkingAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("orange_07-08","orange_07-08_80x80.png", 6 , 4, 23 ,cc.size(80,81));
                     }else{
-                        sprite.idleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("red_idle","red_idle.png", 14 , 5, 65 ,cc.size(70,61));
-                        sprite.selectedIdleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("red_selected_idle","red_selected_idle_655_80.png", 6 , 4, 21 ,cc.size(81,81));
-                        sprite.walkingAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("red_walking","red_walking_512_80_or_75.png", 6 , 3, 18 ,cc.size(81,82));
-
+                        sprite.idleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("red_02","red_02_80x80.png", 12 , 6, 65 ,cc.size(81,80));
+                        sprite.selectedIdleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("red_13","red_13_80x80.png", 6 , 4, 21 ,cc.size(81,81));
+                        sprite.walkingAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("red_07-08","red_07-08_80x80.png", 6 , 3, 18 ,cc.size(81,82));
                     }
-                    sprite.explosionAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("explosion","explosion_1024_167.png", 6 , 5, 28 ,cc.size(167,167));
+                    sprite.explosionAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("explosion_1024_167","explosion_1024_167.png", 6 , 5, 28 ,cc.size(167,167));
 
                     sprite.playIdleAnim();
 
@@ -236,7 +235,7 @@ var LevelScene = cc.Scene.extend({
                     if (name.indexOf("bomb") >= 0){
                         sprite = new BombObject();
                         sprite.initWithFile("res" + imageSourceSrc);
-                        sprite.explosionAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("explosion","explosion_1024_167.png", 6 , 5, 28 ,cc.size(167,167));
+                        sprite.explosionAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("explose_01","explose_01.png", 7 , 4, 28 ,cc.size(267,241));
 
                         var smokeTexture = cc.TextureCache.getInstance().addImage("res/Assets/Sprites/bomb_smoke.png");
                         sprite.smokeTexture = smokeTexture;
@@ -340,8 +339,6 @@ var LevelScene = cc.Scene.extend({
             }
         }
         this.init();
-        this.scheduleUpdate();
-        this.schedule(this.checkCrickers, 1);
 
         this.playLevelIntro();
 
@@ -391,7 +388,6 @@ var LevelScene = cc.Scene.extend({
             crickersMatrix[cellX][cellY] = cricker.team;
             crickersPosArr.push(cc.p(cellX, cellY));  //just for x & y
         }
-
         //Check Matching Crickers
         for( var i = 0 ; i < this.actors.length; i++){
 
@@ -474,6 +470,35 @@ var LevelScene = cc.Scene.extend({
 
             console.log(foundMatch);
         }
+
+        //Check Cricker Support (Anim)
+
+        for( var i = 0 ; i < this.actors.length; i++){
+
+            var crickerHeld = 0;
+            var pos = crickersPosArr[i];
+            var onTopOfCricker = false;
+
+            //Check down
+            if( pos.y != rows && crickersMatrix[pos.x][pos.y+1] != null ){
+                onTopOfCricker = true;
+            }
+
+            //Check up
+            if( pos.y != 0 && crickersMatrix[pos.x][pos.y-1] != null ){
+                crickerHeld++;
+                if( pos.y-1 != 0 && crickersMatrix[pos.x][pos.y-2] != null ){
+                    crickerHeld++;
+                    if( pos.y-2 != 0 && crickersMatrix[pos.x][pos.y-3] != null ){
+                        crickerHeld++;
+                        if( pos.y-3 != 0 && crickersMatrix[pos.x][pos.y-4] != null )
+                            crickerHeld++;
+                    }
+                }
+            }
+
+            this.actors[i].setIsHoldingCricker(crickerHeld > 0);
+        }
     },
     playLevelIntro: function(){
 
@@ -505,5 +530,8 @@ var LevelScene = cc.Scene.extend({
         middleForegroundLayer.runAction(cc.MoveTo.create(2,cc.p(0,0)));
         foregroundLayer.runAction(cc.MoveTo.create(2,cc.p(0,0)));
 
+        //TODO: A mettre en sequence apres le paralax scrolling
+        this.scheduleUpdate();
+        this.schedule(this.checkCrickers, 1);
     }
 });

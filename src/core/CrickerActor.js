@@ -17,6 +17,8 @@ var CrickerActor = cc.PhysicsSprite.extend({
     idleAnim: null,
     selectedIdleAnim: null,
     isExploded: false,
+    isHoldingCricker: false,
+    holdingSprite: null,
     ctor: function () {
         this._super();
 
@@ -31,9 +33,11 @@ var CrickerActor = cc.PhysicsSprite.extend({
     },
     unSelect: function(){
         this.selected = false;
-        this.setFlipX(false);
-        this.stopAllActions();
-        this.playIdleAnim();
+        if(!this.isWalking){
+            this.setFlipX(false);
+            this.stopAllActions();
+            this.playIdleAnim();
+        }
     },
     walkLeft: function () {
 
@@ -103,6 +107,29 @@ var CrickerActor = cc.PhysicsSprite.extend({
 
         this.isWalking = value;
 
+    },
+    setIsHoldingCricker: function(value){
+
+        if(!this.holdingAnim)  return;
+
+        if(!this.isHoldingCricker && value){
+            this.setOpacity(0);
+            this.stopAllActions();
+            this.holdingSprite = cc.Sprite.create();
+            this.holdingSprite.runAction(cc.RepeatForever.create(cc.Animate.create(this.holdingAnim)));
+            this.holdingSprite.setPosition(cc.p(80/2,80/2));
+            this.addChild(this.holdingSprite);
+
+        }else if(!value && this.isHoldingCricker){
+            this.setOpacity(255);
+            this.holdingSprite.stopAllActions();
+            this.removeChild(this.holdingSprite);
+            this.playIdleAnim();
+
+        }
+
+        this.isHoldingCricker = value;
+        this.setNodeDirty();
     },
     gotoCell: function(cellX, cellY){
 
