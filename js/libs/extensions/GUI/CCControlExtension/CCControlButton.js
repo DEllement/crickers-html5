@@ -47,6 +47,7 @@ cc.ControlButton = cc.Control.extend({
     _marginH:0,
 
     ctor:function () {
+        this._super();
         this._preferredSize = new cc.Size(0, 0);
         this._labelAnchorPoint = new cc.Point(0, 0);
 
@@ -57,9 +58,7 @@ cc.ControlButton = cc.Control.extend({
         this._backgroundSpriteDispatchTable = {};
     },
 
-    init:function (isDirectCall) {
-        if ((isDirectCall != null) && (isDirectCall == true))
-            return this._super();
+    init:function(){
         return this.initWithLabelAndBackgroundSprite(cc.LabelTTF.create("", "Helvetica", 12), cc.Scale9Sprite.create());
     },
 
@@ -114,7 +113,7 @@ cc.ControlButton = cc.Control.extend({
 
         // Set the content size
         var maxRect = cc.ControlUtils.CCRectUnion(this._titleLabel.getBoundingBox(), this._backgroundSprite.getBoundingBox());
-        this.setContentSize(cc.SizeMake(maxRect.size.width, maxRect.size.height));
+        this.setContentSize(cc.SizeMake(maxRect.width, maxRect.height));
 
         this._titleLabel.setPosition(cc.p(this.getContentSize().width / 2, this.getContentSize().height / 2));
         this._backgroundSprite.setPosition(cc.p(this.getContentSize().width / 2, this.getContentSize().height / 2));
@@ -125,7 +124,7 @@ cc.ControlButton = cc.Control.extend({
     },
 
     initWithLabelAndBackgroundSprite:function (label, backgroundSprite) {
-        if (this.init(true)) {
+        if (cc.Control.prototype.init.call(this, true)) {
             cc.Assert(label != null, "node must not be nil");
             cc.Assert(label != null || label.RGBAProtocol || backgroundSprite != null, "");
 
@@ -338,15 +337,15 @@ cc.ControlButton = cc.Control.extend({
         if (isTouchMoveInside && !this._highlighted) {
             this._state = cc.CONTROL_STATE_HIGHLIGHTED;
             this.setHighlighted(true);
-            this.sendActionsForControlEvents(cc.CONTROL_EVENT_TOUCH_DRAGENTER);
+            this.sendActionsForControlEvents(cc.CONTROL_EVENT_TOUCH_DRAG_ENTER);
         } else if (isTouchMoveInside && this._highlighted) {
-            this.sendActionsForControlEvents(cc.CONTROL_EVENT_TOUCH_DRAGINSIDE);
+            this.sendActionsForControlEvents(cc.CONTROL_EVENT_TOUCH_DRAG_INSIDE);
         } else if (!isTouchMoveInside && this._highlighted) {
             this._state = cc.CONTROL_STATE_NORMAL;
             this.setHighlighted(false);
-            this.sendActionsForControlEvents(cc.CONTROL_EVENT_TOUCH_DRAGEXIT);
+            this.sendActionsForControlEvents(cc.CONTROL_EVENT_TOUCH_DRAG_EXIT);
         } else if (!isTouchMoveInside && !this._highlighted) {
-            this.sendActionsForControlEvents(cc.CONTROL_EVENT_TOUCH_DRAGOUTSIDE);
+            this.sendActionsForControlEvents(cc.CONTROL_EVENT_TOUCH_DRAG_OUTSIDE);
         }
     },
     onTouchEnded:function (touch, event) {
@@ -355,9 +354,9 @@ cc.ControlButton = cc.Control.extend({
         this.setHighlighted(false);
 
         if (this.isTouchInside(touch)) {
-            this.sendActionsForControlEvents(cc.CONTROL_EVENT_TOUCH_UPINSIDE);
+            this.sendActionsForControlEvents(cc.CONTROL_EVENT_TOUCH_UP_INSIDE);
         } else {
-            this.sendActionsForControlEvents(cc.CONTROL_EVENT_TOUCH_UPOUTSIDE);
+            this.sendActionsForControlEvents(cc.CONTROL_EVENT_TOUCH_UP_OUTSIDE);
         }
     },
 

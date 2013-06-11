@@ -59,7 +59,7 @@ cc.ActionInterval = cc.FiniteTimeAction.extend(/** @lends cc.ActionInterval# */{
      * @return {Boolean}
      */
     initWithDuration:function (d) {
-        this._duration = (d == 0) ? cc.FLT_EPSILON : d;
+        this._duration = (d === 0) ? cc.FLT_EPSILON : d;
         // prevent division by 0
         // This comparison could be in step:, but it might decrease the performance
         // by 3% in heavy based action games.
@@ -96,7 +96,6 @@ cc.ActionInterval = cc.FiniteTimeAction.extend(/** @lends cc.ActionInterval# */{
      * @param {cc.Node} target
      */
     startWithTarget:function (target) {
-        //this._super(target);
         cc.Action.prototype.startWithTarget.call(this, target);
         this._elapsed = 0;
         this._firstTick = true;
@@ -167,9 +166,6 @@ cc.Sequence = cc.ActionInterval.extend(/** @lends cc.Sequence# */{
         cc.Assert(actionOne != null, "Sequence.initOneTwo");
         cc.Assert(actionTwo != null, "Sequence.initOneTwo");
 
-        var one = actionOne.getDuration();
-        var two = actionTwo.getDuration();
-
         var d = actionOne.getDuration() + actionTwo.getDuration();
         this.initWithDuration(d);
 
@@ -184,7 +180,6 @@ cc.Sequence = cc.ActionInterval.extend(/** @lends cc.Sequence# */{
      */
     startWithTarget:function (target) {
         cc.ActionInterval.prototype.startWithTarget.call(this, target);
-        //this._super(target);
         this._split = this._actions[0].getDuration() / this._duration;
         this._last = -1;
     },
@@ -194,7 +189,7 @@ cc.Sequence = cc.ActionInterval.extend(/** @lends cc.Sequence# */{
      */
     stop:function () {
         // Issue #1305
-        if (this._last != -1) {
+        if (this._last !== -1) {
             this._actions[this._last].stop();
         }
         cc.Action.prototype.stop.call(this);
@@ -205,36 +200,37 @@ cc.Sequence = cc.ActionInterval.extend(/** @lends cc.Sequence# */{
      */
     update:function (time) {
         var new_t, found = 0;
-        if (time < this._split) {
+        var locSplit = this._split, locActions = this._actions, locLast = this._last;
+        if (time < locSplit) {
             // action[0]
-            new_t = (this._split) ? time / this._split : 1;
+            new_t = (locSplit) ? time / locSplit : 1;
         } else {
             // action[1]
             found = 1;
-            new_t = (this._split == 1) ? 1 : (time - this._split) / (1 - this._split);
+            new_t = (locSplit === 1) ? 1 : (time - locSplit) / (1 - locSplit);
 
-            if (this._last == -1) {
+            if (locLast === -1) {
                 // action[0] was skipped, execute it.
-                this._actions[0].startWithTarget(this._target);
-                this._actions[0].update(1);
-                this._actions[0].stop();
+                locActions[0].startWithTarget(this._target);
+                locActions[0].update(1);
+                locActions[0].stop();
             }
-            if (!this._last) {
+            if (!locLast) {
                 // switching to action 1. stop action 0.
-                this._actions[0].update(1);
-                this._actions[0].stop();
+                locActions[0].update(1);
+                locActions[0].stop();
             }
         }
 
         // Last action found and it is done.
-        if(this._last == found && this._actions[found].isDone())
+        if(locLast === found && locActions[found].isDone())
             return;
 
         // Last action found and it is done
-        if (this._last != found)
-            this._actions[found].startWithTarget(this._target);
+        if (locLast !== found)
+            locActions[found].startWithTarget(this._target);
 
-        this._actions[found].update(new_t);
+        locActions[found].update(new_t);
         this._last = found;
     },
 
@@ -328,7 +324,6 @@ cc.Repeat = cc.ActionInterval.extend(/** @lends cc.Repeat# */{
     startWithTarget:function (target) {
         this._total = 0;
         this._nextDt = this._innerAction.getDuration() / this._duration;
-        //this._super(target);
         cc.ActionInterval.prototype.startWithTarget.call(this, target);
         this._innerAction.startWithTarget(target);
     },
@@ -444,7 +439,6 @@ cc.RepeatForever = cc.ActionInterval.extend(/** @lends cc.RepeatForever# */{
      * @param {cc.Node} target
      */
     startWithTarget:function (target) {
-        //this._super(target);
         cc.ActionInterval.prototype.startWithTarget.call(this, target);
         this._innerAction.startWithTarget(target);
     },
@@ -625,17 +619,23 @@ cc.Spawn._actionOneTwo = function (action1, action2) {
  * @extends cc.ActionInterval
  */
 cc.RotateTo = cc.ActionInterval.extend(/** @lends cc.RotateTo# */{
-    _dstAngle:0,
-    _startAngle:0,
-    _diffAngle:0,
+    _dstAngleX:0,
+    _startAngleX:0,
+    _diffAngleX:0,
+
+    _dstAngleY:0,
+    _startAngleY:0,
+    _diffAngleY:0,
     /**
      * @param {Number} duration
-     * @param {Number} deltaAngle
+     * @param {Number} deltaAngleX
+     * @param {Number} deltaAngleY
      * @return {Boolean}
      */
-    initWithDuration:function (duration, deltaAngle) {
+    initWithDuration:function (duration, deltaAngleX, deltaAngleY) {
         if (cc.ActionInterval.prototype.initWithDuration.call(this, duration)) {
-            this._dstAngle = deltaAngle || 0;
+            this._dstAngleX = deltaAngleX || 0;
+            this._dstAngleY = deltaAngleY || this._dstAngleX;
             return true;
         }
         return false;
@@ -647,18 +647,26 @@ cc.RotateTo = cc.ActionInterval.extend(/** @lends cc.RotateTo# */{
     startWithTarget:function (target) {
         cc.ActionInterval.prototype.startWithTarget.call(this, target);
 
-        this._startAngle = target.getRotation();
-        if (this._startAngle > 0)
-            this._startAngle = this._startAngle % 360.0;
-        else
-            this._startAngle = this._startAngle % 360.0;
+        // Calculate X
+        this._startAngleX = target.getRotationX();
+        this._startAngleX = this._startAngleX % 360.0;
 
-        this._diffAngle = this._dstAngle - this._startAngle;
-        if (this._diffAngle > 180)
-            this._diffAngle -= 360;
+        this._diffAngleX = this._dstAngleX - this._startAngleX;
+        if(this._diffAngleX > 180)
+            this._diffAngleX -= 360;
+        if(this._diffAngleX < -180)
+            this._diffAngleX += 360;
 
-        if (this._diffAngle < -180)
-            this._diffAngle += 360;
+        // Calculate Y
+        this._startAngleY = target.getRotationY();
+        this._startAngleY = this._startAngleY % 360.0;
+
+        this._diffAngleY = this._dstAngleY - this._startAngleY;
+        if(this._diffAngleY > 180)
+            this._diffAngleY -= 360;
+
+        if(this._diffAngleY < -180)
+            this._diffAngleY += 360;
     },
 
     /**
@@ -672,22 +680,26 @@ cc.RotateTo = cc.ActionInterval.extend(/** @lends cc.RotateTo# */{
      * @param {Number} time time in seconds
      */
     update:function (time) {
-        if (this._target)
-            this._target.setRotation(this._startAngle + this._diffAngle * time);
+        if (this._target){
+            this._target.setRotationX(this._startAngleX + this._diffAngleX * time);
+            this._target.setRotationY(this._startAngleY + this._diffAngleY * time);
+        }
     }
 });
 
 /**
+ * creates the action with separate rotation angles
  * @param {Number} duration duration in seconds
- * @param {Number} deltaAngle deltaAngle in degrees.
+ * @param {Number} deltaAngleX deltaAngleX in degrees.
+ * @param {Number} deltaAngleY deltaAngleY in degrees.
  * @return {cc.RotateTo}
  * @example
  * // example
  * var rotateTo = cc.RotateTo.create(2, 61.0);
  */
-cc.RotateTo.create = function (duration, deltaAngle) {
+cc.RotateTo.create = function (duration, deltaAngleX, deltaAngleY) {
     var rotateTo = new cc.RotateTo();
-    rotateTo.initWithDuration(duration, deltaAngle);
+    rotateTo.initWithDuration(duration, deltaAngleX,deltaAngleY);
 
     return rotateTo;
 };
@@ -698,17 +710,22 @@ cc.RotateTo.create = function (duration, deltaAngle) {
  * @extends  cc.ActionInterval
  */
 cc.RotateBy = cc.ActionInterval.extend(/** @lends cc.RotateBy# */{
-    _angle:0,
-    _startAngle:0,
+    _angleX:0,
+    _startAngleX:0,
+    _angleY:0,
+    _startAngleY:0,
 
     /**
      * @param {Number} duration duration in seconds
-     * @param {Number} deltaAngle deltaAngle in degrees
+     * @param {Number} deltaAngleX deltaAngleX in degrees
+     * @param {Number} deltaAngleY deltaAngleY in degrees
      * @return {Boolean}
      */
-    initWithDuration:function (duration, deltaAngle) {
+    initWithDuration:function (duration, deltaAngleX, deltaAngleY) {
         if (cc.ActionInterval.prototype.initWithDuration.call(this, duration)) {
-            this._angle = deltaAngle;
+            this._angleX = deltaAngleX || 0;
+            this._angleY = deltaAngleY || this._angleX;
+
             return true;
         }
 
@@ -720,7 +737,8 @@ cc.RotateBy = cc.ActionInterval.extend(/** @lends cc.RotateBy# */{
      */
     startWithTarget:function (target) {
         cc.ActionInterval.prototype.startWithTarget.call(this, target);
-        this._startAngle = target.getRotation();
+        this._startAngleX = target.getRotationX();
+        this._startAngleY = target.getRotationY();
     },
 
     /**
@@ -728,7 +746,8 @@ cc.RotateBy = cc.ActionInterval.extend(/** @lends cc.RotateBy# */{
      */
     update:function (time) {
         if (this._target) {
-            this._target.setRotation(this._startAngle + this._angle * time);
+            this._target.setRotationX(this._startAngleX + this._angleX * time);
+            this._target.setRotationY(this._startAngleY + this._angleY * time);
         }
     },
 
@@ -736,21 +755,22 @@ cc.RotateBy = cc.ActionInterval.extend(/** @lends cc.RotateBy# */{
      * @return {cc.ActionInterval}
      */
     reverse:function () {
-        return cc.RotateBy.create(this._duration, -this._angle);
+        return cc.RotateBy.create(this._duration, -this._angleX, -this._angleY);
     }
 });
 
 /**
  * @param {Number} duration druation in seconds
- * @param {Number} deltaAngle deltaAngle in degrees
+ * @param {Number} deltaAngleX deltaAngleX in degrees
+ * @param {Number} deltaAngleY deltaAngleY in degrees
  * @return {cc.RotateBy}
  * @example
  * // example
  * var actionBy = cc.RotateBy.create(2, 360);
  */
-cc.RotateBy.create = function (duration, deltaAngle) {
+cc.RotateBy.create = function (duration, deltaAngleX, deltaAngleY) {
     var rotateBy = new cc.RotateBy();
-    rotateBy.initWithDuration(duration, deltaAngle);
+    rotateBy.initWithDuration(duration, deltaAngleX, deltaAngleY);
 
     return rotateBy;
 };
@@ -763,7 +783,7 @@ cc.RotateBy.create = function (duration, deltaAngle) {
 cc.MoveTo = cc.ActionInterval.extend(/** @lends cc.MoveTo# */{
     /**
      * @param {Number} duration duration in seconds
-     * @param {cc.Poin} position
+     * @param {cc.Point} position
      * @return {Boolean}
      */
     initWithDuration:function (duration, position) {
@@ -1397,7 +1417,6 @@ cc.ScaleBy = cc.ScaleTo.extend(/** @lends cc.ScaleBy# */{
      * @param {Number} target
      */
     startWithTarget:function (target) {
-        //this._super(target);
         cc.ScaleTo.prototype.startWithTarget.call(this, target);
         this._deltaX = this._startScaleX * this._endScaleX - this._startScaleX;
         this._deltaY = this._startScaleY * this._endScaleY - this._startScaleY;
@@ -1457,18 +1476,18 @@ cc.Blink = cc.ActionInterval.extend(/** @lends cc.Blink# */{
         if (this._target && !this.isDone()) {
             var slice = 1.0 / this._times;
             var m = time % slice;
-            this._target.setVisible(m > slice / 2 ? true : false);
+            this._target.setVisible(m > (slice / 2));
         }
     },
 
     startWithTarget:function(target){
-        this._super(target);
+        cc.ActionInterval.prototype.startWithTarget.call(this, target);
         this._originalState = target.isVisible();
     },
 
     stop:function(){
         this._target.setVisible(this._originalState);
-        this._super();
+        cc.ActionInterval.prototype.stop.call(this);
     },
 
     /**
@@ -1646,7 +1665,6 @@ cc.TintTo = cc.ActionInterval.extend(/** @lends cc.TintTo# */{
      * @param {cc.Sprite} target
      */
     startWithTarget:function (target) {
-        //this._super(target);
         cc.ActionInterval.prototype.startWithTarget.call(this, target);
         this._from = this._target.getColor();
     },
@@ -1694,7 +1712,6 @@ cc.TintBy = cc.ActionInterval.extend(/** @lends cc.TintBy# */{
      * @return {Boolean}
      */
     initWithDuration:function (duration, deltaRed, deltaGreen, deltaBlue) {
-        //if (this._super(duration)) {
         if (cc.ActionInterval.prototype.initWithDuration.call(this, duration)) {
             this._deltaR = deltaRed;
             this._deltaG = deltaGreen;
@@ -1710,7 +1727,6 @@ cc.TintBy = cc.ActionInterval.extend(/** @lends cc.TintBy# */{
      * @param {cc.Sprite} target
      */
     startWithTarget:function (target) {
-        //this._super(target);
         cc.ActionInterval.prototype.startWithTarget.call(this, target);
 
         if (target.RGBAProtocol) {
@@ -1802,8 +1818,8 @@ cc.DelayTime.create = function (d) {
 };
 
 
-/** Executes an action in reverse order, from time=duration to time=0
-
+/**
+ * Executes an action in reverse order, from time=duration to time=0
  * @warning Use this action carefully. This action is not
  * sequenceable. Use it as the default "reversed" method
  * of your own actions, but using it outside the "reversed"
@@ -1820,7 +1836,6 @@ cc.ReverseTime = cc.ActionInterval.extend(/** @lends cc.ReverseTime# */{
         cc.Assert(action != null, "");
         cc.Assert(action != this._other, "");
 
-        //if (this._super(action.getDuration())) {
         if (cc.ActionInterval.prototype.initWithDuration.call(this, action.getDuration())) {
             // Don't leak if action is reused
             this._other = action;
@@ -1834,7 +1849,6 @@ cc.ReverseTime = cc.ActionInterval.extend(/** @lends cc.ReverseTime# */{
      * @param {cc.Node} target
      */
     startWithTarget:function (target) {
-        //this._super(target);
         cc.ActionInterval.prototype.startWithTarget.call(this, target);
         this._other.startWithTarget(target);
     },
@@ -1860,7 +1874,6 @@ cc.ReverseTime = cc.ActionInterval.extend(/** @lends cc.ReverseTime# */{
      */
     stop:function () {
         this._other.stop();
-        //this._super();
         cc.Action.prototype.stop.call(this);
     },
     _other:null
@@ -1944,7 +1957,6 @@ cc.Animate = cc.ActionInterval.extend(/** @lends cc.Animate# */{
      * @param {cc.Sprite} target
      */
     startWithTarget:function (target) {
-        //this._super(target);
         cc.ActionInterval.prototype.startWithTarget.call(this, target);
 
         if (this._animation.getRestoreOriginalFrame()) {
@@ -1978,10 +1990,6 @@ cc.Animate = cc.ActionInterval.extend(/** @lends cc.Animate# */{
         for (var i = this._nextFrame; i < numberOfFrames; i++) {
             if (this._splitTimes[i] <= time) {
                 this._target.setDisplayFrame(frames[i].getSpriteFrame());
-                //var dict = frame.getUserInfo();
-                //if (dict) {
-                    //TODO: [[NSNotificationCenter defaultCenter] postNotificationName:CCAnimationFrameDisplayedNotification object:target_ userInfo:dict];
-                //}
                 this._nextFrame = i + 1;
                 break;
             }
@@ -2008,7 +2016,10 @@ cc.Animate = cc.ActionInterval.extend(/** @lends cc.Animate# */{
         var newAnim = cc.Animation.createWithAnimationFrames(newArray, this._animation.getDelayPerUnit(), this._animation.getLoops());
         newAnim.setRestoreOriginalFrame(this._animation.getRestoreOriginalFrame());
         return cc.Animate.create(newAnim);
+    },
 
+    copy:function(){
+        return cc.Animate.create(this._animation.copy());
     },
 
     /**
@@ -2018,7 +2029,6 @@ cc.Animate = cc.ActionInterval.extend(/** @lends cc.Animate# */{
         if (this._animation.getRestoreOriginalFrame() && this._target) {
             this._target.setDisplayFrame(this._origFrame);
         }
-        //this._super();
         cc.Action.prototype.stop.call(this);
     }
 });
@@ -2066,7 +2076,6 @@ cc.TargetedAction = cc.ActionInterval.extend(/** @lends cc.TargetedAction# */{
     },
 
     startWithTarget:function (target) {
-        //this._super(this._forcedTarget);
         cc.ActionInterval.prototype.startWithTarget.call(this, this._forcedTarget);
         this._action.startWithTarget(this._forcedTarget);
     },

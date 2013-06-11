@@ -22,8 +22,11 @@ var CrickerActor = cc.PhysicsSprite.extend({
     ctor: function () {
         this._super();
 
-        this.scheduleUpdate();
+        //this.scheduleUpdate();
     },
+    /*setReady: function(){
+        this.ready = true;
+    },   */
     select : function(){
         this.selected = true;
         this.stopAllActions();
@@ -151,8 +154,8 @@ var CrickerActor = cc.PhysicsSprite.extend({
         if( this.isExploded )
             return;
 
-        var x = this.getPositionX();
-        var y = this.getPositionY();
+        var x = this.getBody().getPos().x;
+        var y = this.getBody().getPos().y;
 
         this.isFalling = this.lastY != y && Math.max(this.lastY, y)-Math.min(this.lastY, y) > 2;
 
@@ -224,7 +227,5 @@ var CrickerActor = cc.PhysicsSprite.extend({
         if( this.isWalking && Math.round(x) == Math.round(this.walkDestination) ){
             this.setIsWalking(false);
         }
-
-
     }
 });

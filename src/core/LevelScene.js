@@ -26,7 +26,7 @@ var LevelScene = cc.Scene.extend({
 
         // physic:
         this.space = new cp.Space();
-        this.space.gravity = cp.v(0,-1000);
+        this.space.gravity = cp.v(0,-500);
         this.space.iterations = 10;
         this.space.collisionBias = Math.pow(1 - 0.2, 60);
         this.space.sleepTimeThreshold = .5;
@@ -54,7 +54,7 @@ var LevelScene = cc.Scene.extend({
 
             var layer = null;
             if( layerName == "Background")
-                layer = new cc.LazyLayer();
+                layer = new cc.Layer.create();
             if( layerName == "Playground" ){
                 layer = new PlaygroundLayer();
 
@@ -306,6 +306,7 @@ var LevelScene = cc.Scene.extend({
                 }
                 sprite.name = name;
                 sprite.assetType = assetType;
+
                 sprite.setPosition(cc.p((x+(w/2)) , winSize.height-(y+(h/2))));
 
 
@@ -345,6 +346,9 @@ var LevelScene = cc.Scene.extend({
         return true;
     },
     update: function(delta){
+
+        this._super();
+
 
         this.space.step(1/60); // 1/60 Fixed time step
 
@@ -530,8 +534,21 @@ var LevelScene = cc.Scene.extend({
         middleForegroundLayer.runAction(cc.MoveTo.create(2,cc.p(0,0)));
         foregroundLayer.runAction(cc.MoveTo.create(2,cc.p(0,0)));
 
-        //TODO: A mettre en sequence apres le paralax scrolling
-        this.scheduleUpdate();
+        //cc.Sequence.create([cc.MoveTo.create(2,cc.p(0,0), cc.CallFunc.create(this.onLayerReady, this))]));
+
+        this.onLayerReady();
+
+    },
+    onLayerReady:function(){
+        //this.scheduleUpdate();
         this.schedule(this.checkCrickers, 1);
+
+        for(var i = 0 ; i < this.actors.length; i++){
+            var cricker = this.actors[i];
+            cricker.scheduleUpdate();
+        }
+
+
+
     }
 });

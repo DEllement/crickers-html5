@@ -35,15 +35,39 @@
         'platform/CCMacro.js',
         'platform/CCFileUtils.js',
         'platform/CCTypes.js',
+		'platform/CCAccelerometer.js',
         'platform/zlib.min.js',
+        'platform/CCEGLView.js',
         'cocoa/CCGeometry.js',
         'platform/Sys.js',
         'platform/CCConfig.js',
+        'platform/CCImage.js',
+        'kazmath/utility.js',
+        'kazmath/vec2.js',
+        'kazmath/vec3.js',
+        'kazmath/vec4.js',
+        'kazmath/ray2.js',
+        'kazmath/mat3.js',
+        'kazmath/mat4.js',
+        'kazmath/plane.js',
+        'kazmath/quaternion.js',
+        'kazmath/aabb.js',
+        'kazmath/GL/mat4stack.js',
+        'kazmath/GL/matrix.js',
         'cocoa/CCSet.js',
         'cocoa/CCNS.js',
         'cocoa/CCAffineTransform.js',
         'support/CCPointExtension.js',
         'support/CCUserDefault.js',
+        'support/CCVertex.js',
+        'support/TransformUtils.js',
+        'support/CCTGAlib.js',
+        'support/CCPNGReader.js',
+        'support/CCTIFFReader.js',
+        'shaders/CCShaders.js',
+        'shaders/CCShaderCache.js',
+        'shaders/CCGLProgram.js',
+        'shaders/CCGLStateCache.js',
         'base_nodes/CCNode.js',
         'base_nodes/CCAtlasNode.js',
         'textures/CCTexture2D.js',
@@ -51,8 +75,11 @@
         'textures/CCTextureAtlas.js',
         'misc_nodes/CCRenderTexture.js',
         'misc_nodes/CCProgressTimer.js',
+        'misc_nodes/CCMotionStreak.js',
+        'misc_nodes/CCClippingNode.js',
         'effects/CCGrid.js',
         'effects/CCGrabber.js',
+        'draw_nodes/CCDrawNode.js',
         'actions/CCAction.js',
         'actions/CCActionInterval.js',
         'actions/CCActionInstant.js',
@@ -61,8 +88,10 @@
         'actions/CCActionCamera.js',
         'actions/CCActionEase.js',
         'actions/CCActionGrid.js',
+        'actions/CCActionGrid3D.js',
         'actions/CCActionTiledGrid.js',
         'actions/CCActionCatmullRom.js',
+        'actions/CCActionPageTurn3D.js',
         'layers_scenes_transitions_nodes/CCScene.js',
         'layers_scenes_transitions_nodes/CCLayer.js',
         'layers_scenes_transitions_nodes/CCTransition.js',
@@ -89,6 +118,7 @@
         'keyboard_dispatcher/CCKeyboardDispatcher.js',
         'text_input_node/CCIMEDispatcher.js',
         'text_input_node/CCTextFieldTTF.js',
+        'CCConfiguration.js',
         'CCDirector.js',
         'CCCamera.js',
         'CCScheduler.js',
@@ -104,15 +134,12 @@
         'tileMap_parallax_nodes/CCTMXObjectGroup.js',
         'tileMap_parallax_nodes/CCTMXLayer.js',
         'tileMap_parallax_nodes/CCParallaxNode.js',
-        'menu_nodes/CCMenuItem.js',
-        'menu_nodes/CCMenu.js',
         'base_nodes/CCdomNode.js',
         '../CocosDenshion/SimpleAudioEngine.js'
-
     ];
 
     var d = document;
-    var c = d.ccConfig;
+    var c = d["ccConfig"];
 
     if (c.loadExtension != null && c.loadExtension == true) {
         engine = engine.concat([
@@ -141,7 +168,7 @@
             '../extensions/CCBReader/CCBSequence.js',
             '../extensions/CCBReader/CCBRelativePositioning.js',
             '../extensions/CCBReader/CCBAnimationManager.js',
-            '../extensions/CCControlEditBox.js'
+            '../extensions/CCEditBox.js'
         ]);
     }
 
@@ -150,17 +177,25 @@
     }
     else {
         if(c.box2d || c.chipmunk){
-            engine.push('Draw_Nodes/CCDrawNode.js');
             engine.push('physics_nodes/CCPhysicsSprite.js');
             engine.push('physics_nodes/CCPhysicsDebugNode.js');
-            if (c.box2d)
+            if (c.box2d === true)
                 engine.push('../box2d/box2d.js');
-            if (c.chipmunk)
+            if (c.chipmunk === true)
                 engine.push('../chipmunk/chipmunk.js');
         }
         engine.forEach(function (e, i) {
             engine[i] = c.engineDir + e;
         });
+        if(typeof c.box2d === "string")
+        {
+            engine.push(c.box2d);
+        }
+        if(typeof c.chipmunk === "string")
+        {
+            engine.push(c.chipmunk);
+        }
+
     }
 
     var loaded = 0;

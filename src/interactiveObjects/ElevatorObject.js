@@ -57,5 +57,7 @@ var ElevatorObject = cc.PhysicsSprite.extend({
         var newPos = cc.v2f(this.getPositionX(), this.getPositionY() + this.increment);
         this.getBody().setVel(cc.v2fmult(cc.v2fsub(newPos,this.getBody().getPos()), 1.0/delta));
         this.getBody().setPos(newPos);
+
+        this.setNodeDirty();
     }
 });

@@ -128,6 +128,7 @@ cc.ParallaxNode = cc.Node.extend(/** @lends cc.ParallaxNode# */{
      * Constructor
      */
     ctor:function () {
+        this._super();
         this._parallaxArray = [];
         this._lastPosition = cc.p(-100, -100);
     },
@@ -153,7 +154,7 @@ cc.ParallaxNode = cc.Node.extend(/** @lends cc.ParallaxNode# */{
         obj.setChild(child);
         this._parallaxArray.push(obj);
 
-        var pos = this._position;
+        var pos = cc.p(this._position.x, this._position.y);
         pos.x = pos.x * ratio.x + offset.x;
         pos.y = pos.y * ratio.y + offset.y;
         child.setPosition(pos);
@@ -194,7 +195,7 @@ cc.ParallaxNode = cc.Node.extend(/** @lends cc.ParallaxNode# */{
      */
     visit:function () {
         var pos = this._absolutePosition();
-        if (!cc.Point.CCPointEqualToPoint(pos, this._lastPosition)) {
+        if (!cc.pointEqualToPoint(pos, this._lastPosition)) {
             for (var i = 0; i < this._parallaxArray.length; i++) {
                 var point = this._parallaxArray[i];
                 var x = -pos.x + pos.x * point.getRatio().x + point.getOffset().x;

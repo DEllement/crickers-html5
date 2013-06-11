@@ -49,7 +49,7 @@ var PlaygroundLayer = cc.Layer.extend({
 
             //console.log(cricker.team);
 
-            var bb = cricker.getBoundingBoxToWorld();
+            var bb = cricker.getBoundingBox();
             var rBB = cc.rect(bb.getX()+9, bb.getY()+11, bb.getWidth()-18, bb.getHeight()-17); //FIXME: get from the body instead...
 
             if( isSwipping && cricker.selected && lineIntersectsRect( this.touchtStartLocation, touches[0].getLocation() , rBB)){

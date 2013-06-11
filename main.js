@@ -30,19 +30,19 @@ var cocos2dApp = cc.Application.extend({
         this._super();
         this.startScene = scene;
         cc.COCOS2D_DEBUG = this.config['COCOS2D_DEBUG'];
+
         cc.initDebugSetting();
         cc.setup(this.config['tag']);
-        cc.Loader.getInstance().onloading = function () {
-            cc.LoaderScene.getInstance().draw();
-        };
-        cc.Loader.getInstance().onload = function () {
-            cc.AppController.shareAppController().didFinishLaunchingWithOptions();
-        };
-        cc.Loader.getInstance().preload(g_ressources);
+
+        //cc.Loader.preload(g_ressources, this.applicationDidFinishLaunching, this);
+
+        cc.AppController.shareAppController().didFinishLaunchingWithOptions();
     },
     applicationDidFinishLaunching:function () {
         // initialize director
         var director = cc.Director.getInstance();
+
+        //cc.EGLView.getInstance().setDesignResolutionSize(960,640,cc.RESOLUTION_POLICY.SHOW_ALL);
 
         // enable High Resource Mode(2x, such as iphone4) and maintains low resource on other devices.
 //     director->enableRetinaDisplay(true);
@@ -57,6 +57,10 @@ var cocos2dApp = cc.Application.extend({
 
         // run
         director.runWithScene(new this.startScene());
+
+        cc.Loader.preload(g_ressources, function () {
+            director.replaceScene(new this.startScene());
+        }, this);
 
         return true;
     }
