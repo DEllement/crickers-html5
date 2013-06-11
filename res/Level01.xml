@@ -28,7 +28,7 @@
             <Width>170</Width>
             <Height>397</Height>
             <IsItemVisible>true</IsItemVisible>
-            <AssetType>REGULAR_SPRITE</AssetType>
+            <AssetType>ANIMATED_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
             <ZIndex>54</ZIndex>

@@ -22,7 +22,7 @@ var BombObject = cc.PhysicsSprite.extend({
         //Check Interactive Object to explode : rather than check againts the grid we check againt a Bounding Box
         //Check Crickers too... ????
 
-        var bb = this.getBoundingBoxToWorld();
+        var bb = this.getBoundingBox();
 
         var explosionArea = new cc.rect(bb.getX()-bb.getWidth(), bb.getY()-bb.getHeight(), bb.getWidth()*3, bb.getHeight()*3);
 

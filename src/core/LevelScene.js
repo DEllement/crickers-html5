@@ -11,7 +11,7 @@ BOMB_OBJECT_COLLISION_TYPE = 14;
 var LevelScene = cc.Scene.extend({
     actors:[],
     interactiveObjects:[],
-    gridSquareSize: 50,
+    gridSquareSize: 60,
     levelXmlPath: "LevelTest_Phx.xml",
     touchAnim:null,
     onEnter:function(){
@@ -386,8 +386,8 @@ var LevelScene = cc.Scene.extend({
 
             var cricker = this.actors[i];
 
-            var cellX = Math.floor(cricker.getPositionX()/this.gridSquareSize);
-            var cellY = Math.floor((winSize.height-cricker.getPositionY())/this.gridSquareSize);
+            var cellX = Math.floor(cricker.getBody().getPos().x/this.gridSquareSize);
+            var cellY = Math.floor((winSize.height-cricker.getBody().getPos().y)/this.gridSquareSize);
 
             crickersMatrix[cellX][cellY] = cricker.team;
             crickersPosArr.push(cc.p(cellX, cellY));  //just for x & y
@@ -533,8 +533,6 @@ var LevelScene = cc.Scene.extend({
         playgroundLayer.runAction(cc.MoveTo.create(2,cc.p(0,0)));
         middleForegroundLayer.runAction(cc.MoveTo.create(2,cc.p(0,0)));
         foregroundLayer.runAction(cc.MoveTo.create(2,cc.p(0,0)));
-
-        //cc.Sequence.create([cc.MoveTo.create(2,cc.p(0,0), cc.CallFunc.create(this.onLayerReady, this))]));
 
         this.onLayerReady();
 
