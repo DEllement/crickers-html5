@@ -1,12 +1,17 @@
 //
 
-FLOOR_COLLISION_TYPE = 0;
-CRICKER_COLLISION_TYPE = 1;
-BOXOBJECT_COLLISION_TYPE = 10;
-PORTALOBJECT_COLLISION_TYPE = 11;
-ELEVATOROBJECT_COLLISION_TYPE = 12;
-CRUMBLINGBLOCK_OBJECT_COLLISION_TYPE = 13;
-BOMB_OBJECT_COLLISION_TYPE = 14;
+TEAM_RED = 0;
+TEAM_GREEN = 1;
+TEAM_BLUE = 2;
+TEAM_ORANGE = 3;
+
+FLOOR_COLLISION_TYPE = 100;
+CRICKER_COLLISION_TYPE = 101;
+BOXOBJECT_COLLISION_TYPE = 110;
+PORTALOBJECT_COLLISION_TYPE = 111;
+ELEVATOROBJECT_COLLISION_TYPE = 112;
+CRUMBLINGBLOCK_OBJECT_COLLISION_TYPE = 113;
+BOMB_OBJECT_COLLISION_TYPE = 114;
 
 var LevelScene = cc.Scene.extend({
     actors:[],
@@ -129,7 +134,7 @@ var LevelScene = cc.Scene.extend({
                     shape.setCollisionType(CRICKER_COLLISION_TYPE);
                     //shape.group = name;
 
-                    sprite.team = team;
+                    //sprite.team = team;
                     sprite.shape = shape;
 
                     this.space.addBody( crickerBody );
@@ -140,19 +145,23 @@ var LevelScene = cc.Scene.extend({
                     sprite.setBody(crickerBody);
 
                     if( team == "Blue"){
+                        sprite.team = TEAM_BLUE;
                         sprite.idleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("blue_02","blue_02_80x80.png", 12 , 8, 93 ,cc.size(81,80));
                         sprite.holdingAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("blue_04","blue_04_80x80.png", 10 , 8, 71 ,cc.size(95,80));
                         sprite.selectedIdleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("blue_13","blue_13_80x80.png", 6 , 4, 21 ,cc.size(80,80));
                         sprite.walkingAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("blue_07-08","blue_07-08_80x80.png", 6 , 4, 19 ,cc.size(80,81));
                     }else if(team == "Green"){
+                        sprite.team = TEAM_GREEN;
                         sprite.idleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("vert_02","vert_02_80x80.png", 12 , 5, 75 ,cc.size(81,81));
                         sprite.selectedIdleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("vert_13","vert_13_80x80.png", 6 , 4, 21 ,cc.size(81,80));
                         sprite.walkingAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("vert_07-08","vert_07-08_80x80.png", 6 , 4, 19 ,cc.size(81,81));
                     }else if(team == "Orange"){
+                        sprite.team = TEAM_ORANGE;
                         sprite.idleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("orange_02","orange_02_80x80.png", 12 , 4, 50 ,cc.size(80,80));
                         sprite.selectedIdleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("orange_13","orange_13_80x80.png", 6 , 3, 17 ,cc.size(80,81));
                         sprite.walkingAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("orange_07-08","orange_07-08_80x80.png", 6 , 4, 23 ,cc.size(80,81));
                     }else{
+                        sprite.team = TEAM_RED;
                         sprite.idleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("red_02","red_02_80x80.png", 12 , 6, 65 ,cc.size(81,80));
                         sprite.selectedIdleAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("red_13","red_13_80x80.png", 6 , 4, 21 ,cc.size(81,81));
                         sprite.walkingAnim = SpriteSheetsLoader.createAnimationFromSpriteSheetFileName("red_07-08","red_07-08_80x80.png", 6 , 3, 18 ,cc.size(81,82));
@@ -386,16 +395,17 @@ var LevelScene = cc.Scene.extend({
 
             var cricker = this.actors[i];
 
-            var cellX = Math.floor(cricker.getBody().getPos().x/this.gridSquareSize);
-            var cellY = Math.floor((winSize.height-cricker.getBody().getPos().y)/this.gridSquareSize);
+            var cellX = Math.floor(cricker.getPosition().x/this.gridSquareSize);
+            var cellY = Math.floor((winSize.height-cricker.getPosition().y)/this.gridSquareSize);
 
             crickersMatrix[cellX][cellY] = cricker.team;
             crickersPosArr.push(cc.p(cellX, cellY));  //just for x & y
         }
         //Check Matching Crickers
+        var foundMatch = 0;
         for( var i = 0 ; i < this.actors.length; i++){
 
-            var foundMatch = 0;
+            foundMatch = 0;
             var team = this.actors[i].team;
             var pos = crickersPosArr[i];
 
@@ -470,10 +480,9 @@ var LevelScene = cc.Scene.extend({
                 this.onMatchFound(team);
                 break;
             }
-
-
-            console.log(foundMatch);
         }
+
+        console.log(foundMatch);
 
         //Check Cricker Support (Anim)
 
@@ -503,6 +512,8 @@ var LevelScene = cc.Scene.extend({
 
             this.actors[i].setIsHoldingCricker(crickerHeld > 0);
         }
+
+        //Check Portal Location
     },
     playLevelIntro: function(){
 
@@ -539,7 +550,7 @@ var LevelScene = cc.Scene.extend({
     },
     onLayerReady:function(){
         //this.scheduleUpdate();
-        this.schedule(this.checkCrickers, 1);
+        this.schedule(this.checkCrickers,.5);
 
         for(var i = 0 ; i < this.actors.length; i++){
             var cricker = this.actors[i];

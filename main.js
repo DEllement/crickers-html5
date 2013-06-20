@@ -42,7 +42,7 @@ var cocos2dApp = cc.Application.extend({
         // initialize director
         var director = cc.Director.getInstance();
 
-        //cc.EGLView.getInstance().setDesignResolutionSize(960,640,cc.RESOLUTION_POLICY.SHOW_ALL);
+        cc.EGLView.getInstance().setDesignResolutionSize(960,640,cc.RESOLUTION_POLICY.SHOW_ALL);
 
         // enable High Resource Mode(2x, such as iphone4) and maintains low resource on other devices.
 //     director->enableRetinaDisplay(true);
@@ -56,7 +56,7 @@ var cocos2dApp = cc.Application.extend({
         // create a scene. it's an autorelease object
 
         // run
-        director.runWithScene(new this.startScene());
+        //director.runWithScene(new this.startScene());
 
         cc.Loader.preload(g_ressources, function () {
             director.replaceScene(new this.startScene());

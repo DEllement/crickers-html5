@@ -41,7 +41,7 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
-            <ZIndex>109</ZIndex>
+            <ZIndex>99</ZIndex>
             <ID>96</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstgrass0.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -57,7 +57,7 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
-            <ZIndex>108</ZIndex>
+            <ZIndex>98</ZIndex>
             <ID>132</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstgrass1.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -73,7 +73,7 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
-            <ZIndex>107</ZIndex>
+            <ZIndex>97</ZIndex>
             <ID>95</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstgrass1.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -89,7 +89,7 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
-            <ZIndex>106</ZIndex>
+            <ZIndex>96</ZIndex>
             <ID>66</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstgrass0.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -105,7 +105,7 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
-            <ZIndex>104</ZIndex>
+            <ZIndex>95</ZIndex>
             <ID>28</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstpalm0.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -121,7 +121,7 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
-            <ZIndex>103</ZIndex>
+            <ZIndex>94</ZIndex>
             <ID>26</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstgrass1.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -137,7 +137,7 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
-            <ZIndex>102</ZIndex>
+            <ZIndex>93</ZIndex>
             <ID>18</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstgrass1.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -153,7 +153,7 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Foreground World 1</Category>
-            <ZIndex>101</ZIndex>
+            <ZIndex>92</ZIndex>
             <ID>16</ID>
             <ImageSourceStr>/Assets/Sprites/l1_firstgrass0.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -169,7 +169,7 @@
             <AssetType>INTERACTIVE_SPRITE</AssetType>
             <AssetTypeInt>3</AssetTypeInt>
             <Category>Interactive Items</Category>
-            <ZIndex>100</ZIndex>
+            <ZIndex>91</ZIndex>
             <ID>98</ID>
             <ImageSourceStr>/Assets/Sprites/box.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -184,6 +184,70 @@
         <Name>Playground</Name>
         <GameSprites>
           <GameSprite>
+            <X>608</X>
+            <Y>152</Y>
+            <Width>38</Width>
+            <Height>38</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>crumblingRockD</Name>
+            <AssetType>INTERACTIVE_SPRITE</AssetType>
+            <AssetTypeInt>3</AssetTypeInt>
+            <Category>Interactive Items</Category>
+            <ZIndex>0</ZIndex>
+            <ID>380</ID>
+            <ImageSourceStr>/Assets/Sprites/crumblingRockL1.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>456</X>
+            <Y>190</Y>
+            <Width>38</Width>
+            <Height>38</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>crumblingRockB</Name>
+            <AssetType>INTERACTIVE_SPRITE</AssetType>
+            <AssetTypeInt>3</AssetTypeInt>
+            <Category>Interactive Items</Category>
+            <ZIndex>0</ZIndex>
+            <ID>379</ID>
+            <ImageSourceStr>/Assets/Sprites/crumblingRockL1.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>418</X>
+            <Y>190</Y>
+            <Width>38</Width>
+            <Height>38</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>crumblingRockA</Name>
+            <AssetType>INTERACTIVE_SPRITE</AssetType>
+            <AssetTypeInt>3</AssetTypeInt>
+            <Category>Interactive Items</Category>
+            <ZIndex>0</ZIndex>
+            <ID>378</ID>
+            <ImageSourceStr>/Assets/Sprites/crumblingRockL1.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
+            <X>532</X>
+            <Y>190</Y>
+            <Width>38</Width>
+            <Height>38</Height>
+            <IsItemVisible>true</IsItemVisible>
+            <IsItemLocked>false</IsItemLocked>
+            <Name>crumblingRockC</Name>
+            <AssetType>INTERACTIVE_SPRITE</AssetType>
+            <AssetTypeInt>3</AssetTypeInt>
+            <Category>Interactive Items</Category>
+            <ZIndex>0</ZIndex>
+            <ID>377</ID>
+            <ImageSourceStr>/Assets/Sprites/crumblingRockL1.png</ImageSourceStr>
+            <Fill>None</Fill>
+          </GameSprite>
+          <GameSprite>
             <X>676</X>
             <Y>100</Y>
             <Width>65</Width>
@@ -194,7 +258,7 @@
             <AssetType>INTERACTIVE_SPRITE</AssetType>
             <AssetTypeInt>3</AssetTypeInt>
             <Category>Interactive Items</Category>
-            <ZIndex>99</ZIndex>
+            <ZIndex>90</ZIndex>
             <ID>133</ID>
             <ImageSourceStr>/Assets/Sprites/bomb_test.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -210,7 +274,7 @@
             <AssetType>INTERACTIVE_SPRITE</AssetType>
             <AssetTypeInt>3</AssetTypeInt>
             <Category>Interactive Items</Category>
-            <ZIndex>98</ZIndex>
+            <ZIndex>89</ZIndex>
             <ID>129</ID>
             <ImageSourceStr>/Assets/Sprites/crumblingRockL1.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -226,7 +290,7 @@
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
-            <ZIndex>97</ZIndex>
+            <ZIndex>88</ZIndex>
             <ID>130</ID>
             <ImageSourceStr>/Assets/Sprites/red0001.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -311,7 +375,7 @@
             <AssetType>INTERACTIVE_SPRITE</AssetType>
             <AssetTypeInt>3</AssetTypeInt>
             <Category>Interactive Items</Category>
-            <ZIndex>96</ZIndex>
+            <ZIndex>87</ZIndex>
             <ID>128</ID>
             <ImageSourceStr>/Assets/Sprites/crumblingRockL1.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -327,7 +391,7 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>92</ZIndex>
+            <ZIndex>86</ZIndex>
             <ID>124</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -343,7 +407,7 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>91</ZIndex>
+            <ZIndex>85</ZIndex>
             <ID>123</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -359,7 +423,7 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>90</ZIndex>
+            <ZIndex>84</ZIndex>
             <ID>122</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -375,7 +439,7 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>89</ZIndex>
+            <ZIndex>83</ZIndex>
             <ID>121</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -391,7 +455,7 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>87</ZIndex>
+            <ZIndex>82</ZIndex>
             <ID>119</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -407,7 +471,7 @@
             <AssetType>INTERACTIVE_SPRITE</AssetType>
             <AssetTypeInt>3</AssetTypeInt>
             <Category>Interactive Items</Category>
-            <ZIndex>86</ZIndex>
+            <ZIndex>81</ZIndex>
             <ID>118</ID>
             <ImageSourceStr>/Assets/Sprites/bomb_test.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -423,7 +487,7 @@
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
-            <ZIndex>83</ZIndex>
+            <ZIndex>80</ZIndex>
             <ID>114</ID>
             <ImageSourceStr>/Assets/Sprites/pers_or.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -508,7 +572,7 @@
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
-            <ZIndex>82</ZIndex>
+            <ZIndex>79</ZIndex>
             <ID>113</ID>
             <ImageSourceStr>/Assets/Sprites/pers_green.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -593,7 +657,7 @@
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
-            <ZIndex>81</ZIndex>
+            <ZIndex>78</ZIndex>
             <ID>112</ID>
             <ImageSourceStr>/Assets/Sprites/pers_or.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -678,7 +742,7 @@
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
-            <ZIndex>80</ZIndex>
+            <ZIndex>77</ZIndex>
             <ID>111</ID>
             <ImageSourceStr>/Assets/Sprites/pers_green.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -763,7 +827,7 @@
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
-            <ZIndex>79</ZIndex>
+            <ZIndex>76</ZIndex>
             <ID>110</ID>
             <ImageSourceStr>/Assets/Sprites/pers_green.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -848,7 +912,7 @@
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
-            <ZIndex>78</ZIndex>
+            <ZIndex>75</ZIndex>
             <ID>109</ID>
             <ImageSourceStr>/Assets/Sprites/pers_blue.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -933,7 +997,7 @@
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
-            <ZIndex>77</ZIndex>
+            <ZIndex>74</ZIndex>
             <ID>108</ID>
             <ImageSourceStr>/Assets/Sprites/pers_blue.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -1018,7 +1082,7 @@
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
-            <ZIndex>76</ZIndex>
+            <ZIndex>73</ZIndex>
             <ID>107</ID>
             <ImageSourceStr>/Assets/Sprites/pers_blue.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -1103,7 +1167,7 @@
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
-            <ZIndex>75</ZIndex>
+            <ZIndex>72</ZIndex>
             <ID>106</ID>
             <ImageSourceStr>/Assets/Sprites/pers_blue.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -1188,7 +1252,7 @@
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
-            <ZIndex>74</ZIndex>
+            <ZIndex>71</ZIndex>
             <ID>105</ID>
             <ImageSourceStr>/Assets/Sprites/pers_or.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -1273,7 +1337,7 @@
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
-            <ZIndex>73</ZIndex>
+            <ZIndex>70</ZIndex>
             <ID>104</ID>
             <ImageSourceStr>/Assets/Sprites/pers_or.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -1358,7 +1422,7 @@
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
-            <ZIndex>72</ZIndex>
+            <ZIndex>69</ZIndex>
             <ID>103</ID>
             <ImageSourceStr>/Assets/Sprites/pers_blue.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -1443,7 +1507,7 @@
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
-            <ZIndex>71</ZIndex>
+            <ZIndex>68</ZIndex>
             <ID>102</ID>
             <ImageSourceStr>/Assets/Sprites/pers_green.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -1528,7 +1592,7 @@
             <AssetType>ACTOR_SPRITE</AssetType>
             <AssetTypeInt>2</AssetTypeInt>
             <Category>Crickers</Category>
-            <ZIndex>70</ZIndex>
+            <ZIndex>67</ZIndex>
             <ID>101</ID>
             <ImageSourceStr>/Assets/Sprites/pers_green.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -1613,7 +1677,7 @@
             <AssetType>INTERACTIVE_SPRITE</AssetType>
             <AssetTypeInt>3</AssetTypeInt>
             <Category>Interactive Items</Category>
-            <ZIndex>68</ZIndex>
+            <ZIndex>66</ZIndex>
             <ID>100</ID>
             <ImageSourceStr>/Assets/Sprites/lift.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -1629,7 +1693,7 @@
             <AssetType>INTERACTIVE_SPRITE</AssetType>
             <AssetTypeInt>3</AssetTypeInt>
             <Category>Interactive Items</Category>
-            <ZIndex>67</ZIndex>
+            <ZIndex>65</ZIndex>
             <ID>97</ID>
             <ImageSourceStr>/Assets/Sprites/box.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -1645,7 +1709,7 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>66</ZIndex>
+            <ZIndex>64</ZIndex>
             <ID>94</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r0.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -1661,7 +1725,7 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>65</ZIndex>
+            <ZIndex>63</ZIndex>
             <ID>93</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r0.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -1677,7 +1741,7 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>64</ZIndex>
+            <ZIndex>62</ZIndex>
             <ID>92</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r0.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -1693,7 +1757,7 @@
             <AssetType>REGULAR_SPRITE</AssetType>
             <AssetTypeInt>0</AssetTypeInt>
             <Category>Rock World 1</Category>
-            <ZIndex>63</ZIndex>
+            <ZIndex>61</ZIndex>
             <ID>91</ID>
             <ImageSourceStr>/Assets/Sprites/l1_r3.png</ImageSourceStr>
             <Fill>None</Fill>
@@ -3242,10 +3306,10 @@
         <Name>Background</Name>
         <GameSprites>
           <GameSprite>
-              <X>0</X>
-              <Y>-602</Y>
-              <Width>960</Width>
-              <Height>1200</Height>
+            <X>0</X>
+            <Y>-602</Y>
+            <Width>960</Width>
+            <Height>1200</Height>
             <IsItemVisible>true</IsItemVisible>
             <IsItemLocked>true</IsItemLocked>
             <Name>l1_back.png_1</Name>
@@ -3262,7 +3326,7 @@
         <PhysicBodies />
       </Layer>
     </Layers>
-    <NewSpriteId>376</NewSpriteId>
+    <NewSpriteId>380</NewSpriteId>
     <Width>960</Width>
     <PhysicConfig>
       <Gravity>

@@ -14,10 +14,10 @@ var PortalObject = cc.Sprite.extend({
         if( cricker.isTeleporting )
             return;
 
-        var bb = cricker.getBoundingBoxToWorld();
+        var bb = cricker.getBoundingBox();
         var crickerBB = cc.rect(bb.getX()+9, bb.getY()+11, bb.getWidth()-18, bb.getHeight()-17);
 
-        var portalBB = this.getBoundingBoxToWorld();
+        var portalBB = this.getBoundingBox();
 
         //Check if is inside
         if( cc.rectContainsRect(portalBB, crickerBB) )

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Box2D" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/../../_SDKs/Cocos2d-html5-v2.1.1/box2d/box2d.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../_SDKs/Cocos2d-html5-v2.1.1/box2d/box2d.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

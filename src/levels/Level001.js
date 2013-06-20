@@ -34,6 +34,8 @@ var Level001 = LevelScene.extend({
                 this.crumblingRockB = this.interactiveObjects[i];
             else if(this.interactiveObjects[i].name == "crumblingRockC")
                 this.crumblingRockC = this.interactiveObjects[i];
+            else if(this.interactiveObjects[i].name == "crumblingRockD")
+                this.crumblingRockD = this.interactiveObjects[i];
             else if(this.interactiveObjects[i].name == "bombA")
                 this.bombA = this.interactiveObjects[i];
             else if(this.interactiveObjects[i].name == "bombB")
@@ -52,6 +54,13 @@ var Level001 = LevelScene.extend({
             null
         );
 
+        this.space.addCollisionHandler( CRUMBLINGBLOCK_OBJECT_COLLISION_TYPE, CRICKER_COLLISION_TYPE,
+            this.crumblingRockCollisionBeginWithCricker.bind(this),
+            null,
+            null,
+            null
+        );
+
         this.scheduleUpdate();
     },
     update:function(delta){
@@ -60,7 +69,7 @@ var Level001 = LevelScene.extend({
         this.lastPortalLogicDeltaTime += delta;
         if(this.lastPortalLogicDeltaTime >= .5){ //Logic is executed each 1/2 second
 
-            /*for(var i=0; i < this.actors.length; i++){
+            for(var i=0; i < this.actors.length; i++){
                 //Check if one of the crickers is inside one of the portal
                 var cricker = this.actors[i];
 
@@ -71,41 +80,10 @@ var Level001 = LevelScene.extend({
 
                 if( teleporting)
                     cricker.isTeleporting = false;
-            } */
+            }
             this.lastPortalLogicDeltaTime = 0;
         }
         this.lastPortalLogicDeltaTime += delta;
-
-        if(this.lastCrumblingRockLogicDeltaTime >= .25){ //Logic is executed each 1/4 second
-            /*for(var i=0; i < this.actors.length; i++){
-
-                if( this.crumblingRockA.isCrumbled && !this.crumblingRockA.isPhysicShapeRemoved ){
-                    this.space.removeShape(this.crumblingRockA.physicShape);
-                    this.crumblingRockA.isPhysicShapeRemoved = true;
-                    //TODO: dispose the block....
-                }else{
-                    this.crumblingRockA.testCricker(this.actors[i]);
-                }
-
-                if( this.crumblingRockB.isCrumbled && !this.crumblingRockB.isPhysicShapeRemoved ){
-                    this.space.removeShape(this.crumblingRockB.physicShape);
-                    this.crumblingRockB.isPhysicShapeRemoved = true;
-                    //TODO: dispose the block....
-                }else{
-                    this.crumblingRockB.testCricker(this.actors[i]);
-                }
-
-                /*if( this.crumblingRockC.isCrumbled  && !this.crumblingRockC.isPhysicShapeRemoved ){
-                    this.space.removeShape(this.crumblingRockC.physicShape);
-                    this.crumblingRockC.isPhysicShapeRemoved = true;
-                    //TODO: dispose the block....
-                }else{
-                    this.crumblingRockC.testCricker(this.actors[i]);
-                }
-            }  */
-            this.lastCrumblingRockLogicDeltaTime = 0;
-        }
-        this.lastCrumblingRockLogicDeltaTime += delta;
     },
     bombCollisionBeginWithCricker: function(arbiter, space){
 
@@ -118,6 +96,22 @@ var Level001 = LevelScene.extend({
 
         return true;
        // this.bombA.getBody().applyImpulse(cp.v(10,0),cp.v(0,0));
+    },
+    crumblingRockCollisionBeginWithCricker: function(arbiter, space){
+
+        //Play gonna explose animation
+        var shapes = arbiter.getShapes();
+        if(shapes[0].group == "crumblingRockA")
+            this.crumblingRockA.startShaking();
+        if(shapes[0].group == "crumblingRockB")
+            this.crumblingRockB.startShaking();
+        if(shapes[0].group == "crumblingRockC")
+            this.crumblingRockC.startShaking();
+        if(shapes[0].group == "crumblingRockD")
+            this.crumblingRockD.startShaking();
+
+        return true;
+        // this.bombA.getBody().applyImpulse(cp.v(10,0),cp.v(0,0));
     }
     /*elevatorCollisionFixes: function(arbiter, space){
 

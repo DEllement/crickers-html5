@@ -1,57 +1,28 @@
 var CrumblingBlock = cc.PhysicsSprite.extend({
     sprites: null,
-    hotspotBB: null,
     falloutDurationByPart: null,
     delay: null,
     currentSpriteIndex: null,
     isCrumbled: false,
-    isPhysicShapeRemoved: false,
     physicShape: null,
-    shakeStarted: false,
-    shakeFinishCount: 0,
     ctor: function(){
         this._super();
     },
-    testCricker: function(cricker){
-
-        if( this.shakeStarted )
-            return false;
-
-        var me = this;
-
-        if(!this.hotspotBB){
-            this.hotspotBB = this.getBoundingBoxToWorld();
-            this.hotspotBB.setY(this.hotspotBB.getY()+10);
-            this.hotspotBB.setX( this.hotspotBB.getX()+ this.hotspotBB.getWidth()/4 );
-            this.hotspotBB.setWidth(this.hotspotBB.getWidth()/2);
-            console.log(this.hotspotBB.getWidth());
+    startShaking: function(){
+        for(var i = 0 ; i < this.sprites.length; i++){
+            if(Math.round(Math.random()) == 0)
+                this.sprites[i].runAction(cc.RepeatForever.create(cc.Sequence.create([cc.MoveBy.create(.1, cc.p(-2, 0)),
+                    cc.MoveBy.create(.1, cc.p(2, 0)),
+                    cc.MoveBy.create(.1, cc.p(-2, 0)),
+                    cc.MoveBy.create(.1, cc.p(2, 0))])));
+            else
+                this.sprites[i].runAction(cc.RepeatForever.create(cc.Sequence.create([cc.MoveBy.create(.1, cc.p(0, -2)) ,
+                    cc.MoveBy.create(.1, cc.p(0, 2)),
+                    cc.MoveBy.create(.1, cc.p(0, -2)) ,
+                    cc.MoveBy.create(.1, cc.p(0, 2))])));
         }
 
-        var bb = cricker.getBoundingBoxToWorld();
-        var crickerBB = cc.rect(bb.getX()+9, bb.getY()+11, bb.getWidth()-18, bb.getHeight()-17);
-
-        //Check if is intersecting the hostSpot
-        if( cc.rectIntersectsRect(this.hotspotBB, crickerBB) ){
-
-            for(var i = 0 ; i < this.sprites.length; i++){
-                if(Math.round(Math.random()) == 0)
-                    this.sprites[i].runAction(cc.Sequence.create([cc.MoveBy.create(.1, cc.p(-2, 0)),
-                                                                  cc.MoveBy.create(.1, cc.p(2, 0)),
-                                                                  cc.MoveBy.create(.1, cc.p(-2, 0)),
-                                                                  cc.MoveBy.create(.1, cc.p(2, 0))]));
-                else
-                    this.sprites[i].runAction(cc.Sequence.create([cc.MoveBy.create(.1, cc.p(0, -2)) ,
-                                                                  cc.MoveBy.create(.1, cc.p(0, 2)),
-                                                                  cc.MoveBy.create(.1, cc.p(0, -2)) ,
-                                                                  cc.MoveBy.create(.1, cc.p(0, 2))]));
-            }
-
-            me.schedule(this.startCrumbling,.15, this.sprites.length, 2 );
-
-            return true;
-        }
-
-        return false;
+        this.schedule(this.startCrumbling,.15, this.sprites.length, 2 );
     },
     startCrumbling: function(){
 
@@ -60,6 +31,7 @@ var CrumblingBlock = cc.PhysicsSprite.extend({
         }
 
         var sprite = this.sprites[this.currentSpriteIndex++];
+        sprite.stopAllActions();
 
         var actionMove = cc.MoveBy.create(1, cc.p(0, -200));
         var actionFade = cc.FadeOut.create(1);
@@ -71,6 +43,10 @@ var CrumblingBlock = cc.PhysicsSprite.extend({
         if(this.currentSpriteIndex == this.sprites.length){
             this.isCrumbled = true;
             this.unschedule(this.startCrumbling);
+
+            var curScene = cc.Director.getInstance().getRunningScene();
+            curScene.space.removeShape(this.physicShape);
+
         }
     }
 });
