@@ -20,7 +20,7 @@
     <file path="/BoxObject.js" changelist="1a87b9d3-e6a9-4e98-9da6-c1b1b93252f3" time="1366486570851" ignored="false" />
     <file path="/main.js" changelist="1a87b9d3-e6a9-4e98-9da6-c1b1b93252f3" time="1370926432641" ignored="false" />
     <file path="/Game.js" changelist="1a87b9d3-e6a9-4e98-9da6-c1b1b93252f3" time="1366864961907" ignored="false" />
-    <file path="/ElevatorObject.js" changelist="1a87b9d3-e6a9-4e98-9da6-c1b1b93252f3" time="1369888964642" ignored="false" />
+    <file path="/ElevatorObject.js" changelist="1a87b9d3-e6a9-4e98-9da6-c1b1b93252f3" time="1371780609220" ignored="false" />
     <file path="/CrumblingBlock.js" changelist="1a87b9d3-e6a9-4e98-9da6-c1b1b93252f3" time="1371716778665" ignored="false" />
     <file path="/LevelTest_Phx.xml" changelist="1a87b9d3-e6a9-4e98-9da6-c1b1b93252f3" time="1367724696511" ignored="false" />
     <file path="/BombObject.js" changelist="1a87b9d3-e6a9-4e98-9da6-c1b1b93252f3" time="1369352077457" ignored="false" />
@@ -64,10 +64,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LevelScene.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LevelScene.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core/LevelScene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="488" column="102" selection-start="19956" selection-end="19956" vertical-scroll-proportion="0.13737623">
+            <state line="494" column="74" selection-start="20097" selection-end="20097" vertical-scroll-proportion="18.0">
               <folding>
                 <element signature="e#16535#16898#0" expanded="false" />
                 <element signature="e#17014#19826#0" expanded="false" />
@@ -94,10 +94,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ElevatorObject.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ElevatorObject.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/interactiveObjects/ElevatorObject.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="53" column="10" selection-start="1640" selection-end="1640" vertical-scroll-proportion="0.6938776">
               <folding />
             </state>
           </provider>
@@ -172,7 +172,6 @@
         <option value="$PROJECT_DIR$/src/interactiveObjects/DestructibleBlock.js" />
         <option value="$PROJECT_DIR$/res/LevelTest_Phx.xml" />
         <option value="$PROJECT_DIR$/src/core/PlaygroundLayer.js" />
-        <option value="$PROJECT_DIR$/src/interactiveObjects/ElevatorObject.js" />
         <option value="$PROJECT_DIR$/js/libs/cocos2d/sprite_nodes/CCSprite.js" />
         <option value="$PROJECT_DIR$/src/core/CrickerActor.js" />
         <option value="$PROJECT_DIR$/src/animatedObjects/PalmTree.js" />
@@ -183,6 +182,7 @@
         <option value="$PROJECT_DIR$/src/interactiveObjects/CrumblingBlock.js" />
         <option value="$PROJECT_DIR$/src/levels/Level001.js" />
         <option value="$PROJECT_DIR$/src/core/LevelScene.js" />
+        <option value="$PROJECT_DIR$/src/interactiveObjects/ElevatorObject.js" />
       </list>
     </option>
   </component>
@@ -788,13 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/interactiveObjects/ElevatorObject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/interactiveObjects/CrumblingBlock.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="18" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
@@ -811,11 +804,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/LevelScene.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="488" column="102" selection-start="19956" selection-end="19956" vertical-scroll-proportion="0.13737623">
+        <state line="494" column="74" selection-start="20097" selection-end="20097" vertical-scroll-proportion="18.0">
           <folding>
             <element signature="e#16535#16898#0" expanded="false" />
             <element signature="e#17014#19826#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interactiveObjects/ElevatorObject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="10" selection-start="1640" selection-end="1640" vertical-scroll-proportion="0.6938776">
+          <folding />
         </state>
       </provider>
     </entry>
